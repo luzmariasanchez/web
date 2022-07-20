@@ -304,16 +304,16 @@
 </template>
 
 <script>
-// import getHead from "@/helpers/head";
+import getHead from "@/helpers/head";
 
 export default {
   name: 'IndexPage',
-  /* head() {
+  head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
     return getHead(this.page, i18nHead, {
       titleTemplate: "%s",
     });
-  }, */
+  },
   async asyncData({ $content, i18n }) {
     const page = await $content(`pages/index/${i18n.locale}`).fetch();
 

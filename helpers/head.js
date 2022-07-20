@@ -1,10 +1,11 @@
+import config from '@/config';
 
-const URL = 'https://www.romainre.com'
+const URL = config.url;
 
 export default (page, i18nHead, override) => {
   if (!page) page = {}
-  
-  const image = `${URL}/images/${page.image || 'default.png'}`;
+
+  const image = `${URL}/images/${page.image || 'default.png'}`;
   return {
     title: page.title,
     meta: [
@@ -70,7 +71,7 @@ export default (page, i18nHead, override) => {
     },
     link: [
       ...i18nHead.link
-   ],
+    ],
     ...(override || {})
   };
 }

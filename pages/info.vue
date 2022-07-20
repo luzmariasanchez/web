@@ -5,7 +5,7 @@
       <p class="text-sm md:text-base text-green-500 font-bold">08 APRIL 2019 <span class="text-gray-900">/</span>
         GETTING
         STARTED</p>
-      <h1 class="font-bold break-normal text-3xl md:text-5xl">Welcome to Ghostwind CSS</h1>
+      <h1 class="font-bold break-normal text-3xl md:text-5xl">{{ page.title }}</h1>
     </div>
 
     <!--image-->
@@ -188,10 +188,27 @@
 
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
-  name: 'AboutPage'
-})
+<script>
+import getHead from "@/helpers/head";
+export default {
+  nuxtI18n: {
+    paths: {
+      en: "/bio",
+      es: "/biografia",
+    },
+  },
+  head() {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
+    return getHead(this.page, i18nHead);
+  },
+  async asyncData({ $content, i18n }) {
+    const page = await $content(`pages/info/${i18n.locale}`).fetch();
+    // const experiences = await $content(`experiences/${i18n.locale}`).fetch();
+    return {
+      error: null,
+      page,
+      // experiences: experiences.data.reverse(),
+    };
+  },
+};
 </script>
