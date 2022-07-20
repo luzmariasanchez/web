@@ -1,0 +1,24 @@
+{
+  "common": {
+    "close": "Cerrar"
+  },
+  "page": {
+    "artworks": "Obras",
+    "exhibitions": "Exposiciones",
+    "researchs": "Investigaciones",
+    "academia": "Académico",
+    "publications": "Publicaciones",
+    "search": "Buscar",
+    "about": "Bio",
+    "contact": "Contacto"
+  },
+  "contact": {
+    "email-label": "Tu correo electrónico:",
+    "email-error": "Oops! Hay un problema con tu correo electrónico.",
+    "message-label": "Tu mensaje:",
+    "message-error": "Oops! Hay un problema con tu mensaje.",
+    "send-label": "Enviar",
+    "send-error": "Oops! Hubo un problema con el envío del mensaje.",
+    "sent": "Tu mensaje ha sido enviado, ¡Hasta pronto!"
+  }
+}

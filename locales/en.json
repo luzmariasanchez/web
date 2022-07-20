@@ -1,0 +1,24 @@
+{
+  "common": {
+    "close": "Close"
+  },
+  "page": {
+    "artworks": "Artworks",
+    "exhibitions": "Exhibitions",
+    "research": "Research",
+    "academia": "Academia",
+    "publications": "Publications",
+    "search": "Search",
+    "about": "Bio",
+    "contact": "Contact"
+  },
+  "contact": {
+    "email-label": "Your email:",
+    "email-error": "Oops! There is a problem with your email.",
+    "message-label": "Your message:",
+    "message-error": "Oops! There is a problem with your message.",
+    "send-label": "Send",
+    "send-error": "Oops! There was a problem with sending the message.",
+    "sent": "Your message has been sent, see you soon!"
+  }
+}
