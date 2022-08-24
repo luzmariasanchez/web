@@ -2,8 +2,10 @@
   <div>
 
     <Head />
-    <Nuxt />
-    <Foot />
+    <div class="pt-[68px]">
+      <Nuxt />
+      <Foot />
+    </div>
   </div>
 </template>
 

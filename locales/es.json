@@ -6,11 +6,20 @@
     "artworks": "Obras",
     "exhibitions": "Exposiciones",
     "researchs": "Investigaciones",
-    "academia": "Académico",
+    "academias": "Académico",
     "publications": "Publicaciones",
     "search": "Buscar",
     "about": "Bio",
     "contact": "Contacto"
+  },
+  "author": {
+    "title": "Luz María Sánchez",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum sunt, consequuntur recusandae nostrum, quibusdam, iusto libero fugit adipisci blanditiis sint veniam reprehenderit. Animi fugit ab, delectus porro excepturi laboriosam dicta!",
+    "more": "Leer más",
+    "avatar": "http://i.pravatar.cc/300"
+  },
+  "foot": {
+    "title": "Luz María Sánchez"
   },
   "contact": {
     "email-label": "Tu correo electrónico:",

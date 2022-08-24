@@ -1,15 +1,15 @@
 <template>
 
-  <header>
+  <header class="fixed w-full z-10 shadow-2xl">
     <!--Nav-->
-    <nav class="bg-gray-900 p-4 mt-0 w-full">
+    <nav class="bg-gray-800 p-4 mt-0 w-full">
       <div class="container mx-auto flex space-between">
 
         <div class="flex items-center">
 
           <div class="flex text-white font-extrabold">
-            <nuxt-link to="/" class="flex text-white text-base no-underline hover:text-white hover:no-underline"
-              href="#">
+            <nuxt-link :to="localePath({ name: 'index' })"
+              class="flex text-white text-base no-underline hover:text-white hover:no-underline" href="#">
               <span class="hidden w-0 md:w-auto md:block pl-1">Luz María Sánchez</span>
             </nuxt-link>
           </div>
@@ -17,27 +17,27 @@
           <div class="flex pl-4 text-sm">
             <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
               <li class="mr-2">
-                <nuxt-link to="/"
+                <nuxt-link :to="localePath({ name: 'artworks' })"
                   class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
                   href="#">{{ $t('page.artworks') }}</nuxt-link>
               </li>
               <li class="mr-2">
-                <nuxt-link to="/"
+                <nuxt-link :to="localePath({ name: 'exhibitions' })"
                   class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
                   href="#">{{ $t('page.exhibitions') }}</nuxt-link>
               </li>
               <li class="mr-2">
-                <nuxt-link to="/"
+                <nuxt-link :to="localePath({ name: 'researchs' })"
                   class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
-                  href="#">{{ $t('page.research') }}</nuxt-link>
+                  href="#">{{ $t('page.researchs') }}</nuxt-link>
               </li>
               <li class="mr-2">
-                <nuxt-link to="/"
+                <nuxt-link :to="localePath({ name: 'academias' })"
                   class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
-                  href="#">{{ $t('page.academia') }}</nuxt-link>
+                  href="#">{{ $t('page.academias') }}</nuxt-link>
               </li>
               <li class="mr-2">
-                <nuxt-link to="/"
+                <nuxt-link :to="localePath({ name: 'publications' })"
                   class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
                   href="#">{{ $t('page.publications') }}</nuxt-link>
               </li>
@@ -47,11 +47,11 @@
 
         <div class="flex flex-1 flex-row-reverse text-sm">
           <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
-            <li class="ml-2">
+            <!-- <li class="ml-2">
               <nuxt-link to="/"
                 class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
                 href="#"><i class="icon-search"></i></nuxt-link>
-            </li>
+            </li> -->
             <li class="ml-2">
               <nuxt-link :to="localePath('info')"
                 class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"

@@ -9,6 +9,7 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+
 body {
   background-color: #eee;
   color: @black;
@@ -25,213 +26,50 @@ img {
   vertical-align: middle;
 }
 
-.page {
-  background-color: @white;
-  .wrap {
-    display: block;
-    width: 100%;
-    max-width: 512px;
-    margin: 0 auto;
-    padding: 0px;
-  }
-  .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 20px 20px;
-  }
-  .content {
-    min-height: 100vh;
-    padding: 0 20px;
-    padding-bottom: 50px;
-    h1 {
-      text-align: center;
-      font-size: 4em;
-      line-height: 1em;
-    }
-    @media (max-width: 512px) {
-      h1 {
-        font-size: 3em;
-      }
-    }
-    @media (max-width: 320px) {
-      h1 {
-        font-size: 2em;
-      }
-    }
-    h2 {
-      text-align: center;
-    }
-    h3 {
-      text-transform: uppercase;
-      display: grid;
-      width: 100%;
-      align-items: center;
-      text-align: center;
-      grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
-      grid-gap: 20px;
-      margin-bottom: 5px;
-      font-size: 1.4em;
-    }
-
-    h3:before,
-    h3:after {
-      content: '';
-      border-top: 1px solid rgba(0, 0, 0, 0.2);
-    }
-    p {
-      margin-bottom: 1em;
-    }
+.markdown-content {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
 
-  figure {
-    width: 100%;
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);
-    img {
-      width: 100%;
-      vertical-align: middle;
-    }
-  }
-  .back-btn {
-    position: fixed;
-    top: 10px;
-    left: 5px;
-    font-size: 2em;
-    padding-top: 5px;
-    transition: transform 200ms;
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-  .down-btn {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2em;
-    transition: bottom 200ms;
-    &:hover {
-      bottom: 5px;
-    }
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
 
-  &.dark {
-    h3:before,
-    h3:after {
-      content: '';
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-  }
-}
-
-
-a {
-  color: @black;
-  text-decoration: none;
-  cursor: pointer;
-}
-.btn {
-  display: inline-block;
-  padding: 8px 20px;
-  background-color: @black;
-  color: @white;
-  &.round-left {
-    border-radius: 18px 0 0 18px;
-    padding-left: 25px;
-  }
-  &.round-right {
-    border-radius: 0 18px 18px 0;
-    padding-right: 25px;
-  }
-  &.round {
-    border-radius: 18px;
-  }
-}
-
-.dark {
-  background-color: @black;
-  color: @white;
-  a {
-    color: @white;
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
 
-  .btn {
-    background-color: @white;
-    color: @black;
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
-}
 
-.btn.orange {
-  background-color: #FC6136;
-  color: @white;
-  &:hover {
-    background-color: #f76f4a;
+  h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
-}
-.btn.blue {
-  background-color: #2274A5;
-  color: @white;
-  &:hover {
-    background-color: #338bbe;
+
+  h6 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
-}
 
-
-.techno {
-  display: inline-block;
-  text-align: center;
-  margin: 5px 5px;
-  img {
-    width: 40px;
+  p {
+    margin-bottom: 1rem;
   }
-  span {
-    display: block;
-    font-size: 0.8em;
+
+  ul {
+    margin-bottom: 1rem;
+    list-style-type: disc;
+    padding-left: 20px;
   }
-}
-
-
-.collab {
-  display: inline-block;
-  text-align: center;
-  margin: 5px 5px;
-  img {
-    height: 100px;
-  }
-  span {
-    display: block;
-    font-size: 0.86em;
-  }
-}
-
-
-.grid-left-right {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-
-.text-size-xs {
-  font-size: 0.8em;
-}
-.text-size-s {
-  font-size: 0.9em;
-}
-.text-size-m {
-  font-size: 1em;
-}
-.text-size-l {
-  font-size: 1.2em;
-}
-.text-size-xl {
-  font-size: 2em;
-}
-.text-size-xxl {
-  font-size: 3em;
-}
-.text-size-xxxl {
-  font-size: 4em;
 }

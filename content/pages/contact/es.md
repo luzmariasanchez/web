@@ -1,6 +1,0 @@
----
-title: Contacto
-description: 
-image: 
----
-

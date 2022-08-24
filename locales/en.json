@@ -5,12 +5,21 @@
   "page": {
     "artworks": "Artworks",
     "exhibitions": "Exhibitions",
-    "research": "Research",
-    "academia": "Academia",
+    "researchs": "Research",
+    "academias": "Academia",
     "publications": "Publications",
     "search": "Search",
     "about": "Bio",
     "contact": "Contact"
+  },
+  "author": {
+    "title": "Luz María Sánchez",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum sunt, consequuntur recusandae nostrum, quibusdam, iusto libero fugit adipisci blanditiis sint veniam reprehenderit. Animi fugit ab, delectus porro excepturi laboriosam dicta!",
+    "more": "Read More",
+    "avatar": "http://i.pravatar.cc/300"
+  },
+  "foot": {
+    "title": "Luz María Sánchez"
   },
   "contact": {
     "email-label": "Your email:",
