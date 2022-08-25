@@ -10,9 +10,8 @@
           <div class="pb-10">
             <nuxt-content :document="page" />
           </div>
-          <PageList v-if="artworks" :items="artworks" :title="$t('page.artworks')" pathName="artworks-slug" />
-          <PageList v-if="exhibitions" :items="exhibitions" :title="$t('page.exhibitions')"
-            pathName="exhibitions-slug" />
+          <PageList v-if="artworks" :items="artworks" title="Artworks" pathName="artworks-slug" />
+          <PageList v-if="exhibitions" :items="exhibitions" title="Exhibitions" pathName="exhibitions-slug" />
           <PageList v-if="academias" :items="academias" :title="$t('page.academias')" pathName="academias-slug" />
           <PageList v-if="researchs" :items="researchs" :title="$t('page.researchs')" pathName="researchs-slug" />
           <PageList v-if="publications" :items="publications" :title="$t('page.publications')"
@@ -28,11 +27,11 @@
 import getHead from "@/helpers/head";
 
 export default {
-  name: 'publications-slug',
+  name: 'research-slug',
   nuxtI18n: {
     paths: {
-      en: "/publications/:slug",
-      es: "/publicaciones/:slug",
+      en: "/research/:slug",
+      es: "/investigacion/:slug",
     },
   },
   head() {
@@ -41,7 +40,7 @@ export default {
   },
   async asyncData({ $content, i18n, params }) {
 
-    const page = await $content(i18n.locale, 'publications', params.slug).fetch();
+    const page = await $content(i18n.locale, 'researchs', params.slug).fetch();
     const artworks = page.artworks && await $content(i18n.locale, "artworks")
       .where({ slug: { $in: page.artworks } })
       .only(["title", "description", "image", "slug"])

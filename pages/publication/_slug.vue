@@ -28,11 +28,11 @@
 import getHead from "@/helpers/head";
 
 export default {
-  name: 'artworks-slug',
+  name: 'publication-slug',
   nuxtI18n: {
     paths: {
-      en: "/artworks/:slug",
-      es: "/proyectos/:slug",
+      en: "/publication/:slug",
+      es: "/publicacion/:slug",
     },
   },
   head() {
@@ -41,7 +41,7 @@ export default {
   },
   async asyncData({ $content, i18n, params }) {
 
-    const page = await $content(i18n.locale, 'artworks', params.slug).fetch();
+    const page = await $content(i18n.locale, 'publications', params.slug).fetch();
     const artworks = page.artworks && await $content(i18n.locale, "artworks")
       .where({ slug: { $in: page.artworks } })
       .only(["title", "description", "image", "slug"])

@@ -9,7 +9,7 @@
         <PageNav :page="page"></PageNav>
 
         <PageContent class="p-6">
-          <PageGrid :items="items" pathName="artworks-slug"></PageGrid>
+          <PageGrid :items="items" pathName="artwork-slug"></PageGrid>
         </PageContent>
         <PageAuthor></PageAuthor>
       </div>

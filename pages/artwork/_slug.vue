@@ -7,7 +7,9 @@
 
       <div class="mx-0 sm:mx-6 mt-12">
         <PageContent class="p-6">
-          <nuxt-content :document="page" />
+          <div class="pb-10">
+            <nuxt-content :document="page" />
+          </div>
           <PageList v-if="artworks" :items="artworks" :title="$t('page.artworks')" pathName="artworks-slug" />
           <PageList v-if="exhibitions" :items="exhibitions" :title="$t('page.exhibitions')"
             pathName="exhibitions-slug" />
@@ -26,11 +28,11 @@
 import getHead from "@/helpers/head";
 
 export default {
-  name: 'exhibitions-slug',
+  name: 'artwork-slug',
   nuxtI18n: {
     paths: {
-      en: "/exhibitions/:slug",
-      es: "/eventos/:slug",
+      en: "/artwork/:slug",
+      es: "/proyecto/:slug",
     },
   },
   head() {
@@ -39,7 +41,7 @@ export default {
   },
   async asyncData({ $content, i18n, params }) {
 
-    const page = await $content(i18n.locale, 'exhibitions', params.slug).fetch();
+    const page = await $content(i18n.locale, 'artworks', params.slug).fetch();
     const artworks = page.artworks && await $content(i18n.locale, "artworks")
       .where({ slug: { $in: page.artworks } })
       .only(["title", "description", "image", "slug"])
