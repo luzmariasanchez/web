@@ -8,9 +8,9 @@
       <div class="mx-0 sm:mx-6">
         <PageNav :page="page"></PageNav>
 
-        <PageContent class="p-6">
+        <div class="bg-gray-200 w-full min-h-[50vh] leading-normal rounded-t p-6">
           <PageGrid :items="items" pathName="academia-slug"></PageGrid>
-        </PageContent>
+        </div>
         <PageAuthor></PageAuthor>
       </div>
     </div>

@@ -6,11 +6,12 @@
     <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
 
       <div class="mx-0 sm:mx-6 mt-12">
-        <PageContent class="p-6 text-xl">
+        <div class="bg-gray-200 w-full min-h-[50vh] leading-normal rounded-t p-6">
+
           <div class="markdown-content">
             <nuxt-content :document="page" />
           </div>
-        </PageContent>
+        </div>
         <!-- <div class="text-center px-16 py-32">List of categories</div> -->
       </div>
     </div>

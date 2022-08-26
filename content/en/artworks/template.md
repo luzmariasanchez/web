@@ -23,6 +23,11 @@ researchs:
   - template
 publications:
   - template
+images:
+  - https://source.unsplash.com/collection/221/1280x800
+  - https://source.unsplash.com/collection/222/1280x800
+  - https://source.unsplash.com/collection/223/1280x800
+  - https://source.unsplash.com/collection/224/1280x800
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit.<!--more--> Sunt aperiam blanditiis minus saepe quis atque ducimus repudiandae. Asperiores cum placeat a tenetur nihil sequi? Saepe, consectetur. Eveniet obcaecati fugiat inventore.

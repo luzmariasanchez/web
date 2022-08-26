@@ -14,11 +14,11 @@ import getHead from "@/helpers/head";
 import loadContent from "@/helpers/loadContent";
 
 export default {
-  name: "artworks",
+  name: "artworks-tag-tag",
   nuxtI18n: {
     paths: {
-      en: "/artworks",
-      es: "/proyectos",
+      en: "/artworks/tag/:tag",
+      es: "/proyectos/tag/:tag",
     },
   },
   head() {
@@ -28,7 +28,9 @@ export default {
   async asyncData(context) {
     const pageKey = 'artworks';
     const { page, error } = await loadContent(context, 'pages', pageKey);
-    const items = await context.$content(context.i18n.locale, pageKey).fetch();
+    const items = await context.$content(context.i18n.locale, pageKey).where({
+      tags: { $contains: context.params.tag }
+    }).fetch();
     const tags = await context.$content(context.i18n.locale, 'tags').fetch();
     return {
       page,

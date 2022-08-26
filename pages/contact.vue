@@ -6,9 +6,9 @@
     <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
 
       <div class="mx-0 sm:mx-6 mt-12">
-        <PageContent class="p-6">
+        <div class="bg-gray-200 w-full min-h-[50vh] leading-normal rounded-t p-6">
           <nuxt-content :document="page" />
-        </PageContent>
+        </div>
         <PageAuthor></PageAuthor>
       </div>
     </div>
