@@ -1,12 +1,12 @@
 <template>
   <div class="relative inline-block">
-    <button @click.stop="toggle" class="text-white">TAGS</button>
+    <button @click.stop="open" class="text-white">TAGS</button>
     <template v-if="opened">
       <Dropdown @close="close">
         <ul>
           <li v-for="(tag, tagIndex) in tags" :key="tagIndex">
             <nuxt-link :to="localePath({ name: pathName, params: { tag: tag.slug } })"
-              class="block hover:bg-gray-200 p-1">{{
+              :class="['block hover:bg-gray-200 p-1', isActive(tag) && 'bg-gray-300']">{{
                   tag.title
               }}
             </nuxt-link>
@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import { ref, useRoute } from 'vue';
 
 export default {
   name: "FilterTags",
@@ -32,21 +31,21 @@ export default {
       required: true
     },
   },
-  setup() {
-    const route = useRoute();
-    const opened = ref(false);
-    function toggle() {
-      opened.value = !opened.value;
-    }
-    function close() {
-      opened.value = false;
-    }
-    console.log(route);
+  data() {
     return {
-      opened,
-      toggle,
-      close
+      opened: false
     }
   },
+  methods: {
+    open() {
+      this.opened = true;
+    },
+    close() {
+      this.opened = false;
+    },
+    isActive(tag) {
+      return tag.slug === this.$route.params.tag;
+    }
+  }
 }
 </script>
