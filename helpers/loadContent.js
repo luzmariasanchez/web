@@ -18,10 +18,10 @@ export default async ({ $content, i18n }, category, slug) => {
         if (res && res.length) return res[0];
       }
     }
-    async function loadRelations(key, service) {
+    async function loadRelations(key, { service, only } = {}) {
       return page[key] && await $content(i18n.locale, service || key)
         .where({ slug: { $in: page[key] } })
-        .only(["title", "description", "image", "slug"])
+        .only(only || ["title", "description", "image", "slug"])
         .fetch();
     }
 
@@ -35,8 +35,8 @@ export default async ({ $content, i18n }, category, slug) => {
         academias: await loadRelations('academias'),
         researchs: await loadRelations('researchs'),
         publications: await loadRelations('publications'),
-        sponsors: await loadRelations('sponsors'),
-        guests: await loadRelations('guests'),
+        sponsors: await loadRelations('sponsors', { only: ["title", "description", "image", "slug", "url"] }),
+        guests: await loadRelations('guests', { only: ["title", "description", "image", "slug", "from", "url"] }),
       },
       error: null
     }

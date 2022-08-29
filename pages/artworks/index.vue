@@ -1,10 +1,10 @@
 <template>
   <div>
-    <template v-if="page">
-      <LayoutGrid :page="page" :items="items" :tags="tags" category="artwork"></LayoutGrid>
+    <template v-if="error">
+      <Error :error="error"></Error>
     </template>
     <template v-else>
-      <Error :error="error"></Error>
+      <LayoutGrid :page="page" :items="items" :tags="tags" category="artwork"></LayoutGrid>
     </template>
   </div>
 </template>

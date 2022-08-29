@@ -1,6 +1,6 @@
 <template>
-  <figure>
-    <img :src="url" :alt="alt" style="width:100%">
+  <figure class="inline-block">
+    <img :src="url" :alt="alt" style="width:100px">
   </figure>
 </template>
 

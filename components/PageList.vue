@@ -1,10 +1,10 @@
 <template>
 
-  <div class="mb-10">
-    <h4 v-if="title" class="text-xl font-semibold">{{ title }}</h4>
+  <div class="mb-6">
+    <h4 v-if="title" class="text-xs font-semibold uppercase">{{  title  }}</h4>
     <ul>
       <li v-for="(item, itemIndex) in items" :key="itemIndex">
-        <nuxt-link :to="localePath({ name: pathName, params: { slug: item.slug } })" class="">{{ item.title }}
+        <nuxt-link :to="localePath({ name: pathName, params: { slug: item.slug } })" class="">{{  item.title  }}
         </nuxt-link>
       </li>
     </ul>

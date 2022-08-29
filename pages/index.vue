@@ -198,7 +198,7 @@
           </div>
           <!--/ Post Content-->
         </div>
-        <PageAuthor></PageAuthor>
+        <Author></Author>
       </div>
     </div>
   </div>

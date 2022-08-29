@@ -2,7 +2,7 @@
 title: Guest Template
 from: A country
 job: A job
-link: http://
+url: http://
 image: https://source.unsplash.com/collection/225/100x100
 ---
 

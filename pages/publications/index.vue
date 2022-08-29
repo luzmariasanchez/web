@@ -11,7 +11,7 @@
         <div class="bg-gray-200 w-full min-h-[50vh] leading-normal rounded-t p-6">
           <PageGrid :items="items" pathName="publication-slug"></PageGrid>
         </div>
-        <PageAuthor></PageAuthor>
+        <Author></Author>
       </div>
     </div>
   </div>

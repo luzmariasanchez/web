@@ -1,10 +1,10 @@
 <template>
   <div>
-    <template v-if="page">
-      <LayoutGrid :page="page" :items="items" :tags="tags" category="artwork"></LayoutGrid>
+    <template v-if="error">
+      <Error :error="error"></Error>
     </template>
     <template v-else>
-      <Error :error="error"></Error>
+      <LayoutGrid :page="page" :items="items" :tags="tags" category="artwork"></LayoutGrid>
     </template>
   </div>
 </template>
@@ -28,15 +28,20 @@ export default {
   async asyncData(context) {
     const pageKey = 'artworks';
     const { page, error } = await loadContent(context, 'pages', pageKey);
+    const { page: tag, error: tagError } = await loadContent(context, 'tags', context.params.tag);
+    console.log('tagError', tagError);
     const items = await context.$content(context.i18n.locale, pageKey).where({
       tags: { $contains: context.params.tag }
     }).fetch();
     const tags = await context.$content(context.i18n.locale, 'tags').fetch();
     return {
-      page,
+      page: {
+        ...page,
+        description: tag?.title
+      },
       items,
       tags,
-      error
+      error: tagError || error
     };
   },
 }

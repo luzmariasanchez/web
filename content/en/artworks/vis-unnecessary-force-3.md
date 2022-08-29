@@ -5,7 +5,8 @@ start: 2017
 end: 2021
 place: tamaulipas-contemporary-art-museum
 tags:
- - collaborative-and-participatory
+ - collaborative
+ - participatory
  - audio-visual
  - cyber-cartography
  - web-data-visualisation

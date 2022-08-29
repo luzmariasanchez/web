@@ -1,10 +1,10 @@
 <template>
   <div>
-    <template v-if="page">
-      <LayoutPage :page="page" :category="category"></LayoutPage>
+    <template v-if="error">
+      <Error :error="error"></Error>
     </template>
     <template v-else>
-      <Error :error="error"></Error>
+      <LayoutPage :page="page" :category="category"></LayoutPage>
     </template>
   </div>
 </template>

@@ -16,7 +16,7 @@
           <PageList v-if="publications" :items="publications" :title="$t('page.publications')"
             pathName="publications-slug" />
         </div>
-        <PageAuthor></PageAuthor>
+        <Author></Author>
       </div>
     </div>
   </div>

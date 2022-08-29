@@ -1,6 +1,6 @@
 <template>
-  <div class="block mb-3 text-gray-700 text-xl text-center p-2 border-solid border border-gray-300">
-    {{ info }}
+  <div class="block mb-3 text-gray-700 text-xl text-left italic">
+    {{  info  }}
   </div>
 </template>
 

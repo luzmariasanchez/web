@@ -22,6 +22,6 @@
 <script>
 
 export default {
-  name: "PageAuthor",
+  name: "Author",
 }
 </script>

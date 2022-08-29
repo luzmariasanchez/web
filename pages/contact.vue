@@ -9,7 +9,7 @@
         <div class="bg-gray-200 w-full min-h-[50vh] leading-normal rounded-t p-6">
           <nuxt-content :document="page" />
         </div>
-        <PageAuthor></PageAuthor>
+        <Author></Author>
       </div>
     </div>
   </div>

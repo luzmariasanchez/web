@@ -1,12 +1,14 @@
 <template>
   <div>
     <template v-if="url">
-      <a :href="url" :target="target">
+      <a :href="url" :target="target" :class="hasClass">
         <slot></slot>
       </a>
     </template>
     <template v-else>
-      <slot></slot>
+      <div :class="hasClass">
+        <slot></slot>
+      </div>
     </template>
   </div>
 </template>
@@ -25,6 +27,13 @@ export default {
       required: false,
       default() {
         return '_blank';
+      }
+    },
+    hasClass: {
+      type: String,
+      required: false,
+      default() {
+        return '';
       }
     },
   },
