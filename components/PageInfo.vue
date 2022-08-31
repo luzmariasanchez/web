@@ -1,5 +1,5 @@
 <template>
-  <div class="block mb-3 text-gray-700 text-xl text-left italic">
+  <div class="block mb-3 text-white text-2xl text-left italic">
     {{  info  }}
   </div>
 </template>

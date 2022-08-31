@@ -1,14 +1,13 @@
 <template>
-  <div class="mb-6">
-    <h4 class="mb-2 text-center text-xs font-semibold uppercase">
-      Video
-    </h4>
-    <template v-if="type === 'youtube'">
-      <PlayerYoutube :id="id"></PlayerYoutube>
-    </template>
-    <template v-if="type === 'vimeo'">
-      <PlayerVimeo :id="id"></PlayerVimeo>
-    </template>
+  <div class="mb-20">
+    <div class="border border-gray-800">
+      <template v-if="type === 'youtube'">
+        <PlayerYoutube :id="id"></PlayerYoutube>
+      </template>
+      <template v-if="type === 'vimeo'">
+        <PlayerVimeo :id="id"></PlayerVimeo>
+      </template>
+    </div>
   </div>
 </template>
 

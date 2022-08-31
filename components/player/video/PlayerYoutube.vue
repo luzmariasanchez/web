@@ -23,7 +23,7 @@ export default {
       type: String,
       required: false,
       default() {
-        return '240px';
+        return '320px';
       }
     },
   },

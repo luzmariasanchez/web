@@ -1,8 +1,6 @@
 <template>
-  <div class="absolute -top-7 text-center w-full">
-    <div class="inline-block bg-gray-200 px-3 py-1 text-sm rounded-t-lg opacity-80">
-      {{  start  }}<template v-if="end"> - {{  end  }}</template>
-    </div>
+  <div class="text-center w-full text-gray-200 text-sm mb-6">
+    {{  start  }}<template v-if="end"> - {{  end  }}</template>
   </div>
 </template>
 

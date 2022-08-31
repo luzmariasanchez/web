@@ -1,8 +1,8 @@
 <template>
 
-  <header class="fixed w-full z-10 shadow-2xl">
+  <header class="w-full bg-black">
     <!--Nav-->
-    <nav class="bg-gray-800 p-4 mt-0 w-full">
+    <nav class="p-4 mt-0 w-full">
       <div class="container mx-auto flex space-between">
 
         <div class="flex items-center">
@@ -19,27 +19,27 @@
               <li class="mr-2">
                 <nuxt-link :to="localePath({ name: 'artworks' })"
                   class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
-                  href="#">{{ $t('page.artworks') }}</nuxt-link>
+                  href="#">{{  $t('page.artworks')  }}</nuxt-link>
               </li>
               <li class="mr-2">
                 <nuxt-link :to="localePath({ name: 'exhibitions' })"
                   class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
-                  href="#">{{ $t('page.exhibitions') }}</nuxt-link>
+                  href="#">{{  $t('page.exhibitions')  }}</nuxt-link>
               </li>
               <li class="mr-2">
                 <nuxt-link :to="localePath({ name: 'researchs' })"
                   class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
-                  href="#">{{ $t('page.researchs') }}</nuxt-link>
+                  href="#">{{  $t('page.researchs')  }}</nuxt-link>
               </li>
               <li class="mr-2">
                 <nuxt-link :to="localePath({ name: 'academias' })"
                   class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
-                  href="#">{{ $t('page.academias') }}</nuxt-link>
+                  href="#">{{  $t('page.academias')  }}</nuxt-link>
               </li>
               <li class="mr-2">
                 <nuxt-link :to="localePath({ name: 'publications' })"
                   class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
-                  href="#">{{ $t('page.publications') }}</nuxt-link>
+                  href="#">{{  $t('page.publications')  }}</nuxt-link>
               </li>
             </ul>
           </div>
@@ -65,7 +65,7 @@
             <li class="ml-2">
               <nuxt-link :to="switchLocalePath(nextLocale.code)"
                 class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
-                href="#">{{ ('' + nextLocale.code).toUpperCase() }}</nuxt-link>
+                href="#">{{  ('' + nextLocale.code).toUpperCase()  }}</nuxt-link>
             </li>
           </ul>
         </div>

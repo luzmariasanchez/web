@@ -4,7 +4,11 @@
       <Error :error="error"></Error>
     </template>
     <template v-else>
-      <LayoutGrid :page="page" :items="items" :tags="tags" category="artwork"></LayoutGrid>
+      <div class="w-full container mx-auto">
+        <PageHead :page="category"></PageHead>
+        <PageGrid :items="items"></PageGrid>
+        <Author></Author>
+      </div>
     </template>
   </div>
 </template>
@@ -12,6 +16,7 @@
 <script>
 import getHead from "@/helpers/head";
 import loadContent from "@/helpers/loadContent";
+import { computed } from "vue";
 
 export default {
   name: "artworks",
@@ -26,13 +31,19 @@ export default {
     return getHead(this.page, i18nHead);
   },
   async asyncData(context) {
-    const pageKey = 'artworks';
-    const { page, error } = await loadContent(context, 'pages', pageKey);
-    const items = await context.$content(context.i18n.locale, pageKey).fetch();
+    const categoryKey = 'artworks';
+    const { page: category, error } = await loadContent(context, 'categories', categoryKey);
+    const items = await context.$content(context.i18n.locale, categoryKey).fetch();
     const tags = await context.$content(context.i18n.locale, 'tags').fetch();
+    const itemsWithCategory = computed(() => {
+      return items.map(item => ({
+        ...item,
+        category,
+      }))
+    })
     return {
-      page,
-      items,
+      category,
+      items: itemsWithCategory.value,
       tags,
       error
     };

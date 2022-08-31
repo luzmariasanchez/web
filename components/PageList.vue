@@ -1,10 +1,11 @@
 <template>
 
-  <div class="mb-6">
-    <h4 v-if="title" class="text-xs font-semibold uppercase">{{  title  }}</h4>
+  <div class="mb-20">
+    <Subtitle :title="title"></Subtitle>
     <ul>
       <li v-for="(item, itemIndex) in items" :key="itemIndex">
-        <nuxt-link :to="localePath({ name: pathName, params: { slug: item.slug } })" class="">{{  item.title  }}
+        <nuxt-link :to="localePath({ name: pathName, params: { slug: item.slug } })" class="text-gray-200">{{  item.title 
+          }}
         </nuxt-link>
       </li>
     </ul>
@@ -15,7 +16,7 @@
 <script>
 
 export default {
-  name: "PageGrid",
+  name: "PageList",
   props: {
     items: {
       type: Array,

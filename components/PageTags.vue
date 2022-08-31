@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-3 text-left">
+  <div class="mb-20 text-center">
     <Tag v-for="(tag, tagIndex) in tags" :key="tagIndex" :tag="tag" :pathName="`${category}-tag-tag`"></Tag>
   </div>
 </template>

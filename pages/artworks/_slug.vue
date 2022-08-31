@@ -4,7 +4,11 @@
       <Error :error="error"></Error>
     </template>
     <template v-else>
-      <LayoutPage :page="page" :category="category"></LayoutPage>
+      <div class="w-full container mx-auto">
+        <PageHead :page="item" :category="category"></PageHead>
+        <LayoutPage :page="item" :category="category"></LayoutPage>
+        <Author></Author>
+      </div>
     </template>
   </div>
 </template>
@@ -23,13 +27,14 @@ export default {
   },
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
-    return getHead(this.page, i18nHead);
+    return getHead(this.item, i18nHead);
   },
   async asyncData(context) {
-    const category = 'artworks';
-    const { page, error } = await loadContent(context, category, context.params.slug);
+    const categoryKey = 'artworks';
+    const { page: category } = await loadContent(context, 'categories', categoryKey);
+    const { page: item, error } = await loadContent(context, categoryKey, context.params.slug);
     return {
-      page, error, category
+      item, error, category
     }
   },
 }

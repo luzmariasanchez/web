@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  name: "GalleryImage",
+  name: "Picture",
   props: {
     url: {
       type: String,

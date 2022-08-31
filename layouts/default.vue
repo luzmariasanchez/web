@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="bg-black">
 
     <Head />
-    <div class="pt-[68px]">
+    <div class="min-h-screen">
       <Nuxt />
-      <Foot />
     </div>
+    <Foot />
   </div>
 </template>
 

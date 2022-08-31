@@ -1,11 +1,13 @@
 <template>
   <div>
-    <figure>
-      <img v-if="place.image" :src="place.image" :alt="place.title" style="width:100%">
-    </figure>
-    <div class="text-center">
-      <div class="">{{  place.title  }}</div>
-      <div v-if="place.address" class="text-xs">{{  place.address  }}</div>
+    <div :class="['grid gap-5', place.image ? 'grid-cols-2' : 'grid-cols-1']">
+      <figure v-if="place.image">
+        <img :src="place.image" :alt="place.title" style="width:100%">
+      </figure>
+      <div :class="place.image ? 'text-left' : 'text-center'">
+        <div class="text-gray-200">{{  place.title  }}</div>
+        <div v-if="place.address" class="text-gray-400 text-xs">{{  place.address  }}</div>
+      </div>
     </div>
   </div>
 </template>

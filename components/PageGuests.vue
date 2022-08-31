@@ -1,9 +1,7 @@
 <template>
-  <div class="mb-6 text-center">
-    <h4 class="text-xs font-semibold uppercase mb-2">
-      Guests
-    </h4>
-    <div>
+  <div class="mb-20 text-center w-full">
+    <Subtitle :title="'Guests'"></Subtitle>
+    <div class="grid grid-flow-col auto-cols-max gap-7">
       <Guest v-for="(guest, guestIndex) in guests" :key="guestIndex" :guest="guest"></Guest>
     </div>
   </div>

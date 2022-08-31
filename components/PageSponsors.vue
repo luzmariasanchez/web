@@ -1,9 +1,7 @@
 <template>
-  <div class="mb-6 text-center">
-    <h4 class="text-xs font-semibold uppercase mb-2">
-      Sponsors
-    </h4>
-    <div>
+  <div class="mb-20 text-center">
+    <Subtitle :title="'Sponsors'"></Subtitle>
+    <div class="grid grid-flow-col auto-cols-max gap-7">
       <Sponsor v-for="(sponsor, sponsorIndex) in sponsors" :key="sponsorIndex" :sponsor="sponsor"></Sponsor>
     </div>
   </div>

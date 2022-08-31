@@ -1,13 +1,12 @@
 <template>
 
-  <div class="w-full h-screen max-h-96 m-0 p-0 bg-cover bg-bottom" :style="{
-    background: `url('${page.image || '/images/default.jpg'}') no-repeat center center`,
-  }">
-    <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
-      <h1 class="text-white font-extrabold text-3xl md:text-5xl drop-shadow-md">
+  <div class="w-full">
+    <div class="text-center pt-10 pb-10">
+      <div v-if="category" class="text-xs uppercase mb-2" :style="{ color: category.color }">{{  category.title  }}</div>
+      <h1 class="text-white font-bold text-3xl md:text-5xl">
         {{  page.title  }}
       </h1>
-      <p class="text-xl md:text-2xl text-gray-300" v-if="page.description">{{  page.description  }}</p>
+      <p class="text-lg text-gray-500 mt-2" v-if="page.description">{{  page.description  }}</p>
     </div>
   </div>
 
@@ -21,6 +20,10 @@ export default {
     page: {
       type: Object,
       required: true,
+    },
+    category: {
+      type: Object,
+      required: false,
     },
   },
 }

@@ -1,6 +1,6 @@
 ---
 title: Artwork Template
-image: https://source.unsplash.com/collection/225/1280x500
+image: https://source.unsplash.com/collection/225/1280x800
 description: A description
 video: https://www.youtube.com/watch?v=
 start: 2000
@@ -13,6 +13,8 @@ sponsors:
  - template
 guests:
  - template
+ - amanda-de-la-garza
+ - morten-sondergaard
 artworks:
   - template
 exhibitions:
@@ -23,7 +25,7 @@ researchs:
   - template
 publications:
   - template
-images:
+pictures:
   - https://source.unsplash.com/collection/221/120x120
   - https://source.unsplash.com/collection/222/120x120
   - https://source.unsplash.com/collection/223/120x120
