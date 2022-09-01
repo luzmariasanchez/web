@@ -10,7 +10,7 @@
             <ul class="list-reset flex flex-1 items-center">
               <li>
                 <button
-                  class="lg:hidden ispanne-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                  class="lg:hidden inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2 text-xl"
                   @click.stop="toggleMenu"><i :class="showMenu ? 'icon-cancel' : 'icon-menu'"></i></button>
               </li>
               <li>
