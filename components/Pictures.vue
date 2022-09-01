@@ -10,7 +10,7 @@
 <script>
 
 export default {
-  name: "PagePictures",
+  name: "Pictures",
   props: {
     pictures: {
       type: Array,

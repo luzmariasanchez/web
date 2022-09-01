@@ -10,7 +10,7 @@
 <script>
 
 export default {
-  name: "PagePlace",
+  name: "Places",
   props: {
     place: {
       type: Object,

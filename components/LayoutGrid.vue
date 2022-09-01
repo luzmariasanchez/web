@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageHead :page="page"></PageHead>
+    <Title :page="page"></Title>
     <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
       <div class="mx-0 sm:mx-6">
         <PageNav>

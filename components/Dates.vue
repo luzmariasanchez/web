@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  name: "PageDates",
+  name: "Dates",
   props: {
     start: {
       type: Number,

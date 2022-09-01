@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageHead :page="page"></PageHead>
+    <Title :page="page"></Title>
 
     <!--Container-->
     <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">

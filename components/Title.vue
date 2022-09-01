@@ -15,7 +15,7 @@
 <script>
 
 export default {
-  name: "PageHead",
+  name: "Title",
   props: {
     page: {
       type: Object,

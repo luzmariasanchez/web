@@ -5,7 +5,7 @@
     </template>
     <template v-else>
       <div class="w-full container mx-auto">
-        <PageHead :page="category"></PageHead>
+        <Title :page="category"></Title>
         <PageGrid :items="items"></PageGrid>
         <Author></Author>
       </div>

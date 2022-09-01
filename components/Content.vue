@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  name: "PageContent",
+  name: "Content",
   props: {
     page: {
       type: Object,

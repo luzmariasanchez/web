@@ -16,7 +16,7 @@
 import { isYoutubeUrl, getYoutubeId, isVimeoUrl, getVimeoId } from '~/helpers/utils/url';
 
 export default {
-  name: "PageVideo",
+  name: "Video",
   props: {
     url: {
       type: String,

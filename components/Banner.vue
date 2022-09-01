@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  name: "PageInfo",
+  name: "Banner",
   props: {
     url: {
       type: String,

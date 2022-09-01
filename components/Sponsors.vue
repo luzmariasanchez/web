@@ -10,7 +10,7 @@
 <script>
 
 export default {
-  name: "PageSponsors",
+  name: "Sponsors",
   props: {
     sponsors: {
       type: Array,

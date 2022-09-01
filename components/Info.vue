@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  name: "PageInfo",
+  name: "Info",
   props: {
     info: {
       type: String,
