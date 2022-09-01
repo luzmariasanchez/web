@@ -18,11 +18,11 @@ import getHead from "@/helpers/head";
 import loadContent from "@/helpers/loadContent";
 
 export default {
-  name: 'artworks-slug',
+  name: 'researchs-slug',
   nuxtI18n: {
     paths: {
-      en: "/artwork/:slug",
-      es: "/proyecto/:slug",
+      en: "/research/:slug",
+      es: "/investigaciones/:slug",
     },
   },
   head() {
@@ -33,7 +33,7 @@ export default {
     }, i18nHead);
   },
   async asyncData(context) {
-    const categoryKey = 'artworks';
+    const categoryKey = 'researchs';
     const { page: category } = await loadContent(context, 'categorys', categoryKey);
     const { page: item, error } = await loadContent(context, categoryKey, context.params.slug);
     return {

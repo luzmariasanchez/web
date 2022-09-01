@@ -1,24 +1,28 @@
 <template>
   <div>
-    <Title :page="page"></Title>
-
-    <!--Container-->
-    <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
-
-      <div class="mx-0 sm:mx-6">
-        <PageNav :page="page"></PageNav>
-
-        <div class="bg-gray-200 w-full min-h-[50vh] leading-normal rounded-t p-6">
-          <PageGrid :items="items" pathName="exhibition-slug"></PageGrid>
-        </div>
+    <template v-if="error">
+      <Error :error="error"></Error>
+    </template>
+    <template v-else>
+      <div class="w-full container mx-auto">
+        <Title :title="category.title"></Title>
+        <PageNav>
+          <template #left>
+            <i class="icon-filter text-gray-300 mr-2"></i>
+            <FilterTags :tags="tags" :pathName="`${category.slug}-tag-tag`"></FilterTags>
+          </template>
+        </PageNav>
+        <PageGrid :items="items"></PageGrid>
         <Author></Author>
       </div>
-    </div>
+    </template>
   </div>
 </template>
 
 <script>
 import getHead from "@/helpers/head";
+import loadContent from "@/helpers/loadContent";
+import { computed } from "vue";
 
 export default {
   name: "exhibitions",
@@ -30,14 +34,24 @@ export default {
   },
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
-    return getHead(this.page, i18nHead);
+    return getHead(this.category, i18nHead);
   },
-  async asyncData({ $content, i18n }) {
-    const page = await $content(i18n.locale, "pages", "exhibitions").fetch();
-    const items = await $content(i18n.locale, "exhibitions").fetch();
+  async asyncData(context) {
+    const categoryKey = 'exhibitions';
+    const { page: category, error } = await loadContent(context, 'categorys', categoryKey);
+    const items = await context.$content(context.i18n.locale, categoryKey).fetch();
+    const tags = await context.$content(context.i18n.locale, 'tags').fetch();
+    const itemsWithCategory = computed(() => {
+      return items.map(item => ({
+        ...item,
+        category,
+      }))
+    })
     return {
-      items,
-      page
+      category,
+      items: itemsWithCategory.value,
+      tags,
+      error
     };
   },
 }

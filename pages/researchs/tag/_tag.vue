@@ -5,7 +5,7 @@
     </template>
     <template v-else>
       <div class="w-full container mx-auto">
-        <Title :title="category.title"></Title>
+        <Title :title="category.title" :description="tag.title"></Title>
         <PageNav>
           <template #left>
             <i class="icon-filter text-gray-300 mr-2"></i>
@@ -25,21 +25,27 @@ import loadContent from "@/helpers/loadContent";
 import { computed } from "vue";
 
 export default {
-  name: "academias",
+  name: "researchs-tag-tag",
   nuxtI18n: {
     paths: {
-      en: "/academia",
-      es: "/academico",
+      en: "/research/tag/:tag",
+      es: "/investigaciones/tag/:tag",
     },
   },
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
-    return getHead(this.category, i18nHead);
+    return getHead({
+      ...this.page,
+      title: `${this.tag.title} - ${this.category.title}`
+    }, i18nHead);
   },
   async asyncData(context) {
-    const categoryKey = 'academias';
+    const categoryKey = 'researchs';
     const { page: category, error } = await loadContent(context, 'categorys', categoryKey);
-    const items = await context.$content(context.i18n.locale, categoryKey).fetch();
+    const { page: tag, error: tagError } = await loadContent(context, 'tags', context.params.tag);
+    const items = await context.$content(context.i18n.locale, categoryKey).where({
+      tags: { $contains: context.params.tag }
+    }).fetch();
     const tags = await context.$content(context.i18n.locale, 'tags').fetch();
     const itemsWithCategory = computed(() => {
       return items.map(item => ({
@@ -49,9 +55,10 @@ export default {
     })
     return {
       category,
+      tag,
       items: itemsWithCategory.value,
       tags,
-      error
+      error: tagError || error
     };
   },
 }

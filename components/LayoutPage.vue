@@ -1,7 +1,7 @@
 <template>
   <div>
     <Banner v-if="page.image" :url="page.image" :alt="page.title" class="mb-6"></Banner>
-    <div class="w-3/5 mx-auto">
+    <div class="w-full sm:w-3/5 mx-auto">
       <Dates v-if="page.start" :start="page.start" :end="page.end"></Dates>
       <Info v-if="page.info" :info="page.info"></Info>
       <Content :page="page"></Content>

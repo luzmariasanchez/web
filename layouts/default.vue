@@ -2,7 +2,7 @@
   <div class="bg-black">
 
     <Head />
-    <div class="min-h-screen">
+    <div class="min-h-screen px-3">
       <Nuxt />
     </div>
     <Foot />
