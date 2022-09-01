@@ -17,12 +17,10 @@
         </div>
       </nuxt-link>
     </div>
-    <div v-else class="text-center p-3 ">
-      Empty
-    </div>
+    <template v-else>
+      <Message text="Empty"></Message>
+    </template>
   </div>
-
-
 </template>
 
 <script>

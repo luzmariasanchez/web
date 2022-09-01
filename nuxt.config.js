@@ -5,7 +5,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'lms',
-    titleTemplate: '%s - Luz María Sánchez',
+    titleTemplate: '%s | Luz María Sánchez',
     htmlAttrs: {
       lang: 'en'
     },

@@ -5,7 +5,7 @@
     </template>
     <template v-else>
       <div class="w-full container mx-auto">
-        <Title :page="item" :category="category"></Title>
+        <Title :title="item.title" :description="item.description" :category="category"></Title>
         <LayoutPage :page="item" :category="category"></LayoutPage>
         <Author></Author>
       </div>
@@ -27,11 +27,14 @@ export default {
   },
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
-    return getHead(this.item, i18nHead);
+    return getHead({
+      ...this.page,
+      title: `${this.item.title} - ${this.category.title}`
+    }, i18nHead);
   },
   async asyncData(context) {
     const categoryKey = 'artworks';
-    const { page: category } = await loadContent(context, 'categories', categoryKey);
+    const { page: category } = await loadContent(context, 'categorys', categoryKey);
     const { page: item, error } = await loadContent(context, categoryKey, context.params.slug);
     return {
       item, error, category

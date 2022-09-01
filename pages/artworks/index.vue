@@ -5,7 +5,13 @@
     </template>
     <template v-else>
       <div class="w-full container mx-auto">
-        <Title :page="category"></Title>
+        <Title :title="category.title"></Title>
+        <PageNav>
+          <template #left>
+            <i class="icon-filter text-gray-300 mr-2"></i>
+            <FilterTags :tags="tags" :pathName="`${category.slug}-tag-tag`"></FilterTags>
+          </template>
+        </PageNav>
         <PageGrid :items="items"></PageGrid>
         <Author></Author>
       </div>
@@ -28,11 +34,11 @@ export default {
   },
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
-    return getHead(this.page, i18nHead);
+    return getHead(this.category, i18nHead);
   },
   async asyncData(context) {
     const categoryKey = 'artworks';
-    const { page: category, error } = await loadContent(context, 'categories', categoryKey);
+    const { page: category, error } = await loadContent(context, 'categorys', categoryKey);
     const items = await context.$content(context.i18n.locale, categoryKey).fetch();
     const tags = await context.$content(context.i18n.locale, 'tags').fetch();
     const itemsWithCategory = computed(() => {

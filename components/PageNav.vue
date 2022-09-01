@@ -1,9 +1,8 @@
 <template>
-  <!--Nav-->
-  <nav class="mt-0 w-full">
-    <div class="container mx-auto flex items-center">
+  <nav class="w-full mb-3">
+    <div class="flex items-center">
 
-      <div class="flex w-1/2 pl-4 text-sm">
+      <div class="flex w-1/2 text-sm">
         <slot name="left"></slot>
       </div>
 
