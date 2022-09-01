@@ -1,6 +1,6 @@
 <template>
   <div class="mb-20">
-    <div class="border border-gray-800">
+    <div class="border border-gray-600">
       <template v-if="type === 'youtube'">
         <PlayerYoutube :id="id"></PlayerYoutube>
       </template>
