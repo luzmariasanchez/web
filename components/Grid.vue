@@ -26,7 +26,7 @@
 <script>
 
 export default {
-  name: "PageGrid",
+  name: "Grid",
   props: {
     items: {
       type: Array,

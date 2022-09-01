@@ -17,6 +17,6 @@
 <script>
 
 export default {
-  name: "PageNav",
+  name: "Nav",
 }
 </script>

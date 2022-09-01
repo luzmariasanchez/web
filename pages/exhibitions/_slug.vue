@@ -6,7 +6,7 @@
     <template v-else>
       <div class="w-full container mx-auto">
         <Title :title="item.title" :description="item.description" :category="category"></Title>
-        <LayoutPage :page="item" :category="category"></LayoutPage>
+        <Detail :page="item" :category="category"></Detail>
         <Author></Author>
       </div>
     </template>

@@ -6,13 +6,13 @@
     <template v-else>
       <div class="w-full container mx-auto">
         <Title :title="category.title"></Title>
-        <PageNav>
+        <Nav>
           <template #left>
             <i class="icon-filter text-gray-300 mr-2"></i>
             <FilterTags :tags="tags" :pathName="`${category.slug}-tag-tag`"></FilterTags>
           </template>
-        </PageNav>
-        <PageGrid :items="items"></PageGrid>
+        </Nav>
+        <Grid :items="items"></Grid>
         <Author></Author>
       </div>
     </template>

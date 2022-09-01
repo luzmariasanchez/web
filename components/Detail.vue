@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: "LayoutPage",
+  name: "Detail",
   props: {
     page: {
       type: Object,
