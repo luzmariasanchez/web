@@ -1,9 +1,8 @@
 <template>
-
   <div>
     <div v-if="items.length" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <nuxt-link v-for="(item, itemIndex) in items" :key="itemIndex"
-        :to="localePath({ name: `${item.category.slug}-slug`, params: { slug: item.slug } })">
+        :to="localePath({ name: `${item.category.slug}-slug`, params: { slug: item.slug } })" class="pb-5">
         <div class="rounded-lg overflow-hidden">
           <div class="relative pb-2/3">
             <img class="absolute h-full w-full object-cover hover:scale-110 transition-transform duration-500	ease-out"
