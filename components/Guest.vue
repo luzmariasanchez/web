@@ -1,5 +1,5 @@
 <template>
-  <Link :url="guest.url" hasClass="block flex flex-wrap items-center mb-1">
+  <Link :url="guest.url" hasClass="block flex flex-wrap items-center mx-4 mb-4">
   <div v-if="guest.image" class="mr-3">
     <figure>
       <img class="rounded-full" :src="guest.image" :alt="guest.title" style="width:50px">

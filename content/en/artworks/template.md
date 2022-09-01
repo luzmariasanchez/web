@@ -11,10 +11,12 @@ tags:
  - template
 sponsors:
  - template
+ - fondo-nacional-para-la-cultura-y-las-artes
 guests:
  - template
  - amanda-de-la-garza
  - morten-sondergaard
+ - ryszard-kluszczynski
 artworks:
   - template
 exhibitions:

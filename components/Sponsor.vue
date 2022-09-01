@@ -1,5 +1,5 @@
 <template>
-  <Link :url="sponsor.url" class="inline-block">
+  <Link :url="sponsor.url" class="mx-4 mb-4">
   <figure v-if="sponsor.image" class="mb-2">
     <img :src="sponsor.image" :alt="sponsor.title" style="width:140px">
   </figure>

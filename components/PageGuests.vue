@@ -1,7 +1,7 @@
 <template>
   <div class="mb-20 text-center w-full">
     <Subtitle :title="'Guests'"></Subtitle>
-    <div class="grid grid-flow-col auto-cols-max gap-7">
+    <div class="flex flex-wrap justify-center">
       <Guest v-for="(guest, guestIndex) in guests" :key="guestIndex" :guest="guest"></Guest>
     </div>
   </div>
