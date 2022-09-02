@@ -63,7 +63,7 @@
                   class="icon-search"></i></nuxt-link>
             </li>
             <li class="ml-2">
-              <nuxt-link :to="localePath('info')"
+              <nuxt-link :to="localePath('bio')"
                 class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"><i
                   class="icon-info"></i></nuxt-link>
             </li>
