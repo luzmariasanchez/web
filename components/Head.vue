@@ -58,7 +58,7 @@
         <div class="flex items-center text-sm">
           <ul class="list-reset flex flex-1 items-center">
             <li class="ml-2">
-              <nuxt-link to="/"
+              <nuxt-link :to="localePath('search')"
                 class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"><i
                   class="icon-search"></i></nuxt-link>
             </li>

@@ -13,7 +13,7 @@ import getHead from "@/helpers/head";
 import loadList from "@/helpers/loadList";
 
 export default {
-  name: "IndexPage",
+  name: "index",
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
     return getHead(this.page, i18nHead, {
@@ -22,23 +22,20 @@ export default {
   },
   async asyncData(context) {
     const page = await context.$content(context.i18n.locale, 'pages', 'index').fetch();
-    const { items: academias } = await loadList(context, 'academias');
-    const { items: artworks } = await loadList(context, 'artworks');
-    const { items: exhibitions } = await loadList(context, 'exhibitions');
-    const { items: publications } = await loadList(context, 'publications');
-    const { items: researchs } = await loadList(context, 'researchs');
-    const items = computed(() => {
-      return sortBy([
-        ...academias.value,
-        ...artworks.value,
-        ...exhibitions.value,
-        ...publications.value,
-        ...researchs.value,
-      ], 'start').reverse()
-    })
+    const { items: academias } = await loadList(context, 'academias', { limit: 3 });
+    const { items: artworks } = await loadList(context, 'artworks', { limit: 3 });
+    const { items: exhibitions } = await loadList(context, 'exhibitions', { limit: 3 });
+    const { items: publications } = await loadList(context, 'publications', { limit: 3 });
+    const { items: researchs } = await loadList(context, 'researchs', { limit: 3 });
     return {
       page,
-      items: items.value
+      items: sortBy([
+        ...academias,
+        ...artworks,
+        ...exhibitions,
+        ...publications,
+        ...researchs,
+      ], 'start').reverse()
     };
   },
 }

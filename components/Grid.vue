@@ -4,7 +4,7 @@
       <Bloc v-for="(item, itemIndex) in items" :key="itemIndex" :item="item"></Bloc>
     </div>
     <template v-else>
-      <Message text="Empty"></Message>
+      <Message :text="emptyMessage"></Message>
     </template>
   </div>
 </template>
@@ -18,6 +18,13 @@ export default {
       type: Array,
       required: true,
     },
+    emptyMessage: {
+      type: String,
+      required: false,
+      default() {
+        return 'No result found'
+      }
+    }
   },
 }
 </script>

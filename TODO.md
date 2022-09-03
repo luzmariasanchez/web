@@ -3,7 +3,6 @@ TODO
 - image bucket
 - contact form id
 - translations
-- search
 - gallery
 - guest popup
 - sponsor popup
@@ -11,3 +10,6 @@ TODO
 - not found message
 - list limit and load more
 - restrict fields loaded in lists
+- surround links
+- update home grid to fit no hole at the end
+- encode query

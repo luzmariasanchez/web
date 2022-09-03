@@ -47,16 +47,14 @@ export default {
       tags: { $contains: context.params.tag }
     }).fetch();
     const tags = await context.$content(context.i18n.locale, 'tags').fetch();
-    const itemsWithCategory = computed(() => {
-      return items.map(item => ({
-        ...item,
-        category,
-      }))
-    })
+
     return {
       category,
       tag,
-      items: itemsWithCategory.value,
+      items: items.map(item => ({
+        ...item,
+        category,
+      })),
       tags,
       error: tagError || error
     };

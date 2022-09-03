@@ -1,5 +1,5 @@
 <template>
-  <div class="border border-gray-600 rounded text-center text-gray-300 p-3">
+  <div class="text-center text-gray-300 py-20">
     {{  text  }}
   </div>
 </template>

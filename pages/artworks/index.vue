@@ -41,15 +41,13 @@ export default {
     const { page: category, error } = await loadContent(context, 'categorys', categoryKey);
     const items = await context.$content(context.i18n.locale, categoryKey).fetch();
     const tags = await context.$content(context.i18n.locale, 'tags').fetch();
-    const itemsWithCategory = computed(() => {
-      return items.map(item => ({
-        ...item,
-        category,
-      }))
-    })
+
     return {
       category,
-      items: itemsWithCategory.value,
+      items: items.map(item => ({
+        ...item,
+        category,
+      })),
       tags,
       error
     };
