@@ -1,8 +1,7 @@
 TODO
 
 - image bucket
-- bio
-- contact
+- contact form id
 - translations
 - search
 - gallery
@@ -10,3 +9,5 @@ TODO
 - sponsor popup
 - place popup
 - not found message
+- list limit and load more
+- restrict fields loaded in lists

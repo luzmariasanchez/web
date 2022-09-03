@@ -1,15 +1,23 @@
 <template>
-  <div>
-    <Title :page="page"></Title>
-
-    <!--Container-->
-    <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
-
-      <div class="mx-0 sm:mx-6 mt-12">
-        <div class="bg-gray-200 w-full min-h-[50vh] leading-normal rounded-t p-6">
-          <nuxt-content :document="page" />
+  <div class="w-full container mx-auto">
+    <Title :title="page.title" :description="page.description"></Title>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div>
+        <Content :page="page"></Content>
+        <div class="text-gray-400">
+          <div class="mb-2">
+            <i class="icon-location"></i> {{  page.address  }}
+          </div>
+          <div class="mb-2">
+            <i class="icon-mail"></i> {{  page.email  }}
+          </div>
+          <div class="mb-2">
+            <i class="icon-phone"></i> {{  page.phone  }}
+          </div>
         </div>
-        <Author></Author>
+      </div>
+      <div>
+        <ContactForm :formUrl="formUrl" />
       </div>
     </div>
   </div>
@@ -32,8 +40,10 @@ export default {
   },
   async asyncData({ $content, i18n }) {
     const page = await $content(i18n.locale, "pages", "contact").fetch();
+    const formUrl = 'https://submit-form.com/XXXXXXXXXXX'
     return {
-      page
+      page,
+      formUrl
     };
   },
 }
