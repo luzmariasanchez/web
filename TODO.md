@@ -3,11 +3,10 @@ TODO
 - image bucket
 - contact form id
 - translations
-- gallery
 - guest popup
 - sponsor popup
 - place popup
-- not found message
+- merge notFound and message components
 - list limit and load more
 - restrict fields loaded in lists
 - surround links

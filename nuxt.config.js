@@ -30,6 +30,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/click-outside.client.js',
+    { src: '~/plugins/vue-gallery.js', mode: "client" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
