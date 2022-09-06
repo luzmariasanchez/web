@@ -47,7 +47,6 @@ export default {
     let query = context.query.q
     if (query) {
       query = decodeURIComponent(context.query.q);
-      console.log('query', query);
       const options = { limit: 6, query };
       const { items: academias } = await loadList(context, 'academias', options);
       const { items: artworks } = await loadList(context, 'artworks', options);
