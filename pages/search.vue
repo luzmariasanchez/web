@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      const queryValue = this.$refs.input.value;
+      const queryValue = encodeURIComponent(this.$refs.input.value);
       this.$router.push(this.localePath({ name: 'search', query: { q: queryValue } }))
     },
   },
@@ -44,8 +44,11 @@ export default {
   async asyncData(context) {
     const page = await context.$content(context.i18n.locale, 'pages', 'search').fetch();
     let items = [];
-    if (context.query.q) {
-      const options = { limit: 6, query: context.query.q };
+    let query = context.query.q
+    if (query) {
+      query = decodeURIComponent(context.query.q);
+      console.log('query', query);
+      const options = { limit: 6, query };
       const { items: academias } = await loadList(context, 'academias', options);
       const { items: artworks } = await loadList(context, 'artworks', options);
       const { items: exhibitions } = await loadList(context, 'exhibitions', options);
@@ -62,7 +65,7 @@ export default {
     return {
       page,
       items,
-      query: context.query.q
+      query
     };
   },
 }
