@@ -22,7 +22,6 @@
 <script>
 import getHead from "@/helpers/head";
 import loadContent from "@/helpers/loadContent";
-import { computed } from "vue";
 
 export default {
   name: "artworks",
@@ -39,8 +38,15 @@ export default {
   async asyncData(context) {
     const categoryKey = 'artworks';
     const { page: category, error } = await loadContent(context, 'categorys', categoryKey);
-    const items = await context.$content(context.i18n.locale, categoryKey).fetch();
-    const tags = await context.$content(context.i18n.locale, 'tags').fetch();
+
+    const items = await context.$content(context.i18n.locale, categoryKey)
+      .sortBy(['start', 'desc'])
+      .only(['slug', 'title', 'description', 'image', 'start'])
+      .fetch();
+    const tags = await context.$content(context.i18n.locale, 'tags')
+      .sortBy(['slug', 'asc'])
+      .only(['slug', 'title'])
+      .fetch();
 
     return {
       category,

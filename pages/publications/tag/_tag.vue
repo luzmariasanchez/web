@@ -22,7 +22,6 @@
 <script>
 import getHead from "@/helpers/head";
 import loadContent from "@/helpers/loadContent";
-import { computed } from "vue";
 
 export default {
   name: "publications-tag-tag",
@@ -43,10 +42,17 @@ export default {
     const categoryKey = 'publications';
     const { page: category, error } = await loadContent(context, 'categorys', categoryKey);
     const { page: tag, error: tagError } = await loadContent(context, 'tags', context.params.tag);
-    const items = await context.$content(context.i18n.locale, categoryKey).where({
-      tags: { $contains: context.params.tag }
-    }).fetch();
-    const tags = await context.$content(context.i18n.locale, 'tags').fetch();
+    const items = await context.$content(context.i18n.locale, categoryKey)
+      .where({
+        tags: { $contains: context.params.tag }
+      })
+      .sortBy(['start', 'desc'])
+      .only(['slug', 'title', 'description', 'image', 'start'])
+      .fetch();
+    const tags = await context.$content(context.i18n.locale, 'tags')
+      .sortBy(['slug', 'asc'])
+      .only(['slug', 'title'])
+      .fetch();
 
     return {
       category,
