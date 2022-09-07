@@ -1,7 +1,8 @@
 {
   "common": {
     "close": "Close",
-    "tags": "Tags"
+    "tags": "Tags",
+    "sort": "Sort by"
   },
   "page": {
     "artworks": "Artworks",

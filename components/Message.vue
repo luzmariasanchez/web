@@ -1,6 +1,6 @@
 <template>
-  <div class="text-center text-gray-300 py-20">
-    {{  text  }}
+  <div class="text-center text-gray-300 mt-10">
+    {{ text }}
   </div>
 </template>
 
