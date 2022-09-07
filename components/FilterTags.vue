@@ -1,13 +1,13 @@
 <template>
   <div class="relative inline-block">
-    <button @click.stop="open" class="text-white">TAGS</button>
+    <button @click.stop="open" class="text-white">{{ $t('common.tags') }}</button>
     <template v-if="opened">
       <Dropdown @close="close">
         <ul>
           <li v-for="(tag, tagIndex) in tags" :key="tagIndex">
             <nuxt-link :to="localePath({ name: pathName, params: { tag: tag.slug } })"
               :class="['block hover:bg-gray-200 p-1', isActive(tag) && 'bg-gray-300']">{{
-               tag.title 
+                  tag.title
               }}
             </nuxt-link>
           </li>

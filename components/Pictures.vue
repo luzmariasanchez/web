@@ -1,6 +1,6 @@
 <template>
   <div class="mb-20 text-center">
-    <Subtitle :title="'Pictures'"></Subtitle>
+    <Subtitle :title="$t('content.pictures')"></Subtitle>
     <div class="leading-[0]">
       <div v-for="(picture, pictureIndex) in pictures" :key="pictureIndex"
         @click="onPictureClick(picture, pictureIndex)"

@@ -1,6 +1,6 @@
 <template>
   <div class="mb-20 text-center w-full">
-    <Subtitle :title="'Guests'"></Subtitle>
+    <Subtitle :title="$t('content.guests')"></Subtitle>
     <div class="flex flex-wrap justify-center">
       <Guest v-for="(guest, guestIndex) in guests" :key="guestIndex" :guest="guest"></Guest>
     </div>

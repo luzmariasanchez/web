@@ -1,6 +1,6 @@
 <template>
   <div class="mb-20 text-center">
-    <Subtitle :title="'Sponsors'"></Subtitle>
+    <Subtitle :title="$t('content.sponsors')"></Subtitle>
     <div class="flex flex-wrap justify-center">
       <Sponsor v-for="(sponsor, sponsorIndex) in sponsors" :key="sponsorIndex" :sponsor="sponsor"></Sponsor>
     </div>

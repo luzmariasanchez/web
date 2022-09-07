@@ -1,6 +1,6 @@
 <template>
   <div class="mb-20">
-    <Subtitle :title="'Place'"></Subtitle>
+    <Subtitle :title="$t('content.place')"></Subtitle>
     <Link :url="place.url">
     <Place :place="place"></Place>
     </Link>

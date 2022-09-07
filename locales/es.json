@@ -1,6 +1,7 @@
 {
   "common": {
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "tags": "Tags"
   },
   "page": {
     "artworks": "Obras",
@@ -9,8 +10,14 @@
     "academias": "Académico",
     "publications": "Publicaciones",
     "search": "Buscar",
-    "about": "Bio",
+    "bio": "Bio",
     "contact": "Contacto"
+  },
+  "content": {
+    "place": "Lugar",
+    "guests": "Invitados",
+    "sponsors": "Sponsors",
+    "pictures": "Galleria"
   },
   "author": {
     "title": "Luz María Sánchez",
