@@ -1,7 +1,7 @@
 ---
 title: Vis. [un]necessary force_1
 description: (V. [u]nf_1)
-image: https://source.unsplash.com/collection/220/1280x800
+image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/artwork/image/original/vis1-7.jpg
 video: https://www.youtube.com/watch?v=rB-xZ5NqTYE
 start: 2014
 end: 2015

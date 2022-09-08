@@ -1,6 +1,7 @@
 export default {
   url: 'https://www.luzmariasanchez.com',
   contactFormUrl: 'https://submit-form.com/',
+  imageDefault: '/images/default.jpg',
   aws: {
     region: 'us-east-2',
     bucket: 'luzmariasanchez',

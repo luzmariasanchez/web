@@ -1,7 +1,8 @@
 <template>
   <div>
     <div v-if="items.length" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <Bloc v-for="(item, itemIndex) in items" :key="itemIndex" :item="item" :class="getClassByIndex(itemIndex)"></Bloc>
+      <Bloc v-for="(item, itemIndex) in items" :key="itemIndex" :item="item" :class="getClassByIndex(itemIndex)"
+        :imageStore="getImageStoreByIndex(itemIndex)"></Bloc>
     </div>
     <template v-else>
       <Message text="Empty"></Message>
@@ -33,8 +34,17 @@ export default {
           return '';
       }
     }
+    function getImageStoreByIndex(index) {
+      switch (index) {
+        case 0:
+          return 'bg';
+        default:
+          return 'medium';
+      }
+    }
     return {
-      getClassByIndex
+      getClassByIndex,
+      getImageStoreByIndex
     }
   }
 }

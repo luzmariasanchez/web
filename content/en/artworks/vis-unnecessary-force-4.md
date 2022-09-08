@@ -1,6 +1,7 @@
 ---
 title: Vis. [un]necessary force_4
 description: (V. [u]nf_4)
+image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/artwork/image/original/vis-4.jpg
 video: https://www.youtube.com/watch?v=rB-xZ5NqTYE
 start: 2018
 end: 2021

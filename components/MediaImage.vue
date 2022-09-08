@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-auto my-6 mx-auto max-w-xl">
+  <div class="relative w-full my-6 mx-auto max-w-xl">
     <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
       <div class="relative p-4 flex-auto">
         <img :src="file.src" :alt="file.key" class="w-full" />
@@ -61,9 +61,8 @@
 
 <script>
 import aws from "@/services/aws";
-import { validate } from "@babel/types";
 export default {
-  name: "ModalImage",
+  name: "MediaImage",
   props: {
     file: {
       type: Object,
