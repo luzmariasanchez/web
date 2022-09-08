@@ -1,7 +1,5 @@
 TODO
 
-- image bucket
-- upload image from client
 - contact form id
 - guest popup
 - sponsor popup
@@ -10,3 +8,5 @@ TODO
 - list limit and load more
 - surround links
 - update home grid to fit no hole at the end
+- es language 
+- hide remove in media

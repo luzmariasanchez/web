@@ -1,6 +1,6 @@
 ---
 title: Exhibition Template
-image: https://source.unsplash.com/collection/225/1280x500
+image: 
 description: A description
 video: https://www.youtube.com/watch?v=
 start: 2000

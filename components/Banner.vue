@@ -1,6 +1,6 @@
 <template>
-  <div class=" w-full">
-    <img :src="imager(url, 'bg')" :alt="alt" :style="{ width: '100%' }" class="rounded-lg">
+  <div class="w-full">
+    <img :src="imager(url, 'full')" :alt="alt" :style="{ width: '100%' }" class="rounded-lg">
   </div>
 </template>
 

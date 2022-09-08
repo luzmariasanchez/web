@@ -27,7 +27,7 @@
           <div v-for="(file, fileIndex) in currentFiles" :key="fileIndex" @click="openFile(file)"
             class="cursor-pointer brightness-100 hover:brightness-150 transition">
             <div class="w-full border-2 border-gray-100">
-              <img :src="file.src" :alt="file.key" class="w-full" loading="lazy" />
+              <img :src="imager(file.src, 'admin')" :alt="file.key" class="w-full" loading="lazy" />
             </div>
             <div class="flex justify-between text-xs text-gray-400 mt-1">
               <div>{{ file.size }}</div>
@@ -66,6 +66,7 @@ import { formatBytes } from "@/helpers/utils/format";
 import aws from "@/services/aws";
 import albums from "@/constants/albums";
 import config from '@/config';
+import imager from '~/helpers/imager';
 
 export default {
   name: "media-album",
@@ -155,6 +156,7 @@ export default {
     },
   },
   methods: {
+    imager,
     openFile(file) {
       this.currentFile = file;
       this.modalOpened = true;

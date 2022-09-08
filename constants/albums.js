@@ -1,63 +1,33 @@
 export default [
   {
     title: 'Artworks',
-    description: 'Image',
-    slug: 'artwork-image',
+    description: 'Images',
+    slug: 'artwork',
     key: 'artwork/image/original'
   },
   {
-    title: 'Artworks',
-    description: 'Pictures',
-    slug: 'artwork-pictures',
-    key: 'artwork/gallery/original'
-  },
-  {
     title: 'Academia',
-    description: 'Image',
-    slug: 'academia-image',
+    description: 'Images',
+    slug: 'academia',
     key: 'academia/image/original'
   },
   {
-    title: 'Academia',
-    description: 'Pictures',
-    slug: 'academia-pictures',
-    key: 'academia/gallery/original'
-  },
-  {
     title: 'Exhibitions',
-    description: 'Image',
-    slug: 'exhibition-image',
+    description: 'Images',
+    slug: 'exhibition',
     key: 'exhibition/image/original'
   },
   {
-    title: 'Exhibitions',
-    description: 'Pictures',
-    slug: 'exhibition-pictures',
-    key: 'exhibition/gallery/original'
-  },
-  {
     title: 'Publications',
-    description: 'Image',
-    slug: 'publication-image',
+    description: 'Images',
+    slug: 'publication',
     key: 'publication/image/original'
   },
   {
-    title: 'Publications',
-    description: 'Pictures',
-    slug: 'publication-pictures',
-    key: 'publication/gallery/original'
-  },
-  {
     title: 'Research',
-    description: 'Image',
-    slug: 'research-image',
+    description: 'Images',
+    slug: 'research',
     key: 'research/image/original'
-  },
-  {
-    title: 'Research',
-    description: 'Pictures',
-    slug: 'research-pictures',
-    key: 'research/gallery/original'
   },
   {
     title: 'Place',

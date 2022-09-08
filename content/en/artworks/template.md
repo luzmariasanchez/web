@@ -1,6 +1,6 @@
 ---
 title: Artwork Template
-image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/artwork/image/original/Vis1L-2.jpg
+image: 
 description: A description
 video: https://www.youtube.com/watch?v=
 start: 2022

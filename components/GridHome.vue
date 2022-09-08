@@ -37,7 +37,7 @@ export default {
     function getImageStoreByIndex(index) {
       switch (index) {
         case 0:
-          return 'bg';
+          return 'large';
         default:
           return 'medium';
       }

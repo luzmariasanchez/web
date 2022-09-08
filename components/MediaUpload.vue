@@ -4,7 +4,8 @@
 
       <template v-if="uploaded">
         <div class="p-5 text-center">
-          File uploaded
+          File uploaded.<br />
+          Please wait during image resize process.
         </div>
       </template>
       <template v-else>
@@ -64,7 +65,7 @@ export default {
         this.uploaded = true;
         setTimeout(() => {
           this.$emit('fileUploaded');
-        }, 1000)
+        }, 10000)
       } else {
         this.uploadError = true;
       }
