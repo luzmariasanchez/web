@@ -39,12 +39,12 @@
 
         <div v-else>
           <div class="text-sm mb-3 truncate">{{ file.src }}</div>
-          <div class="flex justify-between">
-            <button @click="remove"
+          <div class="flex justify-center">
+            <!-- <button @click="remove"
               class="text-red-500 border border-red-500 bg-white hover:text-white hover:border-white hover:bg-red-500 font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none ease-linear transition-all duration-150"
               type="button">
               Remove File
-            </button>
+            </button> -->
             <button @click="copy"
               class="text-blue-500 border border-blue-500 bg-white hover:text-white hover:border-white hover:bg-blue-500 font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none ease-linear transition-all duration-150"
               type="button">
