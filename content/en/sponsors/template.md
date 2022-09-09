@@ -1,4 +1,5 @@
 ---
+offline: true
 title:  Sponsor Template
 image: https://source.unsplash.com/collection/225/250x250
 url: http://

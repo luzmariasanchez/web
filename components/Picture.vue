@@ -1,11 +1,10 @@
 <template>
-  <figure class="inline-block">
-    <img :src="url" :alt="alt" style="width:100px">
+  <figure class="w-full">
+    <img :src="$imager(url, 'thumb')" :alt="alt" class="w-full">
   </figure>
 </template>
 
 <script>
-
 export default {
   name: "Picture",
   props: {

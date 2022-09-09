@@ -1,6 +1,6 @@
 ---
 title: Arts, Sciences, Humanities and Citizenship [ACHC]
-image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/research/image/original/achc.png
+image: 
 video: https://www.youtube.com/watch?v=khiMlFV9jkI
 start: 2016
 end: 2022

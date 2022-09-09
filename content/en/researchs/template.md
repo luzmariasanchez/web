@@ -1,4 +1,5 @@
 ---
+offline: true
 title: Research Template
 image: 
 description: A description

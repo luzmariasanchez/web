@@ -3,7 +3,7 @@
     <div class="rounded-lg overflow-hidden">
       <div class="relative pb-2/3">
         <img class="absolute h-full w-full object-cover hover:scale-110 transition-transform duration-500	ease-out"
-          :src="imager(item.image, imageStore)" :alt="item.title">
+          :src="$imager(item.image, imageStore)" :alt="item.title">
       </div>
     </div>
     <div class="pt-4">
@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import imager from '~/helpers/imager';
 
 export default {
   name: "Bloc",
@@ -32,8 +31,5 @@ export default {
       }
     },
   },
-  methods: {
-    imager
-  }
 }
 </script>

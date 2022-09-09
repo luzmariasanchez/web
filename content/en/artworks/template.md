@@ -1,4 +1,5 @@
 ---
+offline: true
 title: Artwork Template
 image: 
 description: A description

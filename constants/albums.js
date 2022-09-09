@@ -39,12 +39,18 @@ export default [
     title: 'Guests',
     description: 'Image',
     slug: 'guests',
-    key: 'research/image'
+    key: 'guest/image/original'
   },
   {
     title: 'Sponsors',
     description: 'Image',
     slug: 'sponsors',
-    key: 'sponsor/image'
+    key: 'sponsor/image/original'
+  },
+  {
+    title: 'Gallery',
+    description: 'Image',
+    slug: 'gallery',
+    key: 'gallery/image/original'
   },
 ]

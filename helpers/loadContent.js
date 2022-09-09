@@ -2,7 +2,7 @@
 export default async ({ $content, i18n }, category, slug) => {
 
   const pages = await $content(i18n.locale, category)
-    .where({ slug })
+    .where({ slug, offline: { $ne: true } })
     .fetch();
 
   if (pages && pages.length) {
@@ -12,7 +12,7 @@ export default async ({ $content, i18n }, category, slug) => {
     async function loadRelation(key, { service, only } = {}) {
       if (page[key]) {
         const res = await $content(i18n.locale, service || key)
-          .where({ slug: page[key] })
+          .where({ slug: page[key], offline: { $ne: true } })
           .only(only || ["title", "description", "image", "slug"])
           .fetch();
         if (res && res.length) return res[0];
@@ -20,7 +20,7 @@ export default async ({ $content, i18n }, category, slug) => {
     }
     async function loadRelations(key, { service, only } = {}) {
       return page[key] && await $content(i18n.locale, service || key)
-        .where({ slug: { $in: page[key] } })
+        .where({ slug: { $in: page[key] }, offline: { $ne: true }, })
         .only(only || ["title", "description", "image", "slug"])
         .fetch();
     }

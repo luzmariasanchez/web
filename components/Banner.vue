@@ -1,11 +1,10 @@
 <template>
   <div class="w-full">
-    <img :src="imager(url, 'full')" :alt="alt" :style="{ width: '100%' }" class="rounded-lg">
+    <img :src="$imager(url, 'full')" :alt="alt" :style="{ width: '100%' }" class="rounded-lg">
   </div>
 </template>
 
 <script>
-import imager from '~/helpers/imager';
 
 export default {
   name: "Banner",
@@ -19,8 +18,5 @@ export default {
       required: true
     },
   },
-  methods: {
-    imager
-  }
 }
 </script>

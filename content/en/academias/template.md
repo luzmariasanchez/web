@@ -1,4 +1,5 @@
 ---
+offline: true
 title: Academia Template
 image: 
 description: A description

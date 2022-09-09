@@ -39,10 +39,12 @@ export default {
     const categoryKey = 'academias';
     const { page: category, error } = await loadContent(context, 'categorys', categoryKey);
     const items = await context.$content(context.i18n.locale, categoryKey)
+      .where({ offline: { $ne: true } })
       .sortBy(['start', 'desc'])
       .only(['slug', 'title', 'description', 'image', 'start'])
       .fetch();
     const tags = await context.$content(context.i18n.locale, 'tags')
+      .where({ offline: { $ne: true } })
       .sortBy(['slug', 'asc'])
       .only(['slug', 'title'])
       .fetch();

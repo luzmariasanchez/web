@@ -1,4 +1,5 @@
 ---
+offline: true
 title: Publication Template
 image: 
 description: A description

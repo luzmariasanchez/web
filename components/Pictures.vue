@@ -1,14 +1,14 @@
 <template>
   <div class="mb-20 text-center">
     <Subtitle :title="$t('content.pictures')"></Subtitle>
-    <div class="leading-[0]">
-      <div v-for="(picture, pictureIndex) in pictures" :key="pictureIndex"
-        @click="onPictureClick(picture, pictureIndex)"
-        class="inline-block cursor-pointer brightness-100 hover:brightness-150 transition">
-        <Picture :url="picture"></Picture>
-      </div>
-    </div>
     <client-only>
+      <masonry :cols="{ default: 4, 1200: 4, 1000: 3, 720: 3, 580: 2, 400: 2 }" :gutter="8">
+        <div v-for="(picture, pictureIndex) in pictures" :key="pictureIndex"
+          @click="onPictureClick(picture, pictureIndex)"
+          class="cursor-pointer brightness-100 hover:brightness-150 transition mb-2">
+          <Picture :url="picture"></Picture>
+        </div>
+      </masonry>
       <v-gallery :images="galleryImages" :index="galleryIndex" @close="galleryIndex = null"></v-gallery>
     </client-only>
   </div>
@@ -32,9 +32,7 @@ export default {
   computed: {
     galleryImages() {
       if (this.pictures)
-        return this.pictures.map((picture) =>
-          picture
-          // require(`~/assets/images/snaps/large/${picture}`)
+        return this.pictures.map((picture) => this.$imager(picture, 'full')
         );
       return [];
     },

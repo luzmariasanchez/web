@@ -1,6 +1,6 @@
 ---
 title: "ISACS17 Resonant Worlds: Sound, Art and Science"
-image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/exhibition/image/original/isacs.jpg
+image: 
 start: 2017
 place: zkm-center-for-art-and-media-karlsruhe
 tags:

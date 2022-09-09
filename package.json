@@ -22,6 +22,7 @@
     "nuxt-i18n": "^6.27.0",
     "vue": "^2.6.14",
     "vue-gallery": "^2.0.1",
+    "vue-masonry-css": "^1.0.3",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
     "webpack": "^4.46.0"

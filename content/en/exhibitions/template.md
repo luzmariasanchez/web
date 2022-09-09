@@ -1,4 +1,5 @@
 ---
+offline: true
 title: Exhibition Template
 image: 
 description: A description

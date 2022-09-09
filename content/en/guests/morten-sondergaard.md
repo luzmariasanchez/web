@@ -1,5 +1,6 @@
 ---
 title: Morten Søndergaard
+image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/guest/image/original/morten.jpg
 from: Denmark
 job: Aalborg University
 ---

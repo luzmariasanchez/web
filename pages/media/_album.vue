@@ -27,7 +27,7 @@
           <div v-for="(file, fileIndex) in currentFiles" :key="fileIndex" @click="openFile(file)"
             class="cursor-pointer brightness-100 hover:brightness-150 transition">
             <div class="w-full border-2 border-gray-100">
-              <img :src="imager(file.src, 'admin')" :alt="file.key" class="w-full" loading="lazy" />
+              <img :src="imager(file.src, 'thumb')" :alt="file.key" class="w-full" loading="lazy" />
             </div>
             <div class="flex justify-between text-xs text-gray-400 mt-1">
               <div>{{ file.size }}</div>

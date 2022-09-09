@@ -44,12 +44,14 @@ export default {
     const { page: tag, error: tagError } = await loadContent(context, 'tags', context.params.tag);
     const items = await context.$content(context.i18n.locale, categoryKey)
       .where({
+        offline: { $ne: true },
         tags: { $contains: context.params.tag }
       })
       .sortBy(['start', 'desc'])
       .only(['slug', 'title', 'description', 'image', 'start'])
       .fetch();
     const tags = await context.$content(context.i18n.locale, 'tags')
+      .where({ offline: { $ne: true } })
       .sortBy(['slug', 'asc'])
       .only(['slug', 'title'])
       .fetch();

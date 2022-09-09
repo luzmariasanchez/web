@@ -13,6 +13,7 @@ export default async ({ $content, i18n }, categoryKey, options = {}) => {
   const category = categorys[0];
   const items = await $content(i18n.locale, categoryKey)
     .search(query)
+    .where({ offline: { $ne: true }, })
     .sortBy('start', 'desc')
     .skip(skip)
     .limit(limit)
