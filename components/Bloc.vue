@@ -8,7 +8,7 @@
     </div>
     <div class="pt-4">
       <div class="text-xs uppercase mb-1" :style="{ color: item.category.color }">{{ item.category.title }}</div>
-      <h4 class="text-white font-semibold text-lg mb-1">{{ item.title }}</h4>
+      <h4 :class="['text-white font-semibold mb-1', titleSize]">{{ item.title }}</h4>
       <div class="text-gray-400 text-sm">{{ item.description }}</div>
     </div>
   </nuxt-link>
@@ -30,6 +30,19 @@ export default {
         return 'medium';
       }
     },
+    size: {
+      type: String,
+      required: false,
+      default() {
+        return '';
+      }
+    },
   },
+  computed: {
+    titleSize() {
+      if (this.size === 'small') return 'text-md';
+      return 'text-lg';
+    }
+  }
 }
 </script>

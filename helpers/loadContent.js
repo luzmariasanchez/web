@@ -9,6 +9,12 @@ export default async ({ $content, i18n }, category, slug) => {
 
     const page = pages[0];
 
+    const categorys = await $content(i18n.locale, 'categorys').fetch();
+    const categorysByKey = {}
+    categorys.forEach(category => {
+      categorysByKey[category.slug] = category;
+    })
+
     async function loadRelation(key, { service, only } = {}) {
       if (page[key]) {
         const res = await $content(i18n.locale, service || key)
@@ -19,10 +25,15 @@ export default async ({ $content, i18n }, category, slug) => {
       }
     }
     async function loadRelations(key, { service, only } = {}) {
-      return page[key] && await $content(i18n.locale, service || key)
+      const list = page[key] && await $content(i18n.locale, service || key)
         .where({ slug: { $in: page[key] }, offline: { $ne: true }, })
         .only(only || ["title", "description", "image", "slug"])
-        .fetch();
+        .fetch()
+
+      return list && list.map(item => ({
+        ...item,
+        category: categorysByKey[key]
+      }));
     }
 
     return {

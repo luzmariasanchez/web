@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import { computed } from "vue";
 import { sortBy } from 'lodash';
 import getHead from "@/helpers/head";
 import loadList from "@/helpers/loadList";

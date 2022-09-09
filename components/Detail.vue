@@ -11,16 +11,7 @@
       <Guests v-if="page.guests && page.guests.length" :guests="page.guests"></Guests>
       <Sponsors v-if="page.sponsors && page.sponsors.length" :sponsors="page.sponsors"></Sponsors>
       <Pictures v-if="page.pictures && page.pictures.length" :pictures="page.pictures"></Pictures>
-      <List v-if="page.artworks && page.artworks.length" :items="page.artworks" :title="$t('page.artworks')"
-        pathName="artworks-slug" />
-      <List v-if="page.exhibitions && page.exhibitions.length" :items="page.exhibitions" :title="$t('page.exhibitions')"
-        pathName="exhibitions-slug" />
-      <List v-if="page.academias && page.academias.length" :items="page.academias" :title="$t('page.academias')"
-        pathName="academias-slug" />
-      <List v-if="page.researchs && page.researchs.length" :items="page.researchs" :title="$t('page.researchs')"
-        pathName="researchs-slug" />
-      <List v-if="page.publications && page.publications.length" :items="page.publications"
-        :title="$t('page.publications')" pathName="publications-slug" />
+      <Relateds :page="page"></Relateds>
     </div>
   </div>
 </template>
