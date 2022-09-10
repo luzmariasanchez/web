@@ -2,8 +2,13 @@
   <div class="mb-20 text-center w-full">
     <Subtitle :title="$t('content.guests')"></Subtitle>
     <div class="flex flex-wrap justify-center">
-      <Guest v-for="(guest, guestIndex) in guests" :key="guestIndex" :guest="guest"></Guest>
+      <div v-for="(guest, guestIndex) in guests" :key="guestIndex" @click="openModal(guest)">
+        <Guest :guest="guest"></Guest>
+      </div>
     </div>
+    <Modal v-model="modalOpened">
+      <GuestDetail :guest="current"></GuestDetail>
+    </Modal>
   </div>
 </template>
 
@@ -17,5 +22,17 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      modalOpened: false,
+      current: null
+    }
+  },
+  methods: {
+    openModal(guest) {
+      this.current = guest;
+      this.modalOpened = true;
+    }
+  }
 }
 </script>

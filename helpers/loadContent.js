@@ -47,7 +47,7 @@ export default async ({ $content, i18n }, category, slug) => {
         researchs: await loadRelations('researchs'),
         publications: await loadRelations('publications'),
         sponsors: await loadRelations('sponsors', { only: ["title", "description", "image", "slug", "url"] }),
-        guests: await loadRelations('guests', { only: ["title", "description", "image", "slug", "from", "url"] }),
+        guests: await loadRelations('guests', { only: ["title", "description", "image", "slug", "from", "job", "url", "body"] }),
       },
       error: null
     }
