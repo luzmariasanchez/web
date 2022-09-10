@@ -2,7 +2,7 @@
   <div class="w-full container mx-auto">
     <Title :title="page.title"></Title>
     <div v-if="page.image" class="w-full max-w-xs mx-auto mb-10">
-      <img :src="page.image" class="w-full rounded-full">
+      <img :src="$imager(page.image, 'square')" class="w-full rounded-full">
     </div>
     <div class="w-full sm:w-3/5 mx-auto">
       <Content :page="page"></Content>
