@@ -2,7 +2,7 @@
   <div class="mb-20 text-center w-full">
     <Subtitle :title="$t('content.guests')"></Subtitle>
     <div class="flex flex-wrap justify-center">
-      <div v-for="(guest, guestIndex) in guests" :key="guestIndex" @click="openModal(guest)">
+      <div v-for="(guest, guestIndex) in guests" :key="guestIndex" @click.stop="openModal(guest)">
         <Guest :guest="guest"></Guest>
       </div>
     </div>

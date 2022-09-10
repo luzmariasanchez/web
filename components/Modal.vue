@@ -5,10 +5,9 @@
       <button @click="closeModal" class="fixed top-5 right-5 text-3xl text-white z-[52] cursor-pointer"><i
           class="icon-cancel"></i></button>
       <div
-        class="modal fade fixed top-0 left-0 z-[51] w-full h-full outline-none overflow-x-hidden overflow-y-auto show"
-        id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongLabel" style="display: block;"
-        aria-modal="true" role="dialog">
-        <div class="modal-dialog relative w-auto pointer-events-none">
+        class="block modal fade fixed top-0 left-0 z-[51] w-full h-full outline-none overflow-x-hidden overflow-y-auto show"
+        id="exampleModalLong" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-dialog relative w-auto pointer-events-none" v-click-outside="closeModal">
           <div
             class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
 
@@ -54,7 +53,18 @@ export default {
   methods: {
     closeModal() {
       this.$emit('input', false)
+    },
+    escapeEvent(evt) {
+      if (evt.key === 'Escape') {
+        this.closeModal()
+      }
     }
+  },
+  mounted() {
+    document.addEventListener('keydown', this.escapeEvent);
+  },
+  beforeDestroy() {
+    document.removeEventListener('keydown', this.escapeEvent);
   }
 }
 </script>
