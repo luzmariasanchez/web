@@ -18,13 +18,13 @@
             <FilterSort :sorts="sorts" v-model="sortBy"></FilterSort>
           </template>
           <template #right>
-            <button @click="openUpload"
+            <button @click.stop="openUpload"
               class="text-blue-500 border border-white bg-white hover:text-white hover:bg-blue-500 font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none ease-linear transition-all duration-150">Upload
               File</button>
           </template>
         </Nav>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mb-10">
-          <div v-for="(file, fileIndex) in currentFiles" :key="fileIndex" @click="openFile(file)"
+          <div v-for="(file, fileIndex) in currentFiles" :key="fileIndex" @click.stop="openFile(file)"
             class="cursor-pointer brightness-100 hover:brightness-150 transition">
             <div class="w-full border-2 border-gray-100">
               <img :src="imager(file.src, 'thumb')" :alt="file.key" class="w-full" loading="lazy" />
@@ -44,7 +44,7 @@
       <template v-else>
         <Message :text="'This album is empty'"></Message>
         <div class="text-center">
-          <button @click="openUpload"
+          <button @click.stop="openUpload"
             class="text-blue-500 border border-white bg-white hover:text-white hover:bg-blue-500 font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none ease-linear transition-all duration-150 mt-5">Upload
             File</button>
         </div>
