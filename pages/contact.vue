@@ -6,13 +6,13 @@
         <Content :page="page"></Content>
         <div class="text-gray-400">
           <div class="mb-2">
-            <i class="icon-location"></i> {{  page.address  }}
+            <i class="icon-location"></i> {{ page.address }}
           </div>
           <div class="mb-2">
-            <i class="icon-mail"></i> {{  page.email  }}
+            <i class="icon-mail"></i> {{ page.email }}
           </div>
           <div class="mb-2">
-            <i class="icon-phone"></i> {{  page.phone  }}
+            <i class="icon-phone"></i> {{ page.phone }}
           </div>
         </div>
       </div>
@@ -25,6 +25,7 @@
 
 <script>
 import getHead from "@/helpers/head";
+import config from '@/config';
 
 export default {
   name: "contact",
@@ -40,7 +41,7 @@ export default {
   },
   async asyncData({ $content, i18n }) {
     const page = await $content(i18n.locale, "pages", "contact").fetch();
-    const formUrl = 'https://submit-form.com/XXXXXXXXXXX'
+    const formUrl = config.contactFormUrl;
     return {
       page,
       formUrl

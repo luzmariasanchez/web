@@ -1,12 +1,12 @@
 <template>
   <form v-on:submit.prevent="handleSubmit" class="w-full ">
     <fieldset class="mb-5">
-      <label class="block mb-1 text-gray-200">{{  $t('contact.email-label')  }}</label>
+      <label class="block mb-1 text-gray-200">{{ $t('contact.email-label') }}</label>
       <input type="email" name="email" v-model="email" required
         class="w-full px-4 py-3 border-2 placeholder:text-gray-800 text-white rounded-md outline-none placeholder:text-gray-200 bg-black focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 border-gray-600 focus:border-white ring-0" />
     </fieldset>
     <fieldset class="mb-5">
-      <label class="block mb-1 text-gray-200">{{  $t('contact.message-label')  }}</label>
+      <label class="block mb-1 text-gray-200">{{ $t('contact.message-label') }}</label>
       <textarea type="text" name="message" rows="5" v-model="message" required
         class="w-full px-4 py-3 border-2 placeholder:text-gray-800 text-white placeholder:text-gray-200 bg-black rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 border-gray-600 focus:border-white ring-0"></textarea>
     </fieldset>
@@ -16,9 +16,9 @@
       <template v-if="sending">
         <i class="icon-spin animate-spin"></i>
       </template>
-      <template v-else> {{  $t('contact.send-label')  }} </template>
+      <template v-else> {{ $t('contact.send-label') }} </template>
     </button>
-    <p v-if="status" class="mt-5 text-center text-red-500">{{  status  }}</p>
+    <p v-if="status" class="mt-5 text-center text-white">{{ status }}</p>
   </form>
 </template>
 
