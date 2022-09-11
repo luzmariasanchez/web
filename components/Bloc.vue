@@ -1,5 +1,6 @@
 <template>
-  <nuxt-link :to="localePath({ name: `${item.category.slug}-slug`, params: { slug: item.slug } })" class="pb-5">
+  <nuxt-link :to="localePath({ name: `${item.category.slug}-slug`, params: { slug: item.slug } })"
+    class="pb-5 brightness-100 hover:brightness-125 transition">
     <div class="rounded-lg overflow-hidden">
       <div class="relative pb-2/3">
         <img class="absolute h-full w-full object-cover hover:scale-110 transition-transform duration-500	ease-out"

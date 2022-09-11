@@ -5,7 +5,7 @@
       <masonry :cols="{ default: 4, 1200: 4, 1000: 3, 720: 3, 580: 2, 400: 2 }" :gutter="8">
         <div v-for="(picture, pictureIndex) in pictures" :key="pictureIndex"
           @click="onPictureClick(picture, pictureIndex)"
-          class="cursor-pointer brightness-100 hover:brightness-150 transition mb-2">
+          class="cursor-pointer brightness-100 hover:brightness-125 transition mb-2">
           <Picture :url="picture"></Picture>
         </div>
       </masonry>

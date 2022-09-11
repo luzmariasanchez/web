@@ -25,7 +25,7 @@
         </Nav>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mb-10">
           <div v-for="(file, fileIndex) in currentFiles" :key="fileIndex" @click.stop="openFile(file)"
-            class="cursor-pointer brightness-100 hover:brightness-150 transition">
+            class="cursor-pointer brightness-100 hover:brightness-125 transition">
             <div class="w-full border-2 border-gray-100">
               <img :src="imager(file.src, 'thumb')" :alt="file.key" class="w-full" loading="lazy" />
             </div>

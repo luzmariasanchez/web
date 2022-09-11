@@ -1,7 +1,7 @@
 <template>
   <nuxt-link :to="localePath({ name: pathName, params: { tag: tag.slug } })"
-    class="inline-block bg-gray-500 hover:bg-gray-600 text-sm text-white px-2 py-1 mr-1 mb-1 rounded">#{{
-        tag.title
+    class="inline-block bg-gray-600 hover:bg-gray-500 text-sm text-white px-2 py-1 mr-1 mb-1 rounded">#{{
+    tag.title
     }}
   </nuxt-link>
 </template>

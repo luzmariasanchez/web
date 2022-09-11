@@ -1,7 +1,8 @@
 <template>
   <div>
     <template v-if="url">
-      <a :href="url" :target="target" :class="hasClass">
+      <a :href="url" :target="target"
+        :class="['cursor-pointer brightness-100 hover:brightness-125 transition', hasClass]">
         <slot></slot>
       </a>
     </template>
