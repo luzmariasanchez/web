@@ -28,7 +28,13 @@
     "avatar": "https://luzmariasanchez.s3.us-east-2.amazonaws.com/gallery/image/original/luz-maria.jpg"
   },
   "foot": {
-    "title": "Luz María Sánchez"
+    "title": "Luz María Sánchez",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/luzmariasanchez",
+      "twitter": "",
+      "instagram": "",
+      "youtube": ""
+    }
   },
   "contact": {
     "email-label": "Your email:",
