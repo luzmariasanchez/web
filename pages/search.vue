@@ -20,7 +20,7 @@
 <script>
 import { sortBy } from 'lodash';
 import getHead from "@/helpers/head";
-import loadList from "@/helpers/loadList";
+import loadItems from "@/api/loadItems";
 
 export default {
   name: "search",
@@ -48,11 +48,11 @@ export default {
     if (query) {
       query = decodeURIComponent(context.query.q);
       const options = { limit: 6, query };
-      const { items: academias } = await loadList(context, 'academias', options);
-      const { items: artworks } = await loadList(context, 'artworks', options);
-      const { items: exhibitions } = await loadList(context, 'exhibitions', options);
-      const { items: publications } = await loadList(context, 'publications', options);
-      const { items: researchs } = await loadList(context, 'researchs', options);
+      const { items: academias } = await loadItems(context, 'academias', options);
+      const { items: artworks } = await loadItems(context, 'artworks', options);
+      const { items: exhibitions } = await loadItems(context, 'exhibitions', options);
+      const { items: publications } = await loadItems(context, 'publications', options);
+      const { items: researchs } = await loadItems(context, 'researchs', options);
       items = sortBy([
         ...academias,
         ...artworks,

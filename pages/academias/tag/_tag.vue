@@ -13,6 +13,8 @@
           </template>
         </Nav>
         <Grid :items="items"></Grid>
+        <Pagination :pathName="`${category.slug}-tag-tag`" :params="{tag:tag.slug}" :currentPage="+page"
+          :totalPage="+totalPage"></Pagination>
         <Author></Author>
       </div>
     </template>
@@ -21,7 +23,7 @@
 
 <script>
 import getHead from "@/helpers/head";
-import loadContent from "@/helpers/loadContent";
+import loadList from "@/api/loadList";
 
 export default {
   name: "academias-tag-tag",
@@ -38,34 +40,10 @@ export default {
       title: `${this.tag.title} - ${this.category.title}`
     }, i18nHead);
   },
+  watchQuery: ['p'],
   async asyncData(context) {
     const categoryKey = 'academias';
-    const { page: category, error } = await loadContent(context, 'categorys', categoryKey);
-    const { page: tag, error: tagError } = await loadContent(context, 'tags', context.params.tag);
-    const items = await context.$content(context.i18n.locale, categoryKey)
-      .where({
-        offline: { $ne: true },
-        tags: { $contains: context.params.tag }
-      })
-      .sortBy(['start', 'desc'])
-      .only(['slug', 'title', 'description', 'image', 'start'])
-      .fetch();
-    const tags = await context.$content(context.i18n.locale, 'tags')
-      .where({ offline: { $ne: true } })
-      .sortBy(['slug', 'asc'])
-      .only(['slug', 'title'])
-      .fetch();
-
-    return {
-      category,
-      tag,
-      items: items.map(item => ({
-        ...item,
-        category,
-      })),
-      tags,
-      error: tagError || error
-    };
+    return await loadList(context, categoryKey);
   },
 }
 </script>

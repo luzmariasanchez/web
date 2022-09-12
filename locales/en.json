@@ -2,7 +2,9 @@
   "common": {
     "close": "Close",
     "tags": "Tags",
-    "sort": "Sort by"
+    "sort": "Sort by",
+    "prev": "Previous",
+    "next": "Next"
   },
   "page": {
     "artworks": "Artworks",

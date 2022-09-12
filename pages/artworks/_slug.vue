@@ -15,7 +15,7 @@
 
 <script>
 import getHead from "@/helpers/head";
-import loadContent from "@/helpers/loadContent";
+import loadContent from "@/api/loadContent";
 
 export default {
   name: 'artworks-slug',

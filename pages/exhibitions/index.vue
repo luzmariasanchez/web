@@ -13,6 +13,7 @@
           </template>
         </Nav>
         <Grid :items="items"></Grid>
+        <Pagination :pathName="category.slug" :currentPage="+page" :totalPage="+totalPage"></Pagination>
         <Author></Author>
       </div>
     </template>
@@ -21,7 +22,7 @@
 
 <script>
 import getHead from "@/helpers/head";
-import loadContent from "@/helpers/loadContent";
+import loadList from "@/api/loadList";
 
 export default {
   name: "exhibitions",
@@ -35,29 +36,10 @@ export default {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
     return getHead(this.category, i18nHead);
   },
+  watchQuery: ['p'],
   async asyncData(context) {
     const categoryKey = 'exhibitions';
-    const { page: category, error } = await loadContent(context, 'categorys', categoryKey);
-    const items = await context.$content(context.i18n.locale, categoryKey)
-      .where({ offline: { $ne: true } })
-      .sortBy(['start', 'desc'])
-      .only(['slug', 'title', 'description', 'image', 'start'])
-      .fetch();
-    const tags = await context.$content(context.i18n.locale, 'tags')
-      .where({ offline: { $ne: true } })
-      .sortBy(['slug', 'asc'])
-      .only(['slug', 'title'])
-      .fetch();
-
-    return {
-      category,
-      items: items.map(item => ({
-        ...item,
-        category,
-      })),
-      tags,
-      error
-    };
+    return await loadList(context, categoryKey);
   },
 }
 </script>

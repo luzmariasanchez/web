@@ -9,7 +9,7 @@
 <script>
 import { sortBy } from 'lodash';
 import getHead from "@/helpers/head";
-import loadList from "@/helpers/loadList";
+import loadItems from "@/api/loadItems";
 
 export default {
   name: "index",
@@ -21,11 +21,11 @@ export default {
   },
   async asyncData(context) {
     const page = await context.$content(context.i18n.locale, 'pages', 'index').fetch();
-    const { items: academias } = await loadList(context, 'academias', { limit: 3 });
-    const { items: artworks } = await loadList(context, 'artworks', { limit: 3 });
-    const { items: exhibitions } = await loadList(context, 'exhibitions', { limit: 3 });
-    const { items: publications } = await loadList(context, 'publications', { limit: 3 });
-    const { items: researchs } = await loadList(context, 'researchs', { limit: 3 });
+    const { items: academias } = await loadItems(context, 'academias', { limit: 3 });
+    const { items: artworks } = await loadItems(context, 'artworks', { limit: 3 });
+    const { items: exhibitions } = await loadItems(context, 'exhibitions', { limit: 3 });
+    const { items: publications } = await loadItems(context, 'publications', { limit: 3 });
+    const { items: researchs } = await loadItems(context, 'researchs', { limit: 3 });
     return {
       page,
       items: sortBy([
