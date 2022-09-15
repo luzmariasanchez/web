@@ -1,7 +1,10 @@
 {
   "common": {
     "close": "Cerrar",
-    "tags": "Tags"
+    "tags": "Tags",
+    "sort": "Ordenar por",
+    "prev": "Pagina anterior",
+    "next": "Pagina siguiente"
   },
   "page": {
     "artworks": "Obras",
@@ -17,16 +20,23 @@
     "place": "Lugar",
     "guests": "Invitados",
     "sponsors": "Sponsors",
-    "pictures": "Galleria"
+    "pictures": "Galleria",
+    "relateds": "Proyectos relacionados"
   },
   "author": {
     "title": "Luz María Sánchez",
-    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum sunt, consequuntur recusandae nostrum, quibusdam, iusto libero fugit adipisci blanditiis sint veniam reprehenderit. Animi fugit ab, delectus porro excepturi laboriosam dicta!",
+    "content": "Artista transdisciplinar que explora la esfera política de la violencia y las relaciones de poder a través de construcciones multimedia.",
     "more": "Leer más",
-    "avatar": "http://i.pravatar.cc/300"
+    "avatar": "https://luzmariasanchez.s3.us-east-2.amazonaws.com/gallery/image/original/luz-maria.jpg"
   },
   "foot": {
-    "title": "Luz María Sánchez"
+    "title": "Luz María Sánchez",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/luzmariasanchez",
+      "twitter": "",
+      "instagram": "",
+      "youtube": ""
+    }
   },
   "contact": {
     "email-label": "Tu correo electrónico:",

@@ -1,3 +1,0 @@
----
-title: Capítulo en Libro
----

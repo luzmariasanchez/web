@@ -1,3 +1,0 @@
----
-title: Ecología Acústica
----

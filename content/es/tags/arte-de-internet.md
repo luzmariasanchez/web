@@ -1,3 +1,0 @@
----
-title: Arte de internet
----
