@@ -1,5 +1,5 @@
 TODO
 
-- update home grid to fit no hole at the end
+- filter by year
 - es language 
 - sitemap

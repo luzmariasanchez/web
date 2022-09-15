@@ -27,10 +27,27 @@ export default {
           return 'col-span-1 md:col-span-2 lg:col-span-4';
         case 1:
         case 2:
+          return 'col-span-1 md:col-span-1 lg:col-span-2';
         case 3:
         case 4:
+          return 'col-span-1 md:col-span-1 lg:col-span-1';
+        case 5:
+          return 'col-span-1 md:col-span-1 lg:col-span-2';
+        case 6:
+        case 7:
           return 'col-span-1 md:col-span-1 lg:col-span-2';
         default:
+        case 8:
+          return 'col-span-1 md:col-span-1 lg:col-span-2';
+        case 9:
+          return 'col-span-1 md:col-span-1 lg:col-span-1';
+        case 10:
+          return 'col-span-1 md:col-span-1 lg:col-span-1';
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+          return 'col-span-1 md:col-span-1 lg:col-span-1';
           return '';
       }
     }
