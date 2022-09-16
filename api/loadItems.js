@@ -1,28 +1,64 @@
 
-export default async ({ $content, i18n }, categoryKey, options = {}) => {
+import populateItems from '@/api/populateItems';
 
-  const { limit, skip, query } = {
-    limit: 12,
-    skip: 0,
-    query: '',
+export default async (context, service, options = {}) => {
+
+  const {
+    page,
+    limit,
+    where,
+    search,
+    sortField,
+    sortDirection,
+    relations,
+    fields,
+  } = {
+    page: 1,
+    limit: 24,
+    where: {},
+    search: undefined,
+    sortField: 'title',
+    sortDirection: 'asc',
+    relations: null,
+    fields: ['title', 'slug'],
     ...options
   }
-  const categorys = await $content(i18n.locale, 'categorys')
-    .where({ slug: categoryKey })
-    .fetch();
-  const category = categorys[0];
-  const items = await $content(i18n.locale, categoryKey)
-    .search(query)
-    .where({ offline: { $ne: true }, })
-    .sortBy('start', 'desc')
+
+  const condition = {
+    offline: { $ne: true },
+    ...where
+  };
+
+  const skip = (page - 1) * limit;
+
+  let items = await context.$content(context.i18n.locale, service)
+    .search(search)
+    .where(condition)
+    .sortBy(sortField, sortDirection)
     .skip(skip)
     .limit(limit)
+    .only(fields)
     .fetch();
 
+  if (relations && relations.length) {
+    for (let index = 0; index < relations.length; index++) {
+      items = await populateItems(context, [...items], relations[index]);
+    }
+  }
+
+  const totalItems = await context.$content(context.i18n.locale, service)
+    .where(condition)
+    .only([])
+    .fetch();
+
+  const total = totalItems.length;
+  const totalPage = total / limit;
+
   return {
-    items: items.map(item => ({
-      ...item,
-      category,
-    }))
+    items,
+    total,
+    page,
+    totalPage,
+    limit
   }
 }

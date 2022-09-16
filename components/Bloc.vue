@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="localePath({ name: `${item.category.slug}-slug`, params: { slug: item.slug } })"
+  <nuxt-link :to="localePath({ name: `work-slug`, params: { slug: item.slug } })"
     class="pb-5 brightness-100 hover:brightness-125 transition">
     <div class="rounded-lg overflow-hidden">
       <div class="relative pb-2/3">
@@ -8,7 +8,11 @@
       </div>
     </div>
     <div class="pt-4">
-      <div class="text-xs uppercase mb-1" :style="{ color: item.category.color }">{{ item.category.title }}</div>
+      <div v-if="item.categorys">
+        <div v-for="(category, categoryIndex) in item.categorys" :key="categoryIndex"
+          class="inline-block mr-2 text-xs uppercase mb-1" :style="{ color: category.color }">{{
+          category.title }}</div>
+      </div>
       <h4 :class="['text-white font-semibold mb-1', titleSize]">{{ item.title }}</h4>
       <div class="text-gray-400 text-sm">{{ item.description }}</div>
     </div>

@@ -7,14 +7,12 @@
     "next": "Next"
   },
   "page": {
-    "artworks": "Artworks",
-    "exhibitions": "Exhibitions",
-    "researchs": "Research",
-    "academias": "Academia",
-    "publications": "Publications",
     "search": "Search",
     "bio": "Bio",
     "contact": "Contact"
+  },
+  "home": {
+    "works": "Explore All Works"
   },
   "content": {
     "place": "Place",

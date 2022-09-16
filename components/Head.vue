@@ -26,30 +26,10 @@
 
           <div :class="['lg:flex text-sm', showMenu ? 'opened' : 'hidden']" v-click-outside="closeMenu">
             <ul class="list-reset flex flex-col lg:flex-row lg:flex-1 lg:items-center" @click="closeMenu">
-              <li class="mr-2">
-                <nuxt-link :to="localePath({ name: 'artworks' })"
+              <li class="mr-2" v-for="(category, categoryIndex) in categorys" :key="categoryIndex">
+                <nuxt-link :to="localePath({ name: 'works-category', params: {category:category.slug}})"
                   class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
-                  {{ $t('page.artworks') }}</nuxt-link>
-              </li>
-              <li class="mr-2">
-                <nuxt-link :to="localePath({ name: 'exhibitions' })"
-                  class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
-                  {{ $t('page.exhibitions') }}</nuxt-link>
-              </li>
-              <li class="mr-2">
-                <nuxt-link :to="localePath({ name: 'researchs' })"
-                  class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
-                  {{ $t('page.researchs') }}</nuxt-link>
-              </li>
-              <li class="mr-2">
-                <nuxt-link :to="localePath({ name: 'academias' })"
-                  class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
-                  {{ $t('page.academias') }}</nuxt-link>
-              </li>
-              <li class="mr-2">
-                <nuxt-link :to="localePath({ name: 'publications' })"
-                  class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
-                  {{ $t('page.publications') }}</nuxt-link>
+                  {{ category.title }}</nuxt-link>
               </li>
             </ul>
           </div>
@@ -60,17 +40,20 @@
             <li class="ml-2">
               <nuxt-link :to="localePath('search')"
                 class="cursor-pointer inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2">
-                <i class="icon-search"></i></nuxt-link>
+                <i class="icon-search"></i>
+              </nuxt-link>
             </li>
             <li class="ml-2">
               <nuxt-link :to="localePath('bio')"
                 class="cursor-pointer inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2">
-                <i class="icon-info"></i></nuxt-link>
+                <i class="icon-info"></i>
+              </nuxt-link>
             </li>
             <li class="ml-2">
               <nuxt-link :to="localePath('contact')"
                 class="cursor-pointer inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2">
-                <i class="icon-mail"></i></nuxt-link>
+                <i class="icon-mail"></i>
+              </nuxt-link>
             </li>
             <li class="ml-2">
               <nuxt-link :to="switchLocalePath(nextLocale.code)"
@@ -88,12 +71,14 @@
 </template>
 
 <script>
+import loadItems from "@/api/loadItems";
 
 export default {
   name: "Head",
   data() {
     return {
-      showMenu: false
+      showMenu: false,
+      categorys: []
     }
   },
   computed: {
@@ -108,6 +93,14 @@ export default {
     closeMenu: function () {
       this.showMenu = false;
     },
+  },
+  async fetch() {
+    this.categorys = await this.$content(this.$i18n.locale, 'categorys')
+      .where({ offline: { $ne: true }, })
+      .sortBy('order', 'asc')
+      .sortBy('title', 'asc')
+      .only(['title', 'slug'])
+      .fetch();
   }
 }
 </script>
