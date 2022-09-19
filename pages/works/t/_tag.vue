@@ -5,12 +5,12 @@
     </template>
     <template v-else>
       <Title :title="page.title" :description="page.description"></Title>
-      <!-- <Nav>
-      <template #left>
-        <i class="icon-filter text-gray-300 mr-2"></i>
-        <FilterTags :tags="tags" :pathName="`${category.slug}-tag-tag`"></FilterTags>
-      </template>
-    </Nav> -->
+      <Nav>
+        <template #left>
+          <i class="icon-filter text-gray-300 mr-2"></i>
+          <FilterTags></FilterTags>
+        </template>
+      </Nav>
       <Grid :items="items"></Grid>
       <Pagination :pathName="'works'" :currentPage="+currentPagination" :totalPage="+totalPagination"></Pagination>
       <Author></Author>
@@ -23,11 +23,11 @@ import getHead from "@/helpers/head";
 import loadItems from "@/api/loadItems";
 
 export default {
-  name: "works-cat-category",
+  name: "works-tag",
   nuxtI18n: {
     paths: {
-      en: "/works/cat/:category",
-      es: "/proyectos/cat/:category",
+      en: "/works/t/:tag",
+      es: "/proyectos/t/:tag",
     },
   },
   head() {
@@ -36,9 +36,14 @@ export default {
   },
   watchQuery: ['p'],
   async asyncData(context) {
-    let page, error;
+    let page, tag, error;
     try {
-      page = await context.$content(context.i18n.locale, 'categorys', context.params.category).fetch();
+      page = await context.$content(context.i18n.locale, 'pages', 'works').fetch();
+    } catch (err) {
+      error = err;
+    }
+    try {
+      tag = await context.$content(context.i18n.locale, 'tags', context.params.tag).fetch();
     } catch (err) {
       error = err;
     }
@@ -46,7 +51,7 @@ export default {
     const { items, page: currentPagination, totalPage: totalPagination } = await loadItems(context, 'works', {
       page: context.query.p ? parseInt(context.query.p, 10) : 1,
       where: {
-        categorys: { $contains: context.params.category }
+        tags: { $contains: context.params.tag }
       },
       limit: 6,
       sortField: 'start',
@@ -59,7 +64,10 @@ export default {
     });
     return {
       error,
-      page,
+      page: {
+        ...page,
+        description: tag && tag.title
+      },
       items,
       currentPagination,
       totalPagination

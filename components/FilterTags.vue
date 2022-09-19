@@ -5,9 +5,9 @@
       <Dropdown @close="close">
         <ul>
           <li v-for="(tag, tagIndex) in tags" :key="tagIndex">
-            <nuxt-link :to="localePath({ name: pathName, params: { tag: tag.slug } })"
+            <nuxt-link :to="localePath({ name: 'works-t-tag', params: { tag: tag.slug } })"
               :class="['block hover:bg-gray-200 p-1', isActive(tag) && 'bg-gray-300']">{{
-                  tag.title
+              tag.title
               }}
             </nuxt-link>
           </li>
@@ -21,19 +21,10 @@
 
 export default {
   name: "FilterTags",
-  props: {
-    tags: {
-      type: Array,
-      required: true
-    },
-    pathName: {
-      type: String,
-      required: true
-    },
-  },
   data() {
     return {
-      opened: false
+      opened: false,
+      tags: []
     }
   },
   methods: {
@@ -46,6 +37,13 @@ export default {
     isActive(tag) {
       return tag.slug === this.$route.params.tag;
     }
+  },
+  async fetch() {
+    this.tags = await this.$content(this.$i18n.locale, 'tags')
+      .where({ offline: { $ne: true }, })
+      .sortBy('title', 'asc')
+      .only(['title', 'slug'])
+      .fetch();
   }
 }
 </script>

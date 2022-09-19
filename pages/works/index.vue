@@ -1,12 +1,12 @@
 <template>
   <div class="w-full container mx-auto">
     <Title :title="page.title" :description="page.description"></Title>
-    <!-- <Nav>
+    <Nav>
       <template #left>
         <i class="icon-filter text-gray-300 mr-2"></i>
-        <FilterTags :tags="tags" :pathName="`${category.slug}-tag-tag`"></FilterTags>
+        <FilterTags></FilterTags>
       </template>
-    </Nav> -->
+    </Nav>
     <Grid :items="items"></Grid>
     <Pagination :pathName="'works'" :currentPage="+currentPagination" :totalPage="+totalPagination"></Pagination>
     <Author></Author>
