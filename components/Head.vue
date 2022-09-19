@@ -27,7 +27,7 @@
           <div :class="['lg:flex text-sm', showMenu ? 'opened' : 'hidden']" v-click-outside="closeMenu">
             <ul class="list-reset flex flex-col lg:flex-row lg:flex-1 lg:items-center" @click="closeMenu">
               <li class="mr-2" v-for="(category, categoryIndex) in categorys" :key="categoryIndex">
-                <nuxt-link :to="localePath({ name: 'works-category', params: {category:category.slug}})"
+                <nuxt-link :to="localePath({ name: 'works-cat-category', params: {category:category.slug}})"
                   class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
                   {{ category.title }}</nuxt-link>
               </li>

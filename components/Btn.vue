@@ -13,7 +13,7 @@ export default {
   name: "Btn",
   props: {
     to: {
-      type: Object,
+      type: String,
       required: true
     },
     label: {
