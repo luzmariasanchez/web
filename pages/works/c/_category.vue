@@ -53,7 +53,7 @@ export default {
       where: {
         categorys: { $contains: context.params.category }
       },
-      limit: 6,
+      limit: 24,
       sortField: 'start',
       sortDirection: 'desc',
       fields: ['slug', 'title', 'description', 'image', 'start', 'categorys'],

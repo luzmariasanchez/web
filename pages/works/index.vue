@@ -44,7 +44,7 @@ export default {
     }
     const { items, page: currentPagination, totalPage: totalPagination } = await loadItems(context, 'works', {
       page: context.query.p ? parseInt(context.query.p, 10) : 1,
-      limit: 6,
+      limit: 24,
       sortField: 'start',
       sortDirection: 'desc',
       fields: ['slug', 'title', 'description', 'image', 'start', 'categorys'],
