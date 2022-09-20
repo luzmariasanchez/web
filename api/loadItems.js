@@ -48,6 +48,7 @@ export default async (context, service, options = {}) => {
   }
 
   const totalItems = await context.$content(context.i18n.locale, service)
+    .search(search)
     .where(condition)
     .only([])
     .fetch();

@@ -12,7 +12,8 @@
         </template>
       </Nav>
       <Grid :items="items"></Grid>
-      <Pagination :pathName="'works'" :currentPage="+currentPagination" :totalPage="+totalPagination"></Pagination>
+      <Pagination :pathName="'works-c-category'" :currentPage="+currentPagination" :totalPage="+totalPagination">
+      </Pagination>
       <Author></Author>
     </template>
   </div>
@@ -60,6 +61,7 @@ export default {
       relations: [{
         service: 'categorys',
         fields: ['title', 'slug', 'color'],
+        many: true,
       }]
     });
     return {

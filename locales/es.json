@@ -16,7 +16,10 @@
     "contact": "Contacto"
   },
   "home": {
-    "works": "Explore All Works"
+    "works": "Explorar todas las obras"
+  },
+  "search": {
+    "placeholder": "Escriba aquí..."
   },
   "content": {
     "place": "Lugar",

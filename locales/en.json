@@ -18,6 +18,9 @@
   "home": {
     "works": "Explore All Works"
   },
+  "search": {
+    "placeholder": "Type here..."
+  },
   "content": {
     "place": "Place",
     "guests": "Collaborators",

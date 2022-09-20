@@ -51,6 +51,7 @@ export default {
       relations: [{
         service: 'categorys',
         fields: ['title', 'slug', 'color'],
+        many: true,
       }]
     });
     return {
