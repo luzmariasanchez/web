@@ -28,6 +28,13 @@ export default {
     }
   },
   methods: {
+    async load() {
+      this.tags = await this.$content(this.$i18n.locale, 'tags')
+        .where({ offline: { $ne: true }, })
+        .sortBy('title', 'asc')
+        .only(['title', 'slug'])
+        .fetch();
+    },
     open() {
       this.opened = true;
     },
@@ -38,12 +45,13 @@ export default {
       return tag.slug === this.$route.params.tag;
     }
   },
+  watch: {
+    '$i18n.locale'() {
+      this.load();
+    }
+  },
   async fetch() {
-    this.tags = await this.$content(this.$i18n.locale, 'tags')
-      .where({ offline: { $ne: true }, })
-      .sortBy('title', 'asc')
-      .only(['title', 'slug'])
-      .fetch();
+    this.load();
   }
 }
 </script>

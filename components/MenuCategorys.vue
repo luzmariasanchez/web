@@ -31,7 +31,7 @@ export default {
     }
   },
   methods: {
-    async loadMenu() {
+    async load() {
       this.categorys = await this.$content(this.$i18n.locale, 'categorys')
         .where({ offline: { $ne: true }, })
         .sortBy('order', 'asc')
@@ -48,11 +48,11 @@ export default {
   },
   watch: {
     '$i18n.locale'() {
-      this.loadMenu();
+      this.load();
     }
   },
   async fetch() {
-    this.loadMenu();
+    this.load();
   }
 }
 </script>
