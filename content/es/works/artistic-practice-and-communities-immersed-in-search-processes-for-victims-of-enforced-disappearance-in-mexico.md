@@ -1,6 +1,8 @@
 ---
 title: Artistic practice and communities immersed in search processes for victims of enforced disappearance in Mexico
 start: 2020
+categorys:
+ - publications
 tags:
  - chapter-in-book
  - editor

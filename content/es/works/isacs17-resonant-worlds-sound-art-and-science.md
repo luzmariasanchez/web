@@ -3,6 +3,8 @@ title: "ISACS17 Resonant Worlds: Sound, Art and Science"
 image: 
 start: 2017
 place: zkm-center-for-art-and-media-karlsruhe
+categorys:
+ - exhibitions
 tags:
  - art-and-new-media
 guests:

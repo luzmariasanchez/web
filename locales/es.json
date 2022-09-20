@@ -7,14 +7,12 @@
     "next": "Pagina siguiente"
   },
   "page": {
-    "artworks": "Obras",
-    "exhibitions": "Exposiciones",
-    "researchs": "Investigaciones",
-    "academias": "Académico",
-    "publications": "Publicaciones",
     "search": "Buscar",
     "bio": "Bio",
     "contact": "Contacto"
+  },
+  "home": {
+    "works": "Explore All Works"
   },
   "content": {
     "place": "Lugar",

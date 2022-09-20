@@ -2,6 +2,8 @@
 title: LASER Talks Mex
 start: 2019
 place: casa-del-tiempo-uam
+categorys:
+ - academias
 tags:
  - research
  - transdiciplinary

@@ -1,5 +1,5 @@
 ---
-offline: false
+offline: true
 title: Work Template
 image: 
 description: A description
@@ -21,7 +21,7 @@ sponsors:
 guests:
  - template
 works:
-  - laser-talks-mex
+ - template
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit.<!--more--> Sunt aperiam blanditiis minus saepe quis atque ducimus repudiandae. Asperiores cum placeat a tenetur nihil sequi? Saepe, consectetur. Eveniet obcaecati fugiat inventore.

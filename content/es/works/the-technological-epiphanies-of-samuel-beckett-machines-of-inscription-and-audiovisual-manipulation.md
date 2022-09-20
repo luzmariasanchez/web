@@ -3,6 +3,8 @@ title: "The Technological Epiphanies of Samuel Beckett: Machines of Inscription 
 image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/publication/image/original/The-Technological-Epiphanies.png
 start: 2016
 place: contemporary-art-university-museum-muac
+categorys:
+ - publications
 tags: 
  - book
  - samuel-beckett

@@ -4,6 +4,9 @@ video: https://www.youtube.com/watch?v=khiMlFV9jkI
 start: 2016
 end: 2022
 place: universidad-autonoma-metropolitana
+categorys:
+ - academias
+ - researchs
 tags:
  - research
  - transdiciplinary

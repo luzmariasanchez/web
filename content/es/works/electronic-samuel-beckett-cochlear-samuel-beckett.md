@@ -1,6 +1,8 @@
 ---
 title: "Electronic Samuel Beckett: Cochlear Samuel Beckett"
 start: 2016
+categorys:
+ - publications
 tags: 
  - book
  - samuel-beckett

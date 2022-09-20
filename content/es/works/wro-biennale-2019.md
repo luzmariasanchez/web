@@ -3,6 +3,8 @@ title: WRO Biennale 2019
 image: 
 start: 2019
 place: wro-art-center
+categorys:
+ - exhibitions
 ---
 
 On its 30th anniversary, the WRO Biennale, Poland’s largest show of international contemporary art<!--more-->, which commenced as the International Sound Basis Visual Art Festival in 1989 and has explored the development of communication tools ever since, offers a critical scrutiny of processes unfolding in culture, communication, and society by examining the CZYNNIK LUDZKI / HUMAN ASPECT in a post-technological perspective.

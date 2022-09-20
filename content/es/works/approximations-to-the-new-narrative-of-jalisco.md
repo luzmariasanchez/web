@@ -2,6 +2,8 @@
 title: Approximations to the New Narrative of Jalisco
 image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/publication/image/original/Aprox-Jal.jpg
 start: 2021
+categorys:
+ - publications
 tags:
  - book
 sponsors:

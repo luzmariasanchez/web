@@ -1,5 +1,7 @@
 ---
 title: Sonar. Navigation // Location of Sound in the Artistic Practices in the 20th Century
+categorys:
+ - publications
 video: https://www.youtube.com/watch?v=NDzv4Hz9WDg
 start: 2018
 place: guadalajara-international-book-fair

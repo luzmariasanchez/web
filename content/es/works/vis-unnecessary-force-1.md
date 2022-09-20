@@ -9,6 +9,8 @@ info: "74 portable digital speakers shoot gun MK-A1, 74 Micro-SD cards, 74 mp3 s
 Dimensions: variable.
 Duration: undetermined."
 place: tamaulipas-contemporary-art-museum
+categorys:
+ - artworks
 tags:
  - multi-channel
  - sound
@@ -16,7 +18,7 @@ tags:
  - sculpture
 sponsors:
  - sistema-nacional-de-creadores-de-arte
-artworks:
+works:
   - vis-unnecessary-force-3
   - vis-unnecessary-force-4
 pictures:

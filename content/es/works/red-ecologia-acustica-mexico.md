@@ -3,6 +3,8 @@ title: Red Ecología Acústica México
 start: 2018
 end: 2022
 place: fonoteca-nacional-mexico
+categorys:
+ - academias
 tags: 
  - acoustic-ecology
  - research

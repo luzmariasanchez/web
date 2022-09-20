@@ -7,6 +7,8 @@ start: 2018
 end: 2021
 info: "8 sound-monitors, 2 subwoofers, digital interface, computer, modem, tablet, projector, digital sound + texts, 5 steel tools in ‘T’ shape."
 place: contemporary-art-university-museum-muac
+categorys:
+ - artworks
 tags:
  - generative
  - multimedia
@@ -14,7 +16,7 @@ tags:
  - installation
 sponsors:
  - sistema-nacional-de-creadores-de-arte
-artworks:
+works:
   - vis-unnecessary-force-1
   - vis-unnecessary-force-3
 ---

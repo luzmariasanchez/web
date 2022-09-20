@@ -5,6 +5,8 @@ image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/artwork/image/original
 start: 2017
 end: 2021
 place: tamaulipas-contemporary-art-museum
+categorys:
+ - artworks
 tags:
  - collaborative
  - participatory
@@ -13,7 +15,7 @@ tags:
  - web-data-visualisation
 sponsors:
  - sistema-nacional-de-creadores-de-arte
-artworks:
+works:
   - vis-unnecessary-force-1
   - vis-unnecessary-force-4
 ---
