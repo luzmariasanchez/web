@@ -21,7 +21,7 @@ async function assignRelations(context, item, options = {}) {
   if (!relatedIds || !relatedIds.length) return item;
 
   const relateds = await context.$content(context.i18n.locale, service)
-    .where({ [childField]: { $in: relatedIds } })
+    .where({ offline: { $ne: true }, [childField]: { $in: relatedIds } })
     .only(fields)
     .fetch();
 
@@ -58,7 +58,7 @@ async function assignRelation(context, item, options = {}) {
   if (!relatedId) return item;
 
   const relateds = await context.$content(context.i18n.locale, service)
-    .where({ [childField]: relatedId })
+    .where({ offline: { $ne: true }, [childField]: relatedId })
     .only(fields)
     .fetch();
 

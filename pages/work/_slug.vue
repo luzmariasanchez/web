@@ -27,7 +27,7 @@ export default {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
     return getHead({
       ...this.page,
-      title: `${this.item.title} - ${this.page.title}`
+      title: `${this.item ? this.item.title : 'Not found'} - ${this.page.title}`
     }, i18nHead);
   },
   async asyncData(context) {

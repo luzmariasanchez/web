@@ -26,6 +26,7 @@ export default async (context, service, options = {}) => {
 
   const condition = {
     offline: { $ne: true },
+    private: { $ne: true },
     ...where
   };
 

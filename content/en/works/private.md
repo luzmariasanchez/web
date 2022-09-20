@@ -1,7 +1,6 @@
 ---
-offline: true
-private: false
-title: Work Template
+private: true
+title: Private Work
 image: 
 description: A description
 video: https://www.youtube.com/watch?v=
@@ -10,11 +9,7 @@ end: 2001
 info: "A small text"
 place: template
 categorys:
- - academias
  - artworks
- - exhibitions
- - publications
- - researchs
 tags:
  - template
 sponsors:

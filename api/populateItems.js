@@ -16,7 +16,7 @@ export default async function populateItems(context, items, options = {}) {
   if (!relatedIds.length) return items;
 
   const relateds = await context.$content(context.i18n.locale, service)
-    .where({ [childField]: { $in: relatedIds } })
+    .where({ offline: { $ne: true }, [childField]: { $in: relatedIds } })
     .only(fields)
     .fetch();
 
