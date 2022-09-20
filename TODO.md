@@ -5,4 +5,3 @@ TODO
 
 - add works and remove categorys on media page
 - move media on another project
-- search page
