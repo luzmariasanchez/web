@@ -5,7 +5,7 @@
         :imageStore="getImageStoreByIndex(itemIndex)"></Bloc>
     </div>
     <template v-else>
-      <Message text="Empty"></Message>
+      <Message :text="$t('message.empty')"></Message>
     </template>
   </div>
 </template>

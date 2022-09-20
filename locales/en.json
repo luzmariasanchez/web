@@ -6,6 +6,10 @@
     "prev": "Previous",
     "next": "Next"
   },
+  "message": {
+    "empty": "No result found",
+    "notFound": "Not found"
+  },
   "page": {
     "search": "Search",
     "bio": "Bio",

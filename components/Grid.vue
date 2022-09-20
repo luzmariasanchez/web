@@ -4,7 +4,7 @@
       <Bloc v-for="(item, itemIndex) in items" :key="itemIndex" :item="item" :size="size"></Bloc>
     </div>
     <template v-else>
-      <Message :text="emptyMessage"></Message>
+      <Message :text="$t('message.empty')"></Message>
     </template>
   </div>
 </template>
@@ -17,13 +17,6 @@ export default {
     items: {
       type: Array,
       required: true,
-    },
-    emptyMessage: {
-      type: String,
-      required: false,
-      default() {
-        return 'No result found'
-      }
     },
     size: {
       type: String,

@@ -1,7 +1,7 @@
 <template>
   <div class="w-full container mx-auto">
     <template v-if="error">
-      <Message text="Not found"></Message>
+      <Message :text="$t('message.notFound')"></Message>
     </template>
     <template v-else>
       <Title :title="item.title" :description="item.description" :categorys="item.categorys"></Title>
