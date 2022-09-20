@@ -1,6 +1,6 @@
 ---
 title: Approximations to the New Narrative of Jalisco
-image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/publication/image/original/Aprox-Jal.jpg
+image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/Aprox-Jal.jpg
 start: 2021
 categorys:
  - publications
@@ -9,7 +9,7 @@ tags:
 sponsors:
  - fondo-nacional-para-la-cultura-y-las-artes
 pictures: 
- - https://luzmariasanchez.s3.us-east-2.amazonaws.com/publication/image/original/Aprox-Jal-full.jpg
+ - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/Aprox-Jal-full.jpg
 ---
 
 A lot has been heard about the new narrative. While some writers are emerging on the national and world literary scene, in Jalisco the new writers work 24 hours a day, but do we know them? Do we know what opinion the world, the city, the city deserve. literature?

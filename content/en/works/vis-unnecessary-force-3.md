@@ -1,7 +1,7 @@
 ---
 title: Vis. [un]necessary force_3
 description: (V. [u]nf_3)
-image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/artwork/image/original/vis3.jpg
+image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis3.jpg
 start: 2017
 end: 2021
 place: tamaulipas-contemporary-art-museum
