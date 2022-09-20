@@ -1,6 +1,6 @@
 <template>
   <div class="mb-20 text-center">
-    <Tag v-for="(tag, tagIndex) in tags" :key="tagIndex" :tag="tag" :pathName="`${category.slug}-tag-tag`"></Tag>
+    <Tag v-for="(tag, tagIndex) in tags" :key="tagIndex" :tag="tag"></Tag>
   </div>
 </template>
 
@@ -11,10 +11,6 @@ export default {
   props: {
     tags: {
       type: Array,
-      required: true
-    },
-    category: {
-      type: Object,
       required: true
     },
   },

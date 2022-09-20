@@ -8,11 +8,7 @@
       </div>
     </div>
     <div class="pt-4">
-      <div v-if="item.categorys">
-        <div v-for="(category, categoryIndex) in item.categorys" :key="categoryIndex"
-          class="inline-block mr-2 text-xs uppercase mb-1" :style="{ color: category.color }">{{
-          category.title }}</div>
-      </div>
+      <Categorys :categorys="item.categorys"></Categorys>
       <h4 :class="['text-white font-semibold mb-1', titleSize]">{{ item.title }}</h4>
       <div class="text-gray-400 text-sm">{{ item.description }}</div>
     </div>

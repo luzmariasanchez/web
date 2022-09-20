@@ -2,11 +2,11 @@
 
   <div class="w-full">
     <div class="text-center pt-10 pb-10">
-      <div v-if="category" class="text-xs uppercase mb-2" :style="{ color: category.color }">{{  category.title  }}</div>
+      <Categorys :categorys="categorys" class="mb-2"></Categorys>
       <h1 class="text-white font-bold text-3xl md:text-5xl">
-        {{  title  }}
+        {{ title }}
       </h1>
-      <p class="text-lg text-gray-500 mt-2" v-if="description">{{  description  }}</p>
+      <p class="text-lg text-gray-500 mt-2" v-if="description">{{ description }}</p>
     </div>
   </div>
 
@@ -25,8 +25,8 @@ export default {
       type: String,
       required: false,
     },
-    category: {
-      type: Object,
+    categorys: {
+      type: Array,
       required: false,
     },
   },

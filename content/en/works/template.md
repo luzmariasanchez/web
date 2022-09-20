@@ -1,6 +1,6 @@
 ---
-offline: true
-title: Publication Template
+offline: false
+title: Work Template
 image: 
 description: A description
 video: https://www.youtube.com/watch?v=
@@ -21,7 +21,7 @@ sponsors:
 guests:
  - template
 works:
-  - template
+  - laser-talks-mex
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit.<!--more--> Sunt aperiam blanditiis minus saepe quis atque ducimus repudiandae. Asperiores cum placeat a tenetur nihil sequi? Saepe, consectetur. Eveniet obcaecati fugiat inventore.

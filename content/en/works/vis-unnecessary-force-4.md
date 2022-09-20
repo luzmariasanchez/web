@@ -16,7 +16,7 @@ tags:
  - installation
 sponsors:
  - sistema-nacional-de-creadores-de-arte
-artworks:
+works:
   - vis-unnecessary-force-1
   - vis-unnecessary-force-3
 ---

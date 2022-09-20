@@ -29,10 +29,17 @@ export default async function populateItems(context, items, options = {}) {
 
   const fieldKey = keyField || parentKey;
 
-  const relationedItems = items.map(item => ({
-    ...item,
-    [fieldKey]: (item[parentKey] || []).map(parentValue => relatedsById[parentValue])
-  }))
+  const relationedItems = items.map(item => {
+
+    const relations = (item[parentKey] || [])
+      .map(parentValue => relatedsById[parentValue])
+      .filter(relation => relation)
+
+    return {
+      ...item,
+      [fieldKey]: relations
+    }
+  })
 
   return relationedItems;
 }

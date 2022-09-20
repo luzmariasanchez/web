@@ -1,15 +1,20 @@
 <template>
   <div class="w-full container mx-auto">
-    <Title :title="page.title" :description="page.description"></Title>
-    <Nav>
-      <template #left>
-        <i class="icon-filter text-gray-300 mr-2"></i>
-        <FilterTags></FilterTags>
-      </template>
-    </Nav>
-    <Grid :items="items"></Grid>
-    <Pagination :pathName="'works'" :currentPage="+currentPagination" :totalPage="+totalPagination"></Pagination>
-    <Author></Author>
+    <template v-if="error">
+      <Message text="Not found"></Message>
+    </template>
+    <template v-else>
+      <Title :title="page.title" :description="page.description"></Title>
+      <Nav>
+        <template #left>
+          <i class="icon-filter text-gray-300 mr-2"></i>
+          <FilterTags></FilterTags>
+        </template>
+      </Nav>
+      <Grid :items="items"></Grid>
+      <Pagination :pathName="'works'" :currentPage="+currentPagination" :totalPage="+totalPagination"></Pagination>
+      <Author></Author>
+    </template>
   </div>
 </template>
 
@@ -31,7 +36,12 @@ export default {
   },
   watchQuery: ['p'],
   async asyncData(context) {
-    const page = await context.$content(context.i18n.locale, 'pages', 'works').fetch();
+    let page, error;
+    try {
+      page = await context.$content(context.i18n.locale, 'pages', 'works').fetch();
+    } catch (err) {
+      error = err;
+    }
     const { items, page: currentPagination, totalPage: totalPagination } = await loadItems(context, 'works', {
       page: context.query.p ? parseInt(context.query.p, 10) : 1,
       limit: 6,
@@ -45,6 +55,7 @@ export default {
     });
     return {
       page,
+      error,
       items,
       currentPagination,
       totalPagination

@@ -23,7 +23,7 @@ import getHead from "@/helpers/head";
 import loadItems from "@/api/loadItems";
 
 export default {
-  name: "works-tag",
+  name: "works-t-tag",
   nuxtI18n: {
     paths: {
       en: "/works/t/:tag",

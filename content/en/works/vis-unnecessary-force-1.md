@@ -18,7 +18,7 @@ tags:
  - sculpture
 sponsors:
  - sistema-nacional-de-creadores-de-arte
-artworks:
+works:
   - vis-unnecessary-force-3
   - vis-unnecessary-force-4
 pictures:
