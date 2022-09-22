@@ -62,7 +62,7 @@
 <script>
 import { sortBy } from 'lodash';
 import getHead from "@/helpers/head";
-import { formatBytes } from "@/helpers/utils/format";
+import { formatBytes } from "@erniamor/formater";
 import aws from "@/services/aws";
 import albums from "@/constants/albums";
 import config from '@/config';
@@ -147,7 +147,7 @@ export default {
         src: this.bucketUrl + file.Key,
         key: file.Key,
         date: this.$dayjs(file.LastModified).format('YYYY/MM/DD HH:mm'),
-        size: formatBytes(file.Size)
+        size: formatBytes(file.Size, 2)
       }))
       return mappedFiles;
     },
