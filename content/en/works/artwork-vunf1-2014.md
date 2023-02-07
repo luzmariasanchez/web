@@ -1,14 +1,12 @@
 ---
-title: Vis. [un]necessary force_1*
-description: (V. [u]nf_1*)
+title: Vis. [un]necessary force_1
+description: (V.[u]nf_1)
 image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-1.jpg
-video: https://www.youtube.com/watch?v=rB-xZ5NqTYE
+#video: https://www.youtube.com/watch?v=rB-xZ5NqTYE
 start: 2014
 end: 2015
-info: "20 portable digital speakers shoot gun MK-A1, 74 Micro-SD cards, 74 mp3 sounds, MDF modular structure.
-Dimensions: variable.
-Duration: undetermined."
-place: tamaulipas-contemporary-art-museum
+info: "Vis. [un]necessary force_1"
+
 categorys:
  - artworks
 tags:
@@ -18,13 +16,20 @@ tags:
  - sculpture
 
 sponsors:
- - sistema-nacional-de-creadores-de-arte
+ #- sistema-nacional-de-creadores-de-arte
 works:
-  - vis-unnecessary-force-1.01
-  - vis-unnecessary-force-1
-  - vis-unnecessary-force-3
-  - vis-unnecessary-force-4
-  - vis-unnecessary-force-2
+ - artwork-vunf1_01-2017
+ - artwork-vunf1_-2014
+ - artwork-vunf2-2016
+ - artwork-vunf3-2017
+ - artwork-vunf4-2019
+ - prize-arselectronica-2021
+ - research-post-national-mexico-sound-2014
+ - research-achc-2016
+ - academia-intermittent-spaces-ual-2020
+ - academia-now-how-saic-2021
+ - academia-vfin-a-socially-engaged-isea-2017
+ - publication-shifting-kluscinsky-2022
 pictures:
  - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-2.jpg
  - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-3.jpg
@@ -36,7 +41,13 @@ pictures:
  - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-9.jpg
 ---
 
-V. [u]nf_1 is a multichannel sound sculpture/installation.<!--more-->  The title is a sort of acronym in Spanish; it means Vis. [Un]necessary force. It is the first of the series, hence the number 1. V. [u]nf_1  addresses the subject of violence from the citizen’s perspective. Since media is not covering everyday experiences of violence, people flock to the arena offered by social networks, and share their own sounds and images –the ones that communicate their particular experiences within this context of explicit violence. V. [u]nf_1  is assembled using 74 audio players gun-shaped, that build a large format sound-texture composed of the same number of acoustic logs: shootings recorded by citizens caught in confrontations between law enforcement and organized crime in Mexico.
+Multichannel sound sculpture/installation. 
+
+74 portable digital speakers shoot gun MK-A1, 74 Micro-SD cards, 74 mp3 sounds, MDF modular structure.\
+Dimensions: variable.\
+Duration: undetermined.\
+\
+*Vis. [un]necessary force_1* (*V.[u]nf_1*) is a multichannel sound sculpture/installation.<!--more-->  The title is a sort of acronym in Spanish; it means Vis. [Un]necessary force. It is the first of the series, hence the number 1. V. [u]nf_1  addresses the subject of violence from the citizen’s perspective. Since media is not covering everyday experiences of violence, people flock to the arena offered by social networks, and share their own sounds and images –the ones that communicate their particular experiences within this context of explicit violence. V. [u]nf_1  is assembled using 74 audio players gun-shaped, that build a large format sound-texture composed of the same number of acoustic logs: shootings recorded by citizens caught in confrontations between law enforcement and organized crime in Mexico.
 
 V. [u]nf_1  consists of 74 independent audio channels, and the sound tracks are played individually on each of these speakers. At the end of the day and as the batteries run out of charge, speakers/guns go off gradually so the circle of operation/sound non-operation/silence is restarted.
 

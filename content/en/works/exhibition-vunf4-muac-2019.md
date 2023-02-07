@@ -15,23 +15,20 @@ sponsors:
 guests:
  - template
 works:
- - vis-unnecessary-force-4
- - vis-unnecessary-force-2
- - vis-unnecessary-force-3
- - vis-unnecessary-force-1.01
- - vis-unnecessary-force-1
- - vis-unnecessary-force-1_
- - prix-ars-electronica-2021
- - vis_el_sonido_del_mexico_posnacional
- - intermittent_spaces
- - sound_department_colloquium_series
- - shifting_interfaces
- - catalogue-prix-ars-electronica-2021
- - artistic-practice-and-communities-immersed-in-search-processes-for-victims-of-enforced-disappearance-in-mexico
- - arts-sciences-humanities-and-citizenship-achc
- - performatividades-de-la-busqueda
- - sound_park_ars_electronica_2021
- - re_sound_art_exhibition
+ - artwork-vunf4-2019
+ - prize-arselectronica-2021
+ - research-post-national-mexico-sound-2014
+ - research-achc-2016
+ - academia-intermittent-spaces-ual-2020
+ - academia-now-how-saic-2021
+ - academia-vfin-a-socially-engaged-isea-2017
+ - publication-prix-arselectronica-2021
+ - publication-escucha-sanchez-2020
+ - publication-shifting-kluscinsky-2022
+ - exhibition-vfin4-aalborg-2019
+ - exhibition-vfin4-gam-2022
+ - exhibition-vfin4-soundpark-2021
+
 pictures:
  - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/V.[u]nf_4_Muac_Documentation_19.JPG
  - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/V.[u]nf_4_Muac_Documentation_20.JPG
