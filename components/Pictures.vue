@@ -3,13 +3,15 @@
     <Subtitle :title="$t('content.pictures')"></Subtitle>
     <client-only>
       <masonry :cols="{ default: 4, 1200: 4, 1000: 3, 720: 3, 580: 2, 400: 2 }" :gutter="8">
-        <div v-for="(picture, pictureIndex) in pictures" :key="pictureIndex"
+        <div v-for="(picture, pictureIndex) in galleryImages" :key="pictureIndex"
           @click="onPictureClick(picture, pictureIndex)"
           class="cursor-pointer brightness-100 hover:brightness-125 transition mb-2">
           <Picture :url="picture"></Picture>
         </div>
       </masonry>
-      <v-gallery :images="galleryImages" :index="galleryIndex" @close="galleryIndex = null"></v-gallery>
+      <v-gallery :images="galleryImages" :index="galleryIndex" @close="onGalleryClose" @onslide="onGallerySlide"
+        @onslideend="onGallerySlideEnd"></v-gallery>
+      <PictureLegend v-if="currentLegend" :legend="currentLegend"></PictureLegend>
     </client-only>
   </div>
 </template>
@@ -30,16 +32,42 @@ export default {
     };
   },
   computed: {
-    galleryImages() {
+    picturesSplited() {
       if (this.pictures)
-        return this.pictures.map((picture) => this.$imager(picture, 'full')
+        return this.pictures.map((picture) => {
+          const splited = picture.split('|');
+          return {
+            url: splited[0],
+            legend: splited[1],
+          }
+        }
         );
       return [];
     },
+    galleryImages() {
+      return this.picturesSplited.map((picture) => this.$imager(picture.url, 'full'));
+    },
+    galleryLegends() {
+      return this.picturesSplited.map((picture) => picture.legend);
+    },
+    currentLegend() {
+      return (this.galleryIndex >= 0) ? this.galleryLegends[this.galleryIndex] : null;
+    }
   },
   methods: {
     onPictureClick(item, index) {
       this.galleryIndex = index;
+    },
+    onGalleryClose(prop) {
+      console.log('onGalleryClose', prop);
+      this.galleryIndex = null
+    },
+    onGallerySlide(prop) {
+      console.log('onGallerySlide', prop);
+    },
+    onGallerySlideEnd(prop) {
+      console.log('onGallerySlideEnd', prop);
+      this.galleryIndex = prop.index
     },
   },
 }

@@ -4,7 +4,6 @@ private: false
 title: Work Template
 description: 
 image: 
-video: https://www.youtube.com/watch?v=
 start: 2000
 end: 2001
 info: "A small text"
@@ -24,8 +23,8 @@ guests:
 works:
  - template
 pictures:
- - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-2.jpg
- - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-3.jpg
+ - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-2.jpg|Here a legend
+ - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-3.jpg|Another legend
  - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-4.jpg
  - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-5.jpg
 ---
