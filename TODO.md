@@ -1,5 +1,15 @@
 TODO
 
+
+- checar rezise image
+- add legende in image gallery
+- cambiar "works" for ""
+- cambiar sponsors by collabora
+- cambiar guests and sponsors por un label personalisado
+- categorias secondarias
+
+
+
 - filter by year
 - sitemap
 - fix author button on mobile

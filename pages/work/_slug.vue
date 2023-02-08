@@ -69,8 +69,15 @@ export default {
         },
         {
           service: 'works',
-          fields: ['title', 'slug', 'image', 'description'],
-          many: true
+          fields: ['title', 'slug', 'image', 'description', 'categorys'],
+          many: true,
+          relations: [
+            {
+              service: 'categorys',
+              fields: ['title', 'slug', 'color'],
+              many: true
+            },
+          ]
         }
       ]
     });

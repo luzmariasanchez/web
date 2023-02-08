@@ -1,4 +1,6 @@
 
+import populateItems from '@/api/populateItems';
+
 const defaultOptions = {
   service: '',
   fields: ['title', 'slug'],
@@ -6,11 +8,12 @@ const defaultOptions = {
   childField: 'slug',
   keyField: null,
   many: false,
+  relations: null
 }
 
 async function assignRelations(context, item, options = {}) {
 
-  const { service, fields, parentField, childField, keyField } = {
+  const { service, fields, parentField, childField, keyField, relations } = {
     ...defaultOptions,
     ...options
   }
@@ -20,12 +23,18 @@ async function assignRelations(context, item, options = {}) {
   const relatedIds = item[parentKey];
   if (!relatedIds || !relatedIds.length) return item;
 
-  const relateds = await context.$content(context.i18n.locale, service)
+  let relatedItems = await context.$content(context.i18n.locale, service)
     .where({ offline: { $ne: true }, [childField]: { $in: relatedIds } })
     .only(fields)
     .fetch();
 
-  const relatedsById = relateds.reduce((previousValue, currentValue) => {
+  if (relations && relations.length) {
+    for (let index = 0; index < relations.length; index++) {
+      relatedItems = await populateItems(context, [...relatedItems], relations[index]);
+    }
+  }
+
+  const relatedsById = relatedItems.reduce((previousValue, currentValue) => {
     return {
       ...previousValue,
       [currentValue[childField]]: currentValue
@@ -34,20 +43,20 @@ async function assignRelations(context, item, options = {}) {
 
   const fieldKey = keyField || parentKey;
 
-  const relations = (item[parentKey] || [])
+  const relateds = (item[parentKey] || [])
     .map(parentValue => relatedsById[parentValue])
     .filter(relation => relation)
 
   return {
     ...item,
-    [fieldKey]: relations
+    [fieldKey]: relateds
   };
 
 }
 
 async function assignRelation(context, item, options = {}) {
 
-  const { service, fields, parentField, childField, keyField } = {
+  const { service, fields, parentField, childField, keyField, relations } = {
     ...defaultOptions,
     ...options
   }
@@ -62,11 +71,19 @@ async function assignRelation(context, item, options = {}) {
     .only(fields)
     .fetch();
 
+  let related = relateds[0];
+
+  if (relations && relations.length) {
+    for (let index = 0; index < relations.length; index++) {
+      related = await populateItem(context, related, relations[index]);
+    }
+  }
+
   const fieldKey = keyField || parentKey;
 
   return {
     ...item,
-    [fieldKey]: relateds[0]
+    [fieldKey]: related
   };
 
 }
