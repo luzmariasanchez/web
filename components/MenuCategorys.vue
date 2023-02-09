@@ -10,7 +10,7 @@
     <div :class="['lg:flex text-sm', showMenu ? 'opened' : 'hidden']" v-click-outside="closeMenu">
       <ul class="list-reset flex flex-col lg:flex-row lg:flex-1 lg:items-center" @click="closeMenu">
         <li class="mr-2" v-for="(category, categoryIndex) in categorys" :key="categoryIndex">
-          <nuxt-link :to="localePath({ name: 'works-c-category', params: {category:category.slug}})"
+          <nuxt-link :to="localePath({ name: 'works-c-category', params: { category: category.slug } })"
             class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
             {{ category.title }}</nuxt-link>
         </li>
@@ -33,7 +33,7 @@ export default {
   methods: {
     async load() {
       this.categorys = await this.$content(this.$i18n.locale, 'categorys')
-        .where({ offline: { $ne: true }, })
+        .where({ offline: { $ne: true }, primary: true })
         .sortBy('order', 'asc')
         .sortBy('title', 'asc')
         .only(['title', 'slug'])
@@ -74,4 +74,3 @@ export default {
   color: white;
 }
 </style>
-  

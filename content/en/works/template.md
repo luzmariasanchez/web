@@ -4,6 +4,7 @@ private: false
 title: Work Template
 description: 
 image: 
+video: https://www.youtube.com/
 start: 2000
 end: 2001
 info: "A small text"
