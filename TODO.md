@@ -2,9 +2,6 @@ TODO
 
 
 - checar rezise image
-- cambiar "works" for ""
-- cambiar sponsors by collabora
-- cambiar guests and sponsors por un label personalisado
 - categorias secondarias
 
 
