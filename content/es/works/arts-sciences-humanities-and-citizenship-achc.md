@@ -6,8 +6,8 @@ start: 2016
 end: 2022
 place: universidad-autonoma-metropolitana
 categorys:
- - academias
- - researchs
+ - academia
+ - research
 tags:
  - research
  - transdiciplinary

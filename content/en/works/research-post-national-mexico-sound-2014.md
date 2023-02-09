@@ -10,7 +10,7 @@ end: 2023
 info: "[Vis. (un)necessary force. Post-National Mexico’s Sound.]"
 place: template
 categorys:
- - researchs
+ - research
 tags:
  - template
 sponsors:

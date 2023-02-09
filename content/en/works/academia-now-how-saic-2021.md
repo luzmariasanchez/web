@@ -9,7 +9,7 @@ start: 2021
 info: "Now. How?"
 place: template
 categorys:
- - academias
+ - academia
  - 
 tags:
  - template

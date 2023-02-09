@@ -5,7 +5,7 @@ start: 2018
 end: 2022
 #place: fonoteca-nacional-mexico
 categorys:
- - researchs
+ - research
 tags: 
  - acoustic-ecology
  - research

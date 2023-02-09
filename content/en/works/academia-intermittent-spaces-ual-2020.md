@@ -9,7 +9,7 @@ start: 2020
 info: "Intermittent spaces"
 #place: template
 categorys:
- - academias
+ - academia
 tags:
  - template
 sponsors:

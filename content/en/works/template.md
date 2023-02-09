@@ -9,11 +9,11 @@ end: 2001
 info: "A small text"
 place: template
 categorys:
- - academias
+ - academia
  - artworks
  - exhibitions
  - publications
- - researchs
+ - research
 tags:
  - template
 sponsors:

@@ -4,7 +4,7 @@ image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/LA
 start: 2019
 place: casa-del-tiempo-uam
 categorys:
- - academias
+ - academia
 tags:
  - research
  - transdiciplinary

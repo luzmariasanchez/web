@@ -8,11 +8,11 @@ start: 2021
 info: "Vis.[un]necessary force_4 Prix Ars Electronica 2021. Honorary Mention. Category Digital Musics and Sound Art."
 place: template
 categorys:
- - academias
+ - academia
  - artworks
  - exhibitions
  - publications
- - researchs
+ - research
 tags:
  - template
 sponsors:

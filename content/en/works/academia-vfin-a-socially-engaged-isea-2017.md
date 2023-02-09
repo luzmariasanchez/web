@@ -11,7 +11,7 @@ Universidad de Caldas. Manizales, Colombia.
 "
 place: template
 categorys:
- - academias
+ - academia
 tags:
  - template
 sponsors:
