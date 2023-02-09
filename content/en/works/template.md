@@ -1,5 +1,5 @@
 ---
-offline: true
+offline: false
 private: false
 title: Work Template
 description: 
@@ -24,7 +24,7 @@ works:
  - template
 pictures:
  - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-2.jpg|Here a legend
- - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-3.jpg|Another legend
+ - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-3.jpg|Another legend|http://www.romain.re
  - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-4.jpg
  - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/vis1-5.jpg
 ---

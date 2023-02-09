@@ -11,7 +11,7 @@
       </masonry>
       <v-gallery :images="galleryImages" :index="galleryIndex" @close="onGalleryClose" @onslide="onGallerySlide"
         @onslideend="onGallerySlideEnd"></v-gallery>
-      <PictureLegend v-if="currentLegend" :legend="currentLegend"></PictureLegend>
+      <PictureLegend v-if="currentPicture" :picture="currentPicture"></PictureLegend>
     </client-only>
   </div>
 </template>
@@ -39,6 +39,7 @@ export default {
           return {
             url: splited[0],
             legend: splited[1],
+            link: splited[2],
           }
         }
         );
@@ -47,11 +48,8 @@ export default {
     galleryImages() {
       return this.picturesSplited.map((picture) => this.$imager(picture.url, 'full'));
     },
-    galleryLegends() {
-      return this.picturesSplited.map((picture) => picture.legend);
-    },
-    currentLegend() {
-      return (this.galleryIndex >= 0) ? this.galleryLegends[this.galleryIndex] : null;
+    currentPicture() {
+      return (this.galleryIndex >= 0) ? this.picturesSplited[this.galleryIndex] : null;
     }
   },
   methods: {
