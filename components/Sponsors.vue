@@ -1,6 +1,6 @@
 <template>
   <div class="mb-20 text-center">
-    <Subtitle :title="$t('content.sponsors')"></Subtitle>
+    <Subtitle :title="label || $t('content.sponsors')"></Subtitle>
     <div class="flex flex-wrap justify-center">
       <Sponsor v-for="(sponsor, sponsorIndex) in sponsors" :key="sponsorIndex" :sponsor="sponsor"></Sponsor>
     </div>
@@ -15,7 +15,11 @@ export default {
     sponsors: {
       type: Array,
       required: true
-    }
+    },
+    label: {
+      type: String,
+      required: false
+    },
   },
 }
 </script>

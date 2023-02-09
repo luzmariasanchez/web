@@ -16,10 +16,12 @@ categorys:
  - research
 tags:
  - template
+sponsorsLabel: Collab
 sponsors:
- - template
+ - artpace
+guestsLabel: Curador
 guests:
- - template
+ - amanda-de-la-garza
 works:
  - template
 pictures:

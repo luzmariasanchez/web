@@ -8,8 +8,9 @@
       <Tags v-if="page.tags && page.tags.length" :tags="page.tags"></Tags>
       <Video v-if="page.video" :url="page.video"></Video>
       <Places v-if="page.place" :place="page.place"></Places>
-      <Guests v-if="page.guests && page.guests.length" :guests="page.guests"></Guests>
-      <Sponsors v-if="page.sponsors && page.sponsors.length" :sponsors="page.sponsors"></Sponsors>
+      <Guests v-if="page.guests && page.guests.length" :guests="page.guests" :label="page.guestsLabel"></Guests>
+      <Sponsors v-if="page.sponsors && page.sponsors.length" :sponsors="page.sponsors" :label="page.sponsorsLabel">
+      </Sponsors>
       <Pictures v-if="page.pictures && page.pictures.length" :pictures="page.pictures"></Pictures>
       <Relateds v-if="page.works && page.works.length" :items="page.works"></Relateds>
     </div>
