@@ -1,6 +1,9 @@
 <template>
   <div class="w-full">
     <img :src="$imager(url, 'full')" :alt="alt" :style="{ width: '100%' }" class="rounded-lg">
+    <div v-if="legend" class="flex flex-row-reverse text-gray-600 text-xs italic">
+      <div>{{ legend }}</div>
+    </div>
   </div>
 </template>
 
@@ -16,6 +19,10 @@ export default {
     alt: {
       type: String,
       required: true
+    },
+    legend: {
+      type: String,
+      required: false
     },
   },
 }

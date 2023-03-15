@@ -1,9 +1,10 @@
 ---
-offline: true
+offline: false
 private: false
 title: Work Template
 description: 
-image: 
+image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/-0RYEZMr_400x400.jpg
+imageLegend: An image legend for forst image
 video: https://www.youtube.com/
 start: 2000
 end: 2001
