@@ -4,8 +4,8 @@ private: false
 title: Work Template
 description: 
 image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/-0RYEZMr_400x400.jpg
-imageLegend: An image legend for forst image
-video: https://www.youtube.com/
+imageLegend: An image legend for first image
+video: https://www.youtube.com/watch?v=ScMzIvxBSi4
 start: 2000
 end: 2001
 info: "A small text"
@@ -17,6 +17,16 @@ categorys:
  - publications
  - research
 tags:
+ - template
+collections:
+ - template
+commissions:
+ - template
+grants:
+ - template
+prices:
+ - template
+residencys:
  - template
 sponsorsLabel: Collab
 sponsors:
