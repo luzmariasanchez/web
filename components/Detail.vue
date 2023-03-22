@@ -7,6 +7,8 @@
       <Content :page="page"></Content>
       <Tags v-if="page.tags && page.tags.length" :tags="page.tags"></Tags>
       <Places v-if="page.place" :place="page.place"></Places>
+      <Collections v-if="page.collections && page.collections.length" :collections="page.collections"
+        :label="page.collectionsLabel"></Collections>
       <Guests v-if="page.guests && page.guests.length" :guests="page.guests" :label="page.guestsLabel"></Guests>
       <Sponsors v-if="page.sponsors && page.sponsors.length" :sponsors="page.sponsors" :label="page.sponsorsLabel">
       </Sponsors>

@@ -58,6 +58,31 @@ export default {
           many: true
         },
         {
+          service: 'collections',
+          fields: ['title', 'slug'],
+          many: true
+        },
+        {
+          service: 'commissions',
+          fields: ['title', 'slug'],
+          many: true
+        },
+        {
+          service: 'grants',
+          fields: ['title', 'slug'],
+          many: true
+        },
+        {
+          service: 'prices',
+          fields: ['title', 'slug'],
+          many: true
+        },
+        {
+          service: 'residencys',
+          fields: ['title', 'slug'],
+          many: true
+        },
+        {
           service: 'guests',
           fields: ['title', 'slug', 'image', 'job', 'from', 'body'],
           many: true
