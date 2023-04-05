@@ -31,6 +31,7 @@ export default {
   plugins: [
     { src: '~/plugins/prototypes.js' },
     { src: '~/plugins/click-outside.client.js' },
+    { src: '~/plugins/dayjs.js' },
     { src: '~/plugins/vue-gallery.js', mode: "client" },
     { src: "~/plugins/vue-masonry-css", mode: "client" },
   ],
