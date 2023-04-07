@@ -1,5 +1,5 @@
 ---
-offline: true
+offline: false
 title: Collection Template 
 collection: Name of the collection
 address: City, country

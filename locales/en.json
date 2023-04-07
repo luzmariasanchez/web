@@ -24,10 +24,14 @@
   "content": {
     "place": "Place",
     "collections": "Collections",
+    "commissions": "Commissions",
+    "grants": "Grants",
     "guests": "Productors",
     "sponsors": "Collaborators",
+    "prices": "Prices",
     "pictures": "Gallery",
     "picture-link": "Follow link",
+    "residencys": "Residencies",
     "relateds": "Related Works"
   },
   "author": {

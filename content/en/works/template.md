@@ -1,5 +1,5 @@
 ---
-offline: true
+offline: false
 private: false
 title: Work Template
 description: A description
@@ -18,8 +18,10 @@ categorys:
  - research
 tags:
  - template
+collectionsLabel: Collec
 collections:
  - template
+commissionsLabel: Comis
 commissions:
  - template
 grants:

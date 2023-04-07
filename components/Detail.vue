@@ -9,12 +9,12 @@
       <Places v-if="page.place" :place="page.place"></Places>
       <Collections v-if="page.collections && page.collections.length" :collections="page.collections"
         :label="page.collectionsLabel"></Collections>
+      <Commissions v-if="page.commissions && page.commissions.length" :commissions="page.commissions"
+        :label="page.commissionsLabel"></Commissions>
       <Guests v-if="page.guests && page.guests.length" :guests="page.guests" :label="page.guestsLabel"></Guests>
       <Sponsors v-if="page.sponsors && page.sponsors.length" :sponsors="page.sponsors" :label="page.sponsorsLabel">
       </Sponsors>
       <!-- PRIZE 
-      COLLECTION 
-      COMISION  
       GRANT 
       RESIDENCIA -->
       <Video v-if="page.video" :url="page.video"></Video>
