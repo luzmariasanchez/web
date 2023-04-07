@@ -2,7 +2,7 @@
   <div class="w-full container mx-auto">
     <Title :title="page.title" :description="page.description"></Title>
     <CheckItems :items="items" :schema="schema" :options="{ relations }" :route="route"></CheckItems>
-    <Pagination :pathName="'check-commissions'" :currentPage="+currentPagination" :totalPage="+totalPagination">
+    <Pagination :pathName="'check-grants'" :currentPage="+currentPagination" :totalPage="+totalPagination">
     </Pagination>
   </div>
 </template>
@@ -10,14 +10,14 @@
 <script>
 import getHead from "@/helpers/head";
 import loadItems from "@/api/loadItems";
-import schema from "@/schemas/commissions";
+import schema from "@/schemas/grants";
 
 export default {
-  name: "check-commissions",
+  name: "check-grants",
   nuxtI18n: {
     paths: {
-      en: "/check/commissions",
-      es: "/check/commissions",
+      en: "/check/grants",
+      es: "/check/grants",
     },
   },
   head() {
@@ -36,9 +36,9 @@ export default {
   watchQuery: ['p'],
   async asyncData(context) {
     const page = {
-      title: 'Check commissions'
+      title: 'Check grants'
     }
-    const { items, page: currentPagination, totalPage: totalPagination } = await loadItems(context, 'commissions', {
+    const { items, page: currentPagination, totalPage: totalPagination } = await loadItems(context, 'grants', {
       page: context.query.p ? parseInt(context.query.p, 10) : 1,
       limit: 1000,
       condition: {},
@@ -47,7 +47,8 @@ export default {
         'title',
         'offline',
         'address',
-        'jury',
+        'type',
+        'institution',
         'start',
         'end',
         'url',

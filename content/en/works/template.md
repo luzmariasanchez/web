@@ -24,10 +24,13 @@ collections:
 commissionsLabel: Comis
 commissions:
  - template
+grantsLabel: Gr
 grants:
  - template
+pricesLabel: Prix
 prices:
  - template
+residencysLabel: Residence
 residencys:
  - template
 sponsorsLabel: Collab

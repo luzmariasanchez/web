@@ -24,7 +24,10 @@ export default {
   address: {
     isString: isString(),
   },
-  jury: {
+  type: {
+    isString: isString(),
+  },
+  institution: {
     isString: isString(),
   },
   url: {

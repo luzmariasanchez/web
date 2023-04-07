@@ -1,7 +1,8 @@
 ---
 offline: false
 title: Commission Template
-year: 2012
+start: 2012
+end: 2013
 jury: Manuel Rocha Iturbide. José Vasconcelos National Library, Ciudadela. 
 address: Mexico City, Mexico. 
 url: 

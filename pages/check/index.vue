@@ -35,6 +35,8 @@ export default {
       items: [
         { name: 'Categories', route: 'check-categorys' },
         { name: 'Collections', route: 'check-collections' },
+        { name: 'Commissions', route: 'check-commissions' },
+        { name: 'Grants', route: 'check-grants' },
         { name: 'Guests', route: 'check-guests' },
         { name: 'Places', route: 'check-places' },
         { name: 'Sponsors', route: 'check-sponsors' },

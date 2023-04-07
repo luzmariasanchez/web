@@ -11,11 +11,11 @@
         :label="page.collectionsLabel"></Collections>
       <Commissions v-if="page.commissions && page.commissions.length" :commissions="page.commissions"
         :label="page.commissionsLabel"></Commissions>
+      <Grants v-if="page.grants && page.grants.length" :grants="page.grants" :label="page.grantsLabel"></Grants>
       <Guests v-if="page.guests && page.guests.length" :guests="page.guests" :label="page.guestsLabel"></Guests>
       <Sponsors v-if="page.sponsors && page.sponsors.length" :sponsors="page.sponsors" :label="page.sponsorsLabel">
       </Sponsors>
       <!-- PRIZE 
-      GRANT 
       RESIDENCIA -->
       <Video v-if="page.video" :url="page.video"></Video>
       <Pictures v-if="page.pictures && page.pictures.length" :pictures="page.pictures"></Pictures>
