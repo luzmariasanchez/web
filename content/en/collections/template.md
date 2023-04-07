@@ -1,8 +1,10 @@
 ---
-title: Riverbank 
-collection: Linda Pace Foundation
-place: San Antonio, United States.
-link: 
+offline: true
+title: Collection Template 
+collection: Name of the collection
+address: City, country
+image: https://img.local.mx/2018/05/destacada-2-1024x528.jpg
+url: http://www.test.com
 ---
 
 Edition of 3 [+ exhibition and artist copy].
