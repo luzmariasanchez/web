@@ -2,8 +2,7 @@
   <div>
     <ul class="lg:hidden">
       <li>
-        <button
-          class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2 text-xl"
+        <button class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2 text-xl"
           @click.stop="toggleMenu"><i :class="showMenu ? 'icon-cancel' : 'icon-menu'"></i></button>
       </li>
     </ul>
@@ -17,7 +16,6 @@
       </ul>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -33,7 +31,7 @@ export default {
   methods: {
     async load() {
       this.categorys = await this.$content(this.$i18n.locale, 'categorys')
-        .where({ offline: { $ne: true }, primary: true })
+        .where({ offline: { $ne: true } })
         .sortBy('order', 'asc')
         .sortBy('title', 'asc')
         .only(['title', 'slug'])
