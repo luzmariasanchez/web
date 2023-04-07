@@ -12,11 +12,12 @@
       <Commissions v-if="page.commissions && page.commissions.length" :commissions="page.commissions"
         :label="page.commissionsLabel"></Commissions>
       <Grants v-if="page.grants && page.grants.length" :grants="page.grants" :label="page.grantsLabel"></Grants>
+      <Prices v-if="page.prices && page.prices.length" :prices="page.prices" :label="page.pricesLabel"></Prices>
+      <Residencys v-if="page.residencys && page.residencys.length" :residencys="page.residencys"
+        :label="page.residencysLabel"></Residencys>
       <Guests v-if="page.guests && page.guests.length" :guests="page.guests" :label="page.guestsLabel"></Guests>
       <Sponsors v-if="page.sponsors && page.sponsors.length" :sponsors="page.sponsors" :label="page.sponsorsLabel">
       </Sponsors>
-      <!-- PRIZE 
-      RESIDENCIA -->
       <Video v-if="page.video" :url="page.video"></Video>
       <Pictures v-if="page.pictures && page.pictures.length" :pictures="page.pictures"></Pictures>
       <Relateds v-if="page.works && page.works.length" :items="page.works"></Relateds>

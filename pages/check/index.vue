@@ -39,6 +39,8 @@ export default {
         { name: 'Grants', route: 'check-grants' },
         { name: 'Guests', route: 'check-guests' },
         { name: 'Places', route: 'check-places' },
+        { name: 'Prices', route: 'check-prices' },
+        { name: 'Residences', route: 'check-residencys' },
         { name: 'Sponsors', route: 'check-sponsors' },
         { name: 'Tags', route: 'check-tags' },
         { name: 'Works', route: 'check-works' },
