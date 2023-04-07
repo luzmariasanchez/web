@@ -1,6 +1,7 @@
 import {
   hasRelation,
-  // hasRelations,
+  hasRelations,
+  isArray,
   isBoolean,
   isDate,
   isImage,
@@ -29,6 +30,7 @@ export default {
     maxLength: maxLength(100),
   },
   image: {
+    required: required(),
     isUrl: isUrl(),
     isImage: isImage(),
   },
@@ -50,40 +52,56 @@ export default {
     isString: isString(),
   },
   place: {
+    isString: isString(),
     hasRelation: hasRelation('places'),
   },
-  // categorys: {
-  //   hasRelations: hasRelations('categorys'),
-  // },
-
-  // TODO: add requiredIf validator
-
-  // place: template
-  // categorys:
-  //  - academia
-  //  - artworks
-  //  - exhibitions
-  //  - publications
-  //  - research
-  // tags:
-  //  - template
-  // collections:
-  //  - template
-  // commissions:
-  //  - template
-  // grants:
-  //  - template
-  // prices:
-  //  - template
-  // residencys:
-  //  - template
-  // sponsorsLabel: Collab
-  // sponsors:
-  //  - artpace
-  // guestsLabel: Curador
-  // guests:
-  //  - amanda-de-la-garza
-  // works:
-  //  - template
-  // pictures:
+  categorys: {
+    isArray: isArray(),
+    hasRelations: hasRelations('categorys'),
+  },
+  tags: {
+    isArray: isArray(),
+    hasRelations: hasRelations('tags'),
+  },
+  collections: {
+    isArray: isArray(),
+    hasRelations: hasRelations('collections'),
+  },
+  commissions: {
+    isArray: isArray(),
+    hasRelations: hasRelations('commissions'),
+  },
+  grants: {
+    isArray: isArray(),
+    hasRelations: hasRelations('grants'),
+  },
+  prices: {
+    isArray: isArray(),
+    hasRelations: hasRelations('prices'),
+  },
+  residencys: {
+    isArray: isArray(),
+    hasRelations: hasRelations('residencys'),
+  },
+  sponsors: {
+    isArray: isArray(),
+    hasRelations: hasRelations('sponsors'),
+  },
+  sponsorsLabel: {
+    isString: isString(),
+  },
+  guests: {
+    isArray: isArray(),
+    hasRelations: hasRelations('guests'),
+  },
+  guestsLabel: {
+    isString: isString(),
+  },
+  works: {
+    isArray: isArray(),
+    hasRelations: hasRelations('works'),
+  },
+  pictures: {
+    isArray: isArray(),
+  },
 }

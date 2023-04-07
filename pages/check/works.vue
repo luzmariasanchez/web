@@ -72,11 +72,29 @@ export default {
     });
 
     // relations
-    let places = await context.$content(context.i18n.locale, 'places')
-      .only(['slug'])
-      .fetch();
+    const places = await context.$content(context.i18n.locale, 'places').only(['slug']).fetch();
+    const categorys = await context.$content(context.i18n.locale, 'categorys').only(['slug']).fetch();
+    const tags = await context.$content(context.i18n.locale, 'tags').only(['slug']).fetch();
+    const collections = await context.$content(context.i18n.locale, 'collections').only(['slug']).fetch();
+    const commissions = await context.$content(context.i18n.locale, 'commissions').only(['slug']).fetch();
+    const grants = await context.$content(context.i18n.locale, 'grants').only(['slug']).fetch();
+    const prices = await context.$content(context.i18n.locale, 'prices').only(['slug']).fetch();
+    const residencys = await context.$content(context.i18n.locale, 'residencys').only(['slug']).fetch();
+    const sponsors = await context.$content(context.i18n.locale, 'sponsors').only(['slug']).fetch();
+    const guests = await context.$content(context.i18n.locale, 'guests').only(['slug']).fetch();
+    const works = await context.$content(context.i18n.locale, 'works').only(['slug']).fetch();
     const relations = {
-      places: extractSlugs(places)
+      places: extractSlugs(places),
+      categorys: extractSlugs(categorys),
+      tags: extractSlugs(tags),
+      collections: extractSlugs(collections),
+      commissions: extractSlugs(commissions),
+      grants: extractSlugs(grants),
+      prices: extractSlugs(prices),
+      residencys: extractSlugs(residencys),
+      sponsors: extractSlugs(sponsors),
+      guests: extractSlugs(guests),
+      works: extractSlugs(works),
     }
     return {
       page,

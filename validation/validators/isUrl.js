@@ -1,8 +1,8 @@
-import { isUndefined } from 'lodash';
+import { isNil } from 'lodash';
 import { formatMessage } from '..';
 export function isUrl(errorMessage = '%field% is not a valid URL') {
   return (value, item, field) => {
-    if (isUndefined(value)) return true;
+    if (isNil(value)) return true;
     try {
       new URL(value);
       return true;

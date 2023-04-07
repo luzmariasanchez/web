@@ -3,7 +3,6 @@
 title: "RE: SOUND ART EXHIBITION"
 description: 
 image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/V.[u]nf_4_Aalborg_Documentation_04.JPG
-
 video: https://www.youtube.com/watch?v=pzC_UV_tmak
 start: 2019
 info: "RE: SOUND ART EXHIBITION"

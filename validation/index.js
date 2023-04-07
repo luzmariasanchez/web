@@ -2,6 +2,8 @@ export { validate } from './validate';
 export { formatMessage } from './formatMessage';
 // validators
 export { hasRelation } from './validators/hasRelation';
+export { hasRelations } from './validators/hasRelations';
+export { isArray } from './validators/isArray';
 export { isBoolean } from './validators/isBoolean';
 export { isDate } from './validators/isDate';
 export { isImage } from './validators/isImage';
