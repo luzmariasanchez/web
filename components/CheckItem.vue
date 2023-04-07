@@ -5,7 +5,8 @@
     </div>
     <div>
       <div>
-        <nuxt-link :to="localePath({ name: `work-slug`, params: { slug: item.slug } })" class="text-gray-200">
+        <nuxt-link :to="localePath({ name: route.name, params: { [route.param]: item.slug } })"
+          :class="item.offline ? 'text-gray-500' : 'text-gray-200'">
           {{ item.title }}
         </nuxt-link>
       </div>
@@ -39,6 +40,10 @@ export default {
       default() {
         return {}
       }
+    },
+    route: {
+      type: Object,
+      required: true,
     }
   },
   data() {

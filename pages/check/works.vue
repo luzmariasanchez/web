@@ -1,7 +1,7 @@
 <template>
   <div class="w-full container mx-auto">
     <Title :title="page.title" :description="page.description"></Title>
-    <CheckItems :items="items" :schema="schema" :options="{ relations }"></CheckItems>
+    <CheckItems :items="items" :schema="schema" :options="{ relations }" :route="route"></CheckItems>
     <Pagination :pathName="'check-works'" :currentPage="+currentPagination" :totalPage="+totalPagination"></Pagination>
   </div>
 </template>
@@ -29,7 +29,11 @@ export default {
   },
   data() {
     return {
-      schema
+      schema,
+      route: {
+        name: 'work-slug',
+        param: 'slug'
+      }
     }
   },
   watchQuery: ['p'],
@@ -42,6 +46,7 @@ export default {
       limit: 1000,
       sortField: 'start',
       sortDirection: 'desc',
+      condition: {},
       fields: [
         'slug',
         'offline',

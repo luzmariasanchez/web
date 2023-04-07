@@ -21,10 +21,11 @@ export default async (context, service, options = {}) => {
     sortDirection: 'asc',
     relations: null,
     fields: ['title', 'slug'],
+    condition: undefined,
     ...options
   }
 
-  const condition = {
+  const condition = options.condition || {
     offline: { $ne: true },
     private: { $ne: true },
     ...where

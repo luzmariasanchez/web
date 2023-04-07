@@ -5,6 +5,7 @@ export { hasRelation } from './validators/hasRelation';
 export { hasRelations } from './validators/hasRelations';
 export { isArray } from './validators/isArray';
 export { isBoolean } from './validators/isBoolean';
+export { isColor } from './validators/isColor';
 export { isDate } from './validators/isDate';
 export { isImage } from './validators/isImage';
 export { isNumber } from './validators/isNumber';

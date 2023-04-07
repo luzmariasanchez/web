@@ -1,5 +1,5 @@
 ---
-offline: false
+offline: true
 private: false
 title: Work Template
 description: A description
