@@ -27,7 +27,6 @@
 
 <script>
 export default {
-  name: "Detail",
   props: {
     page: {
       type: Object,

@@ -23,6 +23,9 @@ export default {
   url: {
     isUrl: isUrl(),
   },
+  urlLabel: {
+    isString: isString(),
+  },
   image: {
     isUrl: isUrl(),
     isImage: isImage(),

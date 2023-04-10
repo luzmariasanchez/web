@@ -5,7 +5,7 @@
     </template>
     <template v-else>
       <Title :title="item.title" :description="item.description" :categorys="item.categorys"></Title>
-      <Detail :page="item"></Detail>
+      <WorkDetail :page="item"></WorkDetail>
       <Author></Author>
     </template>
   </div>

@@ -1,5 +1,4 @@
 <template>
-
   <header class="w-full bg-black">
     <nav class="p-4 mt-0 w-full">
       <div class="container mx-auto flex justify-between">
@@ -25,11 +24,9 @@
     </nav>
 
   </header>
-
 </template>
 
 <script>
 export default {
-  name: "Head",
 }
 </script>

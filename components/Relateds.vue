@@ -1,7 +1,7 @@
 <template>
   <div>
     <template v-if="items && items.length">
-      <Subtitle :title="$t('content.relateds')"></Subtitle>
+      <Subtitle :title="title || $t('content.relateds')"></Subtitle>
       <Grid :items="items" size="small"></Grid>
     </template>
   </div>
@@ -15,6 +15,10 @@ export default {
     items: {
       type: Array,
       required: true
+    },
+    title: {
+      type: String,
+      required: false
     },
   },
 }

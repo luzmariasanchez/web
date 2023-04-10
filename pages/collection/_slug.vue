@@ -4,8 +4,8 @@
       <Message :text="$t('message.notFound')"></Message>
     </template>
     <template v-else>
-      <Title :title="item.title" :description="item.description" :categorys="item.categorys"></Title>
-      <!-- <Detail :page="item"></Detail> -->
+      <Title :title="item.title" :description="item.collection" :categorys="item.categorys"></Title>
+      <CollectionDetail :collection="item"></CollectionDetail>
       <Author></Author>
     </template>
   </div>
@@ -14,6 +14,7 @@
 <script>
 import getHead from "@/helpers/head";
 import loadItem from "@/api/loadItem";
+import loadItems from "@/api/loadItems";
 
 export default {
   name: 'collection-slug',
@@ -42,6 +43,26 @@ export default {
     const { item, error: itemError } = await loadItem(context, 'collections', {
       slug: context.params.slug,
     });
+
+    if (item) {
+      const { items: works } = await loadItems(context, 'works', {
+        page: 1,
+        limit: 1000,
+        sortField: 'start',
+        sortDirection: 'desc',
+        fields: ['slug', 'title', 'description', 'image', 'start', 'categorys'],
+        where: {
+          collections: { $contains: item.slug }
+        },
+        relations: [{
+          service: 'categorys',
+          fields: ['title', 'slug', 'color'],
+          many: true,
+        }]
+      });
+
+      item.works = works;
+    }
 
     return {
       page,
