@@ -18,19 +18,19 @@ categorys:
  - research
 tags:
  - template
-collectionsLabel: Collec
+collectionsLabel: Collection custom
 collections:
  - template
-commissionsLabel: Comis
+commissionsLabel: Comission custom
 commissions:
  - template
-grantsLabel: Gr
+grantsLabel: Grants custom
 grants:
  - template
-pricesLabel: Prix
+pricesLabel: Price custom
 prices:
  - template
-residencysLabel: Residence
+residencysLabel: Residence custom
 residencys:
  - template
 sponsorsLabel: Collab
