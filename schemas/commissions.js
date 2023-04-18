@@ -24,11 +24,17 @@ export default {
   address: {
     isString: isString(),
   },
+  juryLabel: {
+    isString: isString(),
+  },
   jury: {
     isString: isString(),
   },
   url: {
     isUrl: isUrl(),
+  },
+  urlLabel: {
+    isString: isString(),
   },
   image: {
     isUrl: isUrl(),

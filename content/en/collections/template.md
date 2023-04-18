@@ -3,7 +3,7 @@ offline: false
 title: Collection Template 
 collection: Name of the collection
 address: City, country
-image: https://img.local.mx/2018/05/destacada-2-1024x528.jpg
+image: https://picsum.photos/800/400
 url: http://www.test.com
 urlLabel: Open
 ---

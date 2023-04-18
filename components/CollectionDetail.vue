@@ -5,7 +5,7 @@
       <Dates v-if="collection.start" :start="collection.start" :end="collection.end"></Dates>
       <Address v-if="collection.address" :address="collection.address"></Address>
       <Content :page="collection"></Content>
-      <div class="text-center" v-if="collection.url">
+      <div v-if="collection.url">
         <Url :url="collection.url" :label="collection.urlLabel || $t('content.link')"></Url>
       </div>
       <div class="mt-10">
