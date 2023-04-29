@@ -21,7 +21,7 @@ export default {
   nuxtI18n: {
     paths: {
       en: "/residency/:slug",
-      es: "/coleccion/:slug",
+      es: "/residencia/:slug",
     },
   },
   head() {

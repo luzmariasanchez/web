@@ -1,4 +1,4 @@
 ---
-title: Residencys
+title: Residencies
 description: 
 ---

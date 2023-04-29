@@ -21,7 +21,7 @@ export default {
   nuxtI18n: {
     paths: {
       en: "/commission/:slug",
-      es: "/coleccion/:slug",
+      es: "/comision/:slug",
     },
   },
   head() {

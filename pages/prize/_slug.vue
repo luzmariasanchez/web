@@ -22,7 +22,7 @@ export default {
   nuxtI18n: {
     paths: {
       en: "/prize/:slug",
-      es: "/coleccion/:slug",
+      es: "/premio/:slug",
     },
   },
   head() {
