@@ -6,18 +6,22 @@
           class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
           {{ $t('content.collections') }}
         </nuxt-link>
+        <i class="icon-dot text-gray-600"></i>
         <nuxt-link :to="localePath('commissions')"
           class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
           {{ $t('content.commissions') }}
         </nuxt-link>
+        <i class="icon-dot text-gray-600"></i>
         <nuxt-link :to="localePath('grants')"
           class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
           {{ $t('content.grants') }}
         </nuxt-link>
+        <i class="icon-dot text-gray-600"></i>
         <nuxt-link :to="localePath('residencys')"
           class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
           {{ $t('content.residencys') }}
         </nuxt-link>
+        <i class="icon-dot text-gray-600"></i>
         <nuxt-link :to="localePath('prizes')"
           class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
           {{ $t('content.prizes') }}
