@@ -1,4 +1,4 @@
 ---
-title: Prices
+title: Prizes
 description: 
 ---

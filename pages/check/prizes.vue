@@ -2,7 +2,7 @@
   <div class="w-full container mx-auto">
     <Title :title="page.title" :description="page.description"></Title>
     <CheckItems :items="items" :schema="schema" :options="{ relations }" :route="route"></CheckItems>
-    <Pagination :pathName="'check-prices'" :currentPage="+currentPagination" :totalPage="+totalPagination">
+    <Pagination :pathName="'check-prizes'" :currentPage="+currentPagination" :totalPage="+totalPagination">
     </Pagination>
   </div>
 </template>
@@ -10,14 +10,14 @@
 <script>
 import getHead from "@/helpers/head";
 import loadItems from "@/api/loadItems";
-import schema from "@/schemas/prices";
+import schema from "@/schemas/prizes";
 
 export default {
-  name: "check-prices",
+  name: "check-prizes",
   nuxtI18n: {
     paths: {
-      en: "/check/prices",
-      es: "/check/prices",
+      en: "/check/prizes",
+      es: "/check/prizes",
     },
   },
   head() {
@@ -36,9 +36,9 @@ export default {
   watchQuery: ['p'],
   async asyncData(context) {
     const page = {
-      title: 'Check prices'
+      title: 'Check prizes'
     }
-    const { items, page: currentPagination, totalPage: totalPagination } = await loadItems(context, 'prices', {
+    const { items, page: currentPagination, totalPage: totalPagination } = await loadItems(context, 'prizes', {
       page: context.query.p ? parseInt(context.query.p, 10) : 1,
       limit: 1000,
       condition: {},

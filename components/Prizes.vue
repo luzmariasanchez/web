@@ -1,9 +1,9 @@
 <template>
   <div class="mb-20 text-center">
-    <Subtitle :title="label || $t('content.prices')"></Subtitle>
+    <Subtitle :title="label || $t('content.prizes')"></Subtitle>
     <div class="flex flex-wrap justify-center">
-      <Price v-for="(price, priceIndex) in prices" :key="priceIndex" :price="price">
-      </Price>
+      <Prize v-for="(prize, prizeIndex) in prizes" :key="prizeIndex" :prize="prize">
+      </Prize>
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@
 
 export default {
   props: {
-    prices: {
+    prizes: {
       type: Array,
       required: true
     },

@@ -6,7 +6,7 @@
     <template v-else>
       <Title :title="item.title" :description="item.type" :categorys="item.categorys"></Title>
       <div v-if="item.institution" class="text-center mb-8 text-gray-200">{{ item.institution }}</div>
-      <PriceDetail :price="item"></PriceDetail>
+      <PrizeDetail :prize="item"></PrizeDetail>
       <Author></Author>
     </template>
   </div>
@@ -18,10 +18,10 @@ import loadItem from "@/api/loadItem";
 import loadItems from "@/api/loadItems";
 
 export default {
-  name: 'price-slug',
+  name: 'prize-slug',
   nuxtI18n: {
     paths: {
-      en: "/price/:slug",
+      en: "/prize/:slug",
       es: "/coleccion/:slug",
     },
   },
@@ -36,12 +36,12 @@ export default {
 
     let page, error;
     try {
-      page = await context.$content(context.i18n.locale, 'pages', 'prices').fetch();
+      page = await context.$content(context.i18n.locale, 'pages', 'prizes').fetch();
     } catch (err) {
       error = err;
     }
 
-    const { item, error: itemError } = await loadItem(context, 'prices', {
+    const { item, error: itemError } = await loadItem(context, 'prizes', {
       slug: context.params.slug,
     });
 
@@ -53,7 +53,7 @@ export default {
         sortDirection: 'desc',
         fields: ['slug', 'title', 'description', 'image', 'start', 'end', 'address', 'jury', 'url', 'urlLabel'],
         where: {
-          prices: { $contains: item.slug }
+          prizes: { $contains: item.slug }
         },
         relations: [{
           service: 'categorys',

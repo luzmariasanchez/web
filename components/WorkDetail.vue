@@ -12,7 +12,7 @@
       <Commissions v-if="page.commissions && page.commissions.length" :commissions="page.commissions"
         :label="page.commissionsLabel"></Commissions>
       <Grants v-if="page.grants && page.grants.length" :grants="page.grants" :label="page.grantsLabel"></Grants>
-      <Prices v-if="page.prices && page.prices.length" :prices="page.prices" :label="page.pricesLabel"></Prices>
+      <Prizes v-if="page.prizes && page.prizes.length" :prizes="page.prizes" :label="page.prizesLabel"></Prizes>
       <Residencys v-if="page.residencys && page.residencys.length" :residencys="page.residencys"
         :label="page.residencysLabel"></Residencys>
       <Guests v-if="page.guests && page.guests.length" :guests="page.guests" :label="page.guestsLabel"></Guests>

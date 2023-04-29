@@ -1,10 +1,10 @@
 TODO
 
-
-- checar rezise image
-- categorias secondarias
-
-
+- price -> prize
+- add sub categorias en el search
+- revisar el validator de imagenes
+- agregar paginas de lista
+- pago atlas
 
 - filter by year
 - sitemap
@@ -13,30 +13,6 @@ TODO
 - move media on another project
 
 
-
-agregar section
-
-PRIZE 
-COLLECTION 
-COMISION  
-GRANT 
-RESIDENCIA
-
-
-
-- nombre de premio
-- tipo de premio
-- fecha
-- lugar
-- curador
-- texto
-
-
-- ajouter legende a l' image principal
-
-
-
-subir video arriba de gallery
 
 
 https://docs.google.com/document/d/15JgWTU3l6HTyNyVVBOge9tUcxs1wTxh7GaWPsdkhxR4/edit?usp=sharing

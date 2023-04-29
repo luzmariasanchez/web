@@ -65,7 +65,7 @@ export default {
         'collections',
         'commissions',
         'grants',
-        'prices',
+        'prizes',
         'residencys',
         'sponsorsLabel',
         'sponsors',
@@ -83,7 +83,7 @@ export default {
     const collections = await context.$content(context.i18n.locale, 'collections').only(['slug']).fetch();
     const commissions = await context.$content(context.i18n.locale, 'commissions').only(['slug']).fetch();
     const grants = await context.$content(context.i18n.locale, 'grants').only(['slug']).fetch();
-    const prices = await context.$content(context.i18n.locale, 'prices').only(['slug']).fetch();
+    const prizes = await context.$content(context.i18n.locale, 'prizes').only(['slug']).fetch();
     const residencys = await context.$content(context.i18n.locale, 'residencys').only(['slug']).fetch();
     const sponsors = await context.$content(context.i18n.locale, 'sponsors').only(['slug']).fetch();
     const guests = await context.$content(context.i18n.locale, 'guests').only(['slug']).fetch();
@@ -95,7 +95,7 @@ export default {
       collections: extractSlugs(collections),
       commissions: extractSlugs(commissions),
       grants: extractSlugs(grants),
-      prices: extractSlugs(prices),
+      prizes: extractSlugs(prizes),
       residencys: extractSlugs(residencys),
       sponsors: extractSlugs(sponsors),
       guests: extractSlugs(guests),

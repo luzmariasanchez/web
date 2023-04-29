@@ -75,9 +75,9 @@ export default {
     isArray: isArray(),
     hasRelations: hasRelations('grants'),
   },
-  prices: {
+  prizes: {
     isArray: isArray(),
-    hasRelations: hasRelations('prices'),
+    hasRelations: hasRelations('prizes'),
   },
   residencys: {
     isArray: isArray(),

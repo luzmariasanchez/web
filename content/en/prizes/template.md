@@ -1,9 +1,9 @@
 ---
 offline: false
-title: Price Template
+title: Prize Template
 start: 2020
 end: 2021
-type: Price Type
+type: Prize Type
 institution: Institución que lo otorga
 category: Digital Communities
 juryLabel: aaa

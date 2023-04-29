@@ -27,8 +27,8 @@ commissions:
 grantsLabel: Grants custom
 grants:
  - template
-pricesLabel: Price custom
-prices:
+prizesLabel: Prize custom
+prizes:
  - template
 residencysLabel: Residence custom
 residencys:

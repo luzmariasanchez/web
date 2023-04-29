@@ -73,7 +73,7 @@ export default {
           many: true
         },
         {
-          service: 'prices',
+          service: 'prizes',
           fields: ['title', 'slug'],
           many: true
         },

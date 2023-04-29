@@ -1,7 +1,7 @@
 <template>
-  <NuxtLink :to="localePath({ name: `price-slug`, params: { slug: price.slug } })">
+  <NuxtLink :to="localePath({ name: `prize-slug`, params: { slug: prize.slug } })">
     <div class="text-center text-sm text-gray-200">
-      {{ price.title }}
+      {{ prize.title }}
     </div>
   </NuxtLink>
 </template>
@@ -10,7 +10,7 @@
 
 export default {
   props: {
-    price: {
+    prize: {
       type: Object,
       required: true
     },
