@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="localePath({ name: `work-slug`, params: { slug: item.slug } })"
+  <nuxt-link :to="localePath({ name: pathName, params: { slug: item.slug } })"
     class="pb-5 brightness-100 hover:brightness-125 transition">
     <div class="rounded-lg overflow-hidden">
       <div class="relative pb-2/3">
@@ -38,6 +38,13 @@ export default {
         return '';
       }
     },
+    pathName: {
+      type: String,
+      required: false,
+      default() {
+        return 'work-slug';
+      }
+    }
   },
   computed: {
     titleSize() {
