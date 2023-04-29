@@ -7,7 +7,6 @@
       <Title :title="page.title" :description="page.description"></Title>
       <Grid :items="items" pathName="residency-slug"></Grid>
       <Pagination :pathName="'residencys'" :currentPage="+currentPagination" :totalPage="+totalPagination"></Pagination>
-      <Author></Author>
     </template>
   </div>
 </template>

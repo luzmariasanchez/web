@@ -3,10 +3,9 @@
     <Title :title="page.title" :description="page.description"></Title>
     <GridHome :items="items"></GridHome>
     <div class="flex w-full items-center justify-center mt-5 p-5">
-      <Btn :to="localePath({name: 'works'})" :label="$t('home.works')">
+      <Btn :to="localePath({ name: 'works' })" :label="$t('home.works')">
       </Btn>
     </div>
-    <Author></Author>
   </div>
 </template>
 

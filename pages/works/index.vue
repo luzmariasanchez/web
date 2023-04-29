@@ -13,7 +13,6 @@
       </Nav>
       <Grid :items="items"></Grid>
       <Pagination :pathName="'works'" :currentPage="+currentPagination" :totalPage="+totalPagination"></Pagination>
-      <Author></Author>
     </template>
   </div>
 </template>

@@ -14,7 +14,6 @@
       <Grid :items="items"></Grid>
       <Pagination :pathName="'works-t-tag'" :currentPage="+currentPagination" :totalPage="+totalPagination">
       </Pagination>
-      <Author></Author>
     </template>
   </div>
 </template>

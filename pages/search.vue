@@ -17,10 +17,9 @@
         </form>
       </div>
       <Grid :items="items"></Grid>
-      <Pagination :pathName="'search'" :query="{q:encodeQuery(query)}" :currentPage="+currentPagination"
+      <Pagination :pathName="'search'" :query="{ q: encodeQuery(query) }" :currentPage="+currentPagination"
         :totalPage="+totalPagination">
       </Pagination>
-      <Author></Author>
     </template>
   </div>
 </template>

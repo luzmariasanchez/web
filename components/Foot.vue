@@ -1,27 +1,27 @@
 <template>
   <footer class="">
     <div class="border-t border-gray-800">
-      <nav class="container max-w-6xl mx-auto flex justify-center items-center px-2 py-8">
+      <nav class="container max-w-6xl mx-auto flex flex-col md:flex-row flex-wrap justify-center items-center px-2 py-8">
         <nuxt-link :to="localePath('collections')"
           class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
           {{ $t('content.collections') }}
         </nuxt-link>
-        <i class="icon-dot text-gray-600"></i>
+        <i class="icon-dot text-gray-600 hidden md:block"></i>
         <nuxt-link :to="localePath('commissions')"
           class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
           {{ $t('content.commissions') }}
         </nuxt-link>
-        <i class="icon-dot text-gray-600"></i>
+        <i class="icon-dot text-gray-600 hidden md:block"></i>
         <nuxt-link :to="localePath('grants')"
           class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
           {{ $t('content.grants') }}
         </nuxt-link>
-        <i class="icon-dot text-gray-600"></i>
+        <i class="icon-dot text-gray-600 hidden md:block"></i>
         <nuxt-link :to="localePath('residencys')"
           class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
           {{ $t('content.residencys') }}
         </nuxt-link>
-        <i class="icon-dot text-gray-600"></i>
+        <i class="icon-dot text-gray-600 hidden md:block"></i>
         <nuxt-link :to="localePath('prizes')"
           class="cursor-pointer inline-block text-gray-600 no-underline lg:hover:text-gray-200 hover:text-black hover:text-underline py-2 px-2">
           {{ $t('content.prizes') }}

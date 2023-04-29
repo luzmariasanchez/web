@@ -7,7 +7,6 @@
       <Title :title="item.title" :description="item.type" :categorys="item.categorys"></Title>
       <div v-if="item.institution" class="text-center mb-8 text-gray-200">{{ item.institution }}</div>
       <PrizeDetail :prize="item"></PrizeDetail>
-      <Author></Author>
     </template>
   </div>
 </template>

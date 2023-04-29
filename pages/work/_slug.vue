@@ -6,7 +6,6 @@
     <template v-else>
       <Title :title="item.title" :description="item.description" :categorys="item.categorys"></Title>
       <WorkDetail :page="item"></WorkDetail>
-      <Author></Author>
     </template>
   </div>
 </template>
