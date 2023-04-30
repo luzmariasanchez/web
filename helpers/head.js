@@ -64,11 +64,11 @@ export default (page, i18nHead, override, noindexnofollow) => {
         property: "og:image:alt",
         content: page.title,
       },
-      ...(noindexnofollow ? {
+      {
         hid: "robots",
         name: "robots",
-        content: 'noindex,nofollow',
-      } : {}),
+        content: noindexnofollow && 'noindex,nofollow',
+      },
       ...i18nHead.meta
     ],
     htmlAttrs: {
