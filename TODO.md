@@ -1,11 +1,6 @@
 TODO
 
-- add sub categorias en el search
-- revisar el validator de imagenes
-- pago atlas
 
-- filter by year
-- sitemap
 - agregar feat field para salir primero en la portada
 - move media on another project
 

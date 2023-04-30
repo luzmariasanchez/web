@@ -1,6 +1,6 @@
 import { isNil } from 'lodash';
 import { formatMessage } from '..';
-export function hasRelations(relation, errorMessage = '%field% has not a valid relations (%value% not found in %relation%)') {
+export function hasRelations(relation, errorMessage = '%field% has no valid relations (%value% not found in %relation%)') {
   return (value, item, field, options) => {
     if (isNil(value)) return true;
     let isValid = true;

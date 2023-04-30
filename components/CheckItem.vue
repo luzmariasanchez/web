@@ -1,7 +1,8 @@
 <template>
   <div class="flex flex-row gap-2 w-full border border-gray-700 p-2">
     <div>
-      <i :class="hasError ? 'icon-cancel text-red-400' : 'icon-check text-green-400'"></i>
+      <i v-if="isChecking" class="icon-spin animate-spin text-gray-200"></i>
+      <i v-else :class="hasError ? 'icon-cancel text-red-400' : 'icon-check text-green-400'"></i>
     </div>
     <div>
       <div>
@@ -48,7 +49,8 @@ export default {
   },
   data() {
     return {
-      validation: null
+      validation: null,
+      isChecking: true
     };
   },
   computed: {
@@ -62,8 +64,9 @@ export default {
       return this.validation && this.validation.$errors.length;
     },
   },
-  mounted: function () {
-    this.validation = validate(this.item, this.schema, this.options);
+  mounted: async function () {
+    this.validation = await validate(this.item, this.schema, this.options);
+    this.isChecking = false;
   }
 }
 </script>
