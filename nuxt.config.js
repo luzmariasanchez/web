@@ -108,14 +108,26 @@ export default {
     gzip: true,
     routes: [
       '/',
+      '/collections',
+      '/commissions',
+      '/grants',
+      '/prizes',
+      '/residencies',
+      '/works',
       '/bio',
       '/contact',
-      // ...getProjectsPath('en'),
+      '/search',
 
       '/es/',
+      '/es/colecciones',
+      '/es/comisiones',
+      '/es/becas',
+      '/es/premios',
+      '/es/residencias',
+      '/es/proyectos',
       '/es/bio',
       '/es/contacto',
-      // ...getProjectsPath('es'),
+      '/es/buscar',
     ]
   },
 
