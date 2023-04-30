@@ -1,13 +1,13 @@
 <template>
   <div class="w-full container mx-auto">
     <Title :title="page.title" :description="page.description"></Title>
-    <div class="text-center">
-      <ul>
-        <li v-for="(item, itemIndex) in items" :key="itemIndex">
-          <NuxtLink :to="localePath({ name: item.route })" class="text-gray-200 hover:text-white">{{ item.name }}
-          </NuxtLink>
-        </li>
-      </ul>
+
+    <div class="grid grid grid-cols-3 gap-4">
+      <div class="flex flex-col gap-4" v-for="(group, groupIndex) in groups" :key="groupIndex">
+        <CheckLink v-for="(item, itemIndex) in group" :key="itemIndex" :name="item.name" :service="item.service"
+          :collection="collectionsByService[item.service]">
+        </CheckLink>
+      </div>
     </div>
   </div>
 </template>
@@ -32,20 +32,73 @@ export default {
       page: {
         title: 'Check'
       },
-      items: [
-        { name: 'Categories', route: 'check-categorys' },
-        { name: 'Collections', route: 'check-collections' },
-        { name: 'Commissions', route: 'check-commissions' },
-        { name: 'Grants', route: 'check-grants' },
-        { name: 'Guests', route: 'check-guests' },
-        { name: 'Places', route: 'check-places' },
-        { name: 'Prizes', route: 'check-prizes' },
-        { name: 'Residences', route: 'check-residencys' },
-        { name: 'Sponsors', route: 'check-sponsors' },
-        { name: 'Tags', route: 'check-tags' },
-        { name: 'Works', route: 'check-works' },
+      groups: [
+        [
+          { name: 'Pages', service: 'pages' },
+          { name: 'Categories', service: 'categorys' },
+          { name: 'Tags', service: 'tags' },
+        ],
+        [
+          { name: 'Works', service: 'works' },
+          { name: 'Guests', service: 'guests' },
+          { name: 'Places', service: 'places' },
+          { name: 'Sponsors', service: 'sponsors' },
+        ],
+        [
+          { name: 'Collections', service: 'collections' },
+          { name: 'Commissions', service: 'commissions' },
+          { name: 'Grants', service: 'grants' },
+          { name: 'Prizes', service: 'prizes' },
+          { name: 'Residencies', service: 'residencys' },
+        ],
       ]
     }
+  },
+  async asyncData(context) {
+
+    async function getInfo(service) {
+      const items = await context.$content(context.i18n.locale, service)
+        .only(['slug', 'private', 'offline'])
+        .fetch();
+      return {
+        service,
+        total: items.length,
+        private: items.filter(item => item.private).length,
+        offline: items.filter(item => item.offline).length
+      }
+    }
+
+    const collectionServices = [
+      'pages',
+      'categorys',
+      'tags',
+      'works',
+      'guests',
+      'places',
+      'sponsors',
+      'collections',
+      'commissions',
+      'grants',
+      'prizes',
+      'residencys',
+    ]
+
+    const collections = await Promise.all(
+      collectionServices.map(service => {
+        return getInfo(service)
+      })
+    )
+
+    const collectionsByService = collections.reduce((obj, collection) => {
+      return {
+        ...obj,
+        [collection.service]: collection
+      }
+    }, {})
+
+    return {
+      collectionsByService
+    };
   },
 }
 </script>

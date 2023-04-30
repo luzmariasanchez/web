@@ -7,6 +7,7 @@ export { isArray } from './validators/isArray';
 export { isBoolean } from './validators/isBoolean';
 export { isColor } from './validators/isColor';
 export { isDate } from './validators/isDate';
+export { isEmail } from './validators/isEmail';
 export { isImage } from './validators/isImage';
 export { isNumber } from './validators/isNumber';
 export { isString } from './validators/isString';
