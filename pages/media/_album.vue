@@ -78,7 +78,7 @@ export default {
   },
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
-    return getHead(this.album, i18nHead);
+    return getHead(this.album, i18nHead, {}, true);
   },
   data() {
     return {

@@ -2,7 +2,7 @@ import config from '@/config';
 
 const URL = config.url;
 
-export default (page, i18nHead, override) => {
+export default (page, i18nHead, override, noindexnofollow) => {
   if (!page) page = {}
 
   const image = `${URL}/images/${page.image || 'default.png'}`;
@@ -64,6 +64,11 @@ export default (page, i18nHead, override) => {
         property: "og:image:alt",
         content: page.title,
       },
+      ...(noindexnofollow ? {
+        hid: "robots",
+        name: "robots",
+        content: 'noindex,nofollow',
+      } : {}),
       ...i18nHead.meta
     ],
     htmlAttrs: {

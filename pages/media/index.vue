@@ -29,7 +29,7 @@ export default {
   },
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
-    return getHead(this.page, i18nHead);
+    return getHead(this.page, i18nHead, {}, true);
   },
   async asyncData({ $content, i18n }) {
     const page = await $content(i18n.locale, "pages", "media").fetch();
