@@ -25,12 +25,15 @@ export default {
     const page = await context.$content(context.i18n.locale, 'pages', 'index').fetch();
     const { items } = await loadItems(context, 'works', {
       limit: 15,
-      fields: ['slug', 'title', 'description', 'image', 'start', 'categorys'],
+      sortField: 'start',
+      sortDirection: 'desc',
+      fields: ['slug', 'title', 'description', 'image', 'start', 'categorys', 'feat'],
       relations: [{
         service: 'categorys',
         fields: ['title', 'slug', 'color'],
       }]
     });
+    console.log(items);
     return {
       page,
       items
