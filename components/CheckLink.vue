@@ -1,10 +1,10 @@
 <template>
   <NuxtLink :to="localePath({ name: route })"
-    class="border border-gray-400 hover:border-gray-200 text-gray-200 hover:text-white px-2 py-6 flex flex-col items-center">
-    <div class="text-2xl">
-      {{ collection.total }} {{ name }}
+    :class="['border border-gray-400 hover:border-gray-200 hover:text-white px-2 py-4 flex flex-col items-center', active ? 'text-gray-800 bg-gray-200' : 'text-gray-200 bg-none']">
+    <div class="text-xl">
+      <span v-if="collection">{{ collection.total }}</span> {{ name }}
     </div>
-    <div class="sm">
+    <div class="sm" v-if="collection">
       <div v-if="collection.private" class="text-gray-500">{{ collection.private }} privates</div>
       <div v-if="collection.offline" class="text-gray-500">{{ collection.offline }} offline</div>
     </div>
@@ -25,7 +25,11 @@ export default {
     },
     collection: {
       type: Object,
-      required: true,
+      required: false,
+    },
+    active: {
+      type: Boolean,
+      required: false,
     }
   },
   data() {

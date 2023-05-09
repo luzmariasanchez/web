@@ -29,7 +29,7 @@
 <script>
 
 export default {
-  name: "CheckItem",
+  name: "CheckScan",
   props: {
     item: {
       type: Object,

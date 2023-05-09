@@ -1,9 +1,16 @@
 <template>
   <div class="w-full container mx-auto">
     <Title :title="page.title" :description="page.description"></Title>
-    <CheckItems :items="items" :schema="schema" :options="{ relations }" :route="route"></CheckItems>
-    <Pagination :pathName="'check-collections'" :currentPage="+currentPagination" :totalPage="+totalPagination">
-    </Pagination>
+    <div class="grid md:grid-cols-12 gap-5">
+      <div class="md:col-span-9">
+        <CheckAsync :items="items" :schema="schema" :options="{ relations }" :route="route"></CheckAsync>
+        <Pagination :pathName="'check-collections'" :currentPage="+currentPagination" :totalPage="+totalPagination">
+        </Pagination>
+      </div>
+      <div class="md:col-span-3 md:pt-0 p-2">
+        <CheckMenu current="collections"></CheckMenu>
+      </div>
+    </div>
   </div>
 </template>
 
