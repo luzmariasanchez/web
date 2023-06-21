@@ -15,7 +15,7 @@ tags:
  - participatory
  - installation
  - sound
- - social_practice
+ - social-practice
 sponsors:
 # - sistema-nacional-de-creadores-de-arte
 works:

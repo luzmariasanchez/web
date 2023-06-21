@@ -12,6 +12,8 @@ categorys:
 tags:
  - 3d-print
  - sculpture
+grants:
+ - snca_2015_2018
 sponsors:
  #- sistema-nacional-de-creadores-de-arte
 works:

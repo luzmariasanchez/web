@@ -15,6 +15,8 @@ tags:
  - audio-visual
  - cyber-cartography
  - web-data-visualisation
+grants:
+ - snca_2015_2018
 sponsors:
 # - sistema-nacional-de-creadores-de-arte
 works:

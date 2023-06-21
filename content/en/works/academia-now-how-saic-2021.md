@@ -10,7 +10,6 @@ info: "Now. How?"
 place: template
 categorys:
  - academia
- - 
 tags:
  - template
 sponsors:

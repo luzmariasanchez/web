@@ -4,6 +4,8 @@ title: "Vis. [un]necessary force_4"
 description: 
 image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/V.[u]nf_4_Muac_Documentation_08.JPG
 video: https://www.youtube.com/watch?v=qjg3S3vkQy4
+start: 2019
+end: 2019
 info: "Vis. [un]necessary force_4"
 place: template
 categorys:

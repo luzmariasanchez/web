@@ -14,8 +14,18 @@ tags:
  - sound
  - installation
  - sculpture
+prizesLabel: Prize
+prizes:
+ - bienal_of_the_frontiers
+grantsLabel: Grant
+grants:
+ - snca_2015_2018
 
+collectionsLabel: Collection 
+collections:
+ - vunf1_mact
 works:
+
  - artwork-vunf1_01-2017
  - artwork-vunf1-2014
  - artwork-vunf2-2016
@@ -28,6 +38,7 @@ works:
  - academia-now-how-saic-2021
  - academia-vfin-a-socially-engaged-isea-2017
  - publication-shifting-kluscinsky-2022
+
 pictures:
  - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/Vis_1_London_5 (1).jpg
  - https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/Vis_1_London_71 (1).jpg

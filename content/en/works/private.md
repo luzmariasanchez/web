@@ -1,7 +1,7 @@
 ---
 private: true
 title: Private Work
-image: 
+image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/239384287_556513159106946_8262870035840969622_n.png
 description: A description
 video: https://www.youtube.com/watch?v=
 start: 2000

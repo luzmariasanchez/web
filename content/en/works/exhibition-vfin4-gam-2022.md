@@ -5,8 +5,8 @@ description:
 image: https://luzmariasanchez.s3.us-east-2.amazonaws.com/work/image/original/performatividades de la busqueda.png
 
 video: https://www.youtube.com/watch?v=285h8uXgrTQ
-start: 27-10-2022
-end: 04-03-2023
+start: 2022
+end: 2023
 info: "Performatividades de la Búsqueda"
 place: template
 categorys:

@@ -7,9 +7,10 @@ categorys:
 tags:
  - chapter-in-book
  - editor
- - social_practice
+ - social-practice
 sponsors:
- - 
+
+ - template
 works: 
  - artwork-vunf4-2019
  - prize-arselectronica-2021

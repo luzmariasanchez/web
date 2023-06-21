@@ -14,7 +14,12 @@ tags:
  - sound
  - installation
  - sculpture
-
+prizesLabel: Prize
+prizes:
+ - bienal_of_the_frontiers
+collectionsLabel: Collection 
+collections:
+ - vunf1_mact
 sponsors:
  #- sistema-nacional-de-creadores-de-arte
 works:

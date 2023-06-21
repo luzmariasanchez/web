@@ -16,7 +16,7 @@ works:
  - artwork-vunf1-2014
  - artwork-vunf2-2016
  - artwork-vunf3-2017
- - artwork-vunf4-2017
+ - artwork-vunf4-2019
  - prize-arselectronica-2021
  - research-post-national-mexico-sound-2014
  - academia-intermittent-spaces-ual-2020
